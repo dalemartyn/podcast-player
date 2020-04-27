@@ -1,0 +1,20 @@
+/* ==========================================================================
+   #CARD-LAYOUT
+   ========================================================================== */
+
+.o-card-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: sp(xlarge) sp(large);
+  margin: sp(xlarge) 0;
+  list-style: none;
+
+  @include mq($from: md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.o-card-layout__item {
+  display: block;
+  margin: 0;
+}

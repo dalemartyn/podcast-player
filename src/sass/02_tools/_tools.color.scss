@@ -1,0 +1,42 @@
+/**
+ * Get a color.
+ */
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+/**
+ * Get a color as an rgb triplet value.
+ */
+@function rgb-triplet($color, $lighten: false, $darken: false) {
+  $hex: map-get($colors, $color);
+
+  @if $lighten {
+    $hex: mix(color("white"), $hex, $lighten);
+  }
+
+  @if $darken {
+    $hex: mix(color("blue-grey-600"), $hex, $darken);
+  }
+
+  $triplet: #{red($hex), green($hex), blue($hex)};
+  @return $triplet;
+}
+
+/**
+ * Get a material design color as an rgb triplet value.
+ */
+@function rgb-material($name, $variant) {
+  $hex: material-color($name, $variant);
+  $triplet: #{red($hex), green($hex), blue($hex)};
+  @return $triplet;
+}
+
+/**
+ * Get a semantic color.
+ *
+ * Can optionally specify an opacity.
+ */
+@function sem-color($color_name, $opacity: 1) {
+  @return rgba(var(--color-#{$color_name}), #{$opacity});
+}

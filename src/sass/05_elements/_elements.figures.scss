@@ -1,0 +1,32 @@
+/* ==========================================================================
+   #FIGURES
+   ========================================================================== */
+
+figure {
+  margin-top: sp(xlarge);
+  margin-bottom: sp(xlarge);
+
+  img {
+    width: 100%;
+    border-radius: var(--rounded-radius);
+  }
+
+  img,
+  video,
+  svg {
+    display: block;
+  }
+
+  svg {
+    height: auto;
+    width: 100%;
+  }
+}
+
+figcaption {
+  @include ms-respond(font-size, .25);
+  padding-top: sp(small);
+  line-height: 1.55;
+  color: sem-color(text-2);
+  @include theme-transition(color);
+}

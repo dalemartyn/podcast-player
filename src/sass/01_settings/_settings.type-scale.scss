@@ -1,0 +1,14 @@
+@function rem($px) {
+  @return ($px / 16px * 1rem);
+}
+
+$modularscale: (
+  20rem: (
+    base: rem(13px),
+    ratio: 1.4
+  ),
+  60rem: (
+    base: rem(13px),
+    ratio: 1.5
+  ),
+);

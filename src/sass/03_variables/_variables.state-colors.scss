@@ -1,0 +1,13 @@
+@mixin light-state-color-vars {
+  --state-color-hover:      #{rgba(color("blue-grey-600"), .1)};
+  --state-color-active:     #{rgba(color("blue-grey-600"), .2)};
+  --state-color-hover-img:  #{rgba(color("blue-grey-900"), .15)};
+  --state-color-active-img: #{rgba(color("blue-grey-900"), .3)};
+}
+
+@mixin dark-state-color-vars {
+  --state-color-hover:      #{rgba(color("blue-grey-100"), .08)};
+  --state-color-active:     #{rgba(color("blue-grey-100"), .16)};
+  --state-color-hover-img:  #{rgba(color("blue-grey-100"), .12)};
+  --state-color-active-img: #{rgba(color("blue-grey-100"), .24)};
+}

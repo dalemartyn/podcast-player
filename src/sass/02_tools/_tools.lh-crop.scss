@@ -1,0 +1,25 @@
+/**
+ * Crop off the extra line-height from text.
+ *
+ * via https: //medium.com/codyhouse/line-height-crop-a-simple-css-formula-to-remove-top-space-from-your-text-9c3de06d7c6f
+ */
+@mixin lh-crop($line-height, $capital-letter: 1) {
+  display: flow-root;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((#{$capital-letter} - #{$line-height}) * .5em);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    margin-bottom: calc((#{$capital-letter} - #{$line-height}) * .5em);
+  }
+
+}

@@ -1,0 +1,15 @@
+/**
+ * Get a responsive size.
+ *
+ * Size is e.g. 'tiny', 'small', 'large', 'xlarge'.
+ */
+@function sp($size: null) {
+
+  @if $size {
+    @return var(--spacing-unit-#{$size});
+  }
+  @else {
+    @return var(--spacing-unit);
+  }
+
+}

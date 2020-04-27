@@ -1,0 +1,9 @@
+// https://fvsch.com/styling-buttons/
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}

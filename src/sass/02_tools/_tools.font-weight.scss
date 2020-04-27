@@ -1,0 +1,6 @@
+/**
+ * Get a font-weight.
+ */
+@function fw($weight) {
+  @return var(--font-weight-#{$weight});
+}

@@ -1,0 +1,38 @@
+/**
+ * Helper mixin to add theme transition styles.
+ */
+@mixin theme-transition($properties) {
+  $current_selector: &;
+
+  $val: ();
+
+  @for $i from 1 through length($properties) {
+    $p: nth($properties, $i);
+    $val: append($val, $p);
+    $val: append($val, $theme-transition);
+
+    @if $i !=length($properties) {
+      $val: append($val, unquote($string: ","));
+    }
+  }
+
+  @at-root {
+
+    @if is-superselector($current_selector, ":root") {
+
+      #{$current_selector}:not(.is-heavy).is-transitioning {
+        transition: $val;
+      }
+    }
+    @else {
+
+      :root:not(.is-heavy).is-transitioning {
+
+        #{$current_selector} {
+          transition: $val;
+        }
+      }
+    }
+  }
+
+}

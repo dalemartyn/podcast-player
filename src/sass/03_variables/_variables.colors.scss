@@ -1,0 +1,70 @@
+@mixin light-color-vars {
+  --color-background:          #{rgb-triplet("white")};
+  // --color-background:          #{rgb-triplet("white", $darken: 2%)};
+  --color-background-code:     #{rgb-triplet("white", $darken: 6%)};
+  --color-surface:             #{rgb-triplet("white")};
+  --color-text:                #{rgb-triplet("blue-grey-900")};
+  --color-text-2:              #{rgb-triplet("blue-grey-500")};
+  --color-text-3:              #{rgb-triplet("blue-grey-400")};
+  --color-quote-border:        #{rgb-triplet("blue-grey-400")};
+  --color-border:              #{rgb-triplet("blue-grey-50")};
+  --color-selection:           #{rgb-triplet("green-500")};
+  --color-selection-inactive:  #{rgb-triplet("blue-grey-300")};
+  --color-link:                #{rgb-triplet("green-500")};
+  --color-twitter-profile:     #{rgb-triplet("blue-grey-600")};
+
+  --color-code-red:            #{rgb-material("red", "500")};
+  --color-code-pink:           #{rgb-material("pink", "800")};
+  --color-code-purple:         #{rgb-material("purple", "400")};
+  --color-code-deep-purple:    #{rgb-material("deep-purple", "600")};
+  --color-code-indigo:         #{rgb-material("indigo", "800")};
+  --color-code-blue:           #{rgb-material("blue", "800")};
+  --color-code-light-blue:     #{rgb-material("light-blue", "800")};
+  --color-code-cyan:           #{rgb-material("cyan", "600")};
+  --color-code-teal:           #{rgb-material("teal", "800")};
+  --color-code-green:          #{rgb-material("green", "800")};
+  --color-code-light-green:    #{rgb-material("light-green", "800")};
+  --color-code-lime:           #{rgb-material("lime", "800")};
+  --color-code-yellow:         #{rgb-material("yellow", "800")};
+  --color-code-amber:          #{rgb-material("amber", "800")};
+  --color-code-orange:         #{rgb-material("orange", "700")};
+  --color-code-deep-orange:    #{rgb-material("deep-orange", "500")};
+  --color-code-brown:          #{rgb-material("brown", "800")};
+  --color-code-blue-grey:      #{rgb-material("blue-grey", "500")};
+  --color-code-dark-blue-grey: #{rgb-material("blue-grey", "700")};
+}
+
+@mixin dark-color-vars {
+  --color-background:          #{rgb-triplet("blue-grey-950")};
+  --color-background-code:     #{rgb-triplet("blue-grey-900")};
+  --color-surface:             #{rgb-triplet("blue-grey-900")};
+  --color-text:                #{rgb-triplet("white")};
+  --color-text-2:              #{rgb-triplet("blue-grey-200")};
+  --color-text-3:              #{rgb-triplet("blue-grey-300")};
+  --color-quote-border:        #{rgb-triplet("blue-grey-300")};
+  --color-border:              #{rgb-triplet("blue-grey-850")};
+  --color-selection:           #{rgb-triplet("green-300")};
+  --color-selection-inactive:  #{rgb-triplet("blue-grey-300")};
+  --color-link:                #{rgb-triplet("green-300")};
+  --color-twitter-profile:     #{rgb-triplet("blue-grey-700")};
+
+  --color-code-red:            #{rgb-material("red", "200")};
+  --color-code-pink:           #{rgb-material("pink", "200")};
+  --color-code-purple:         #{rgb-material("purple", "200")};
+  --color-code-deep-purple:    #{rgb-material("deep-purple", "200")};
+  --color-code-indigo:         #{rgb-material("indigo", "200")};
+  --color-code-blue:           #{rgb-material("blue", "200")};
+  --color-code-light-blue:     #{rgb-material("light-blue", "200")};
+  --color-code-cyan:           #{rgb-material("cyan", "200")};
+  --color-code-teal:           #{rgb-material("teal", "200")};
+  --color-code-green:          #{rgb-material("green", "200")};
+  --color-code-light-green:    #{rgb-material("light-green", "200")};
+  --color-code-lime:           #{rgb-material("lime", "200")};
+  --color-code-yellow:         #{rgb-material("yellow", "200")};
+  --color-code-amber:          #{rgb-material("amber", "200")};
+  --color-code-orange:         #{rgb-material("orange", "200")};
+  --color-code-deep-orange:    #{rgb-material("deep-orange", "200")};
+  --color-code-brown:          #{rgb-material("brown", "200")};
+  --color-code-blue-grey:      #{rgb-material("blue-grey", "200")};
+  --color-code-dark-blue-grey: #{rgb-material("blue-grey", "50")};
+}

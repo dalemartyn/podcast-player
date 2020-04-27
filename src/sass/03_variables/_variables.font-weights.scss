@@ -1,0 +1,6 @@
+@mixin font-weight-vars {
+
+  @each $weight, $value in $font-weights {
+    --font-weight-#{$weight}: #{$value};
+  }
+}

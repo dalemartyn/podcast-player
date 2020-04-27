@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: fw(bold);
+  margin-bottom: sp();
+}
+
+h1 {
+  @include ms-respond(font-size, 3);
+  line-height: 1.1;
+  letter-spacing: -.005em;
+}
+
+h2 {
+  @include ms-respond(font-size, 2);
+  line-height: 1.2;
+  margin-top: sp(xxlarge);
+  margin-bottom: sp(small);
+}
+
+h3 {
+  @include ms-respond(font-size, 1.5);
+  line-height: 1.35;
+  margin-top: sp(xlarge);
+  margin-bottom: sp(small);
+}

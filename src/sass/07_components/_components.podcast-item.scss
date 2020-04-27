@@ -1,0 +1,41 @@
+/* ==========================================================================
+   #PODCAST-ITEM
+   ========================================================================== */
+
+
+.c-podcast-item {
+  display: flex;
+  border-top: 1px solid sem-color(border);
+}
+
+.c-podcast-item__button button {
+  @include button-reset;
+  @include ms-respond(font-size, .75);
+  font-weight: fw(semibold);
+  line-height: 1.25;
+  border: sp(xxmicro) solid sem-color("text");
+  padding: sp(small);
+}
+
+
+  .c-podcast-item__description {
+    p {
+      @include ms-respond(font-size, .75);
+      line-height: var(--body-2-line-height);
+      --body-2-line-height: 1.4em;
+
+      @include mq($from: 20em, $until: 60em) {
+        --body-2-line-height: #{ms-fluid(1.4em, 1.45em, 20em, 60em)};
+      }
+
+      @include mq($from: 60em) {
+        --body-2-line-height: 1.45em;
+      }
+
+      margin-bottom: sp(small);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }

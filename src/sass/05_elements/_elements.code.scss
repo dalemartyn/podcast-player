@@ -1,0 +1,40 @@
+/* ==========================================================================
+   #CODE
+   ========================================================================== */
+
+pre,
+code {
+  font-family: IBM Plex Mono, Menlo, Roboto Mono, monospace, sans-serif;
+  font-weight: fw(regular);
+  @include ms-respond(font-size, .5);
+  background-color: sem-color(background-code);
+  color: sem-color(text);
+  @include theme-transition(color background-color);
+  border-radius: var(--rounded-radius);
+
+  span {
+    color: sem-color(code-dark-blue-grey);
+    @include theme-transition(color);
+  }
+}
+
+p > code {
+  word-break: break-word;
+  padding: .125em .3em;
+}
+
+pre {
+  line-height: 1.5;
+  padding: sp();
+  overflow-x: auto;
+
+  @include mq($from: sm) {
+    padding: sp(large);
+  }
+
+  > code {
+    border: 0;
+    display: inline-block;
+    padding: 0;
+  }
+}

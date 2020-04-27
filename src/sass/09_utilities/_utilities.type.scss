@@ -1,0 +1,103 @@
+/* ==========================================================================
+   #TYPE-STYLES
+   ========================================================================== */
+
+.ts-page-title {
+  @include ms-respond(font-size, 4);
+  line-height: 1.05;
+  text-align: center;
+  letter-spacing: -.005em;
+  font-weight: fw(bold);
+  @include lh-crop(1.05, .785);
+}
+
+
+.ts-page-intro {
+  @include ms-respond(font-size, 1.5);
+  line-height: 1.35;
+  font-weight: fw(text);
+}
+
+.ts-post-tagline {
+  @include ms-respond(font-size, 1.5);
+  line-height: 1.35;
+  font-weight: fw(text);
+}
+
+/* Style for site title and card titles */
+.ts-title {
+  @include ms-respond(font-size, 1.75);
+  line-height: 1.2;
+  font-weight: fw(bold);
+  @include lh-crop(1.2, .785);
+}
+
+.ts-meta {
+  @include ms-respond(font-size, .25);
+  color: sem-color(text-2);
+  @include theme-transition(color);
+}
+
+.ts-label {
+  @include ms-respond(font-size, .5);
+  font-weight: fw(regular);
+  line-height: 1.25;
+}
+
+.ts-display-1 {
+  @include ms-respond(font-size, 3.5);
+  letter-spacing: -.005em;
+  line-height: 1.1;
+}
+
+.ts-display-2 {
+  @include ms-respond(font-size, 2.75);
+  line-height: 1.2;
+  letter-spacing: -.005em;
+}
+
+.ts-display-3 {
+  @include ms-respond(font-size, 2.25);
+}
+
+.ts-display-4 {
+  @include ms-respond(font-size, 1.75);
+}
+
+.ts-body-2 {
+  @include ms-respond(font-size, .75);
+  line-height: var(--body-2-line-height);
+  --body-2-line-height: 1.4em;
+
+  @include mq($from: 20em, $until: 60em) {
+    --body-2-line-height: #{ms-fluid(1.4em, 1.45em, 20em, 60em)};
+  }
+
+  @include mq($from: 60em) {
+    --body-2-line-height: 1.45em;
+  }
+}
+
+.u-nobr {
+  white-space: nowrap;
+}
+
+.u-bold {
+  font-weight: fw(bold);
+}
+
+.u-semibold {
+  font-weight: fw(semibold);
+}
+
+.u-text {
+  font-weight: fw(text);
+}
+
+.u-regular {
+  font-weight: fw(regular);
+}
+
+.u-text-center {
+  text-align: center;
+}

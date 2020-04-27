@@ -1,0 +1,48 @@
+/**
+ * Helper mixin to add focus visible styles using the focus-visible polyfill.
+ *
+ * Note:
+ *  Libsass has an issue with `selector-unity` if relationship
+ *  selectors are used. e.g. `.c-site-menu__item > a`.
+ *  So only use on direct selectors.
+ */
+@mixin focus-style {
+  $current_selector: &;
+
+  @at-root {
+
+    .js-focus-visible {
+
+      #{selector-unify($current_selector, ".focus-visible")} {
+        @content;
+      }
+    }
+  }
+
+}
+
+@mixin focused-link-styles {
+  outline: none;
+  box-shadow: 0 0 0 3px sem-color(link);
+  border-radius: 1px;
+  background-color: sem-color(link, .375);
+  color: sem-color(text) !important;
+  text-decoration: none !important;
+}
+
+@mixin focused-link {
+  @include focus-style {
+    @include focused-link-styles;
+  }
+}
+
+@mixin focused-link-with-nested-content {
+  @include focus-style {
+    @include focused-link-styles;
+
+    > * {
+      color: sem-color(text) !important;
+      text-decoration: none !important;
+    }
+  }
+}

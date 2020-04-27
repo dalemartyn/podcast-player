@@ -1,0 +1,42 @@
+$spacing-directions: (
+  null:          null,
+  "-top":        "-top",
+  "-right":      "-right",
+  "-bottom":     "-bottom",
+  "-left":       "-left",
+  "-vertical":   "-top" "-bottom",
+);
+
+$spacing-properties: (
+  "padding":     "padding",
+  "margin":      "margin",
+);
+
+/**
+ * Exponents used in spacing system. e.g. 1.5^x
+ */
+$spacing-unit-sizes: (
+  xmicro:         0,
+  micro:          1,
+  tiny:           2,
+  small:          3,
+  null:           4,
+  large:          5,
+  xlarge:         6,
+  xxlarge:        7,
+  xxxlarge:       8,
+  xxxxlarge:      9,
+);
+
+
+// ratio not being used here at present.
+$spacing_scale: (
+  20rem: (
+    base: rem(4px),
+    ratio: 1.4142136
+  ),
+  60rem: (
+    base: rem(4px),
+    ratio: 1.5
+  ),
+);

@@ -1,0 +1,18 @@
+/* ==========================================================================
+   #PLAYER
+   ========================================================================== */
+
+
+.c-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: sem-color("surface", .98);
+  box-shadow: var(--shadow-2);
+}
+
+  .c-player__audio {
+    width: 100%;
+    display: block;
+  }

@@ -1,0 +1,16 @@
+/* ==========================================================================
+   #QUOTES
+   ========================================================================== */
+
+q {
+  @include ms-respond(font-size, 2.5);
+  font-variation-settings: "wdth" 90;
+  line-height: 1.2;
+  font-style: italic;
+  color: sem-color(text-3);
+  @include theme-transition(color);
+  display: block;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  margin: sp(xlarge) 0;
+}

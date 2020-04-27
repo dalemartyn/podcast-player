@@ -1,0 +1,39 @@
+/* ==========================================================================
+   #FONTS
+   ========================================================================== */
+
+@font-face {
+  font-family: IBM Plex Sans;
+  src: url("/fonts/plex-sans/plex-roman-subset-xs.woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: normal;
+  unicode-range: U+0000-00A4, U+0020, U+00A0, U+2013-201E, U+2022;
+}
+
+@font-face {
+  font-family: IBM Plex Sans;
+  src: url("/fonts/plex-sans/plex-italic-subset-xs.woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: italic;
+  unicode-range: U+0000-00A4, U+0020, U+00A0, U+2013-201E, U+2022;
+}
+
+@font-face {
+  font-family: IBM Plex Mono;
+  font-style: normal;
+  font-weight: 450;
+  src:
+    local("IBM Plex Mono Text"),
+    url("/fonts/plex-mono/plex-mono-text-subset.woff2") format("woff2");
+  unicode-range: U+0000-00A4, U+0020, U+00A0, U+2013-201E;
+}
+
+@font-face {
+  font-family: IBM Plex Mono;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local("IBM Plex Mono Medium"),
+    url("/fonts/plex-mono/plex-mono-medium-subset.woff2") format("woff2");
+  unicode-range: U+0000-00A4, U+0020, U+00A0, U+2013-201E;
+}

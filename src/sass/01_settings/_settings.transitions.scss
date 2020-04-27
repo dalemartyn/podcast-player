@@ -1,0 +1,12 @@
+/**
+ * Material design easing curves
+ * https://material.io/design/motion/speed.html#easing
+ */
+
+$standard-easing: cubic-bezier(.4, 0, .2, 1);
+$decelerate-easing: cubic-bezier(0, 0, .2, 1);
+$accelerate-easing: cubic-bezier(.4, 0, 1, 1);
+$sharp-easing: cubic-bezier(.4, 0, .6, 1); // same as ease-in-out;
+
+$theme-transition: .3s $decelerate-easing;
+$hover-transition: .2s $standard-easing;

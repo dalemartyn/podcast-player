@@ -1,0 +1,37 @@
+/* ==========================================================================
+   #SHARED
+   ========================================================================== */
+
+/**
+ * Shared declarations for certain elements.
+ */
+
+/**
+ * Always declare margins in the same direction:
+ * csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+
+address,
+blockquote, p, pre,
+dl, ol, ul,
+figure,
+table,
+fieldset {
+  margin-bottom: sp(large);
+}
+
+
+
+/**
+ * Consistent indentation for lists.
+ */
+
+dd, ol, ul {
+  margin-left: sp();
+}
+
+button,
+audio {
+  outline: none;
+  @include focused-link;
+}
