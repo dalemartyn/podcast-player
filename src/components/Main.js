@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Feed from './Feed';
 import Home from './Home';
-import {
-  useAppState,
-  useAppDispatch
-} from '../AppStateProvider';
+import { useAppState, useAppDispatch } from '../AppStateProvider';
 import useHistory from '../hooks/useHistory';
 
 export default function Main() {
@@ -12,10 +9,12 @@ export default function Main() {
   const dispatch = useAppDispatch();
   let main;
 
-  if (route.path === 'feed') {
+  if (route.path === '/') {
+    main = <Home dispatch={dispatch} />;
+  } else if (route.path === '/feed') {
     main = <Feed feed={feed} route={route} player={player} dispatch={dispatch} />;
   } else {
-    main = <Home dispatch={dispatch} />;
+    main = <NotFound route={route} />;
   }
 
   useHistory(route);
@@ -33,4 +32,13 @@ function MainLayout({ children }) {
       {children}
     </div>
   );
+}
+
+function NotFound({ route }) {
+  return (
+    <>
+      <h1 className="ts-page-title u-margin-bottom-xxlarge">404</h1>
+      <p>The <code>{route.path}</code> route couldn’t be found.</p>
+    </>
+  )
 }

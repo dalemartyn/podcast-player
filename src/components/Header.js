@@ -9,7 +9,7 @@ export default function Header() {
     e.preventDefault();
 
     setRoute({
-      path: ''
+      path: '/'
     })
   }
 

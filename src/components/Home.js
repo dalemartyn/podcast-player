@@ -7,7 +7,7 @@ export default function Home() {
 
   function showPodcastFeed(url) {
     setRoute({
-      path: 'feed',
+      path: '/feed',
       feed: url
     });
   }

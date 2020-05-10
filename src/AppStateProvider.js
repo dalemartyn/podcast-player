@@ -17,6 +17,19 @@ export function useAppHistory() {
   return useContext(AppHistoryContext);
 }
 
+function initialRoute() {
+  const path = window.location.pathname;
+  return {
+    path: path
+  };
+}
+
+const initialState = {
+  feed: [],
+  player: {},
+  route: initialRoute()
+}
+
 function appReducer(state, action) {
   switch (action.type) {
     case "PLAY_PODCAST": {
@@ -46,19 +59,11 @@ function appReducer(state, action) {
     case "SET_ROUTE": {
       return {
         ...state,
-        route: action.data || { path: 'home' }
+        route: action.data || initialRoute()
       }
     }
     default:
       return state;
-  }
-}
-
-const initialState = {
-  feed: [],
-  player: {},
-  route: {
-    path: 'home'
   }
 }
 
