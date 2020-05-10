@@ -5,6 +5,7 @@ import {
   useAppState,
   useAppDispatch
 } from '../AppStateProvider';
+import useHistory from '../hooks/useHistory';
 
 export default function Main() {
   const { feed, player, route } = useAppState();
@@ -17,9 +18,7 @@ export default function Main() {
     main = <Home dispatch={dispatch} />;
   }
 
-  useEffect(function scrollToTop() {
-    document.documentElement.scrollTo(0, 0);
-  }, [route.path]);
+  useHistory(route);
 
   return (
     <MainLayout>

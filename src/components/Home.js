@@ -1,15 +1,14 @@
 import React from 'react';
 import podcasts from '../podcasts.json';
+import useRouter from '../hooks/useRouter';
 
 export default function Home({ dispatch }) {
+  const setRoute = useRouter();
 
   function showPodcastFeed(url) {
-    dispatch({
-      type: 'SET_ROUTE',
-      data: {
-        path: 'feed',
-        feed: url
-      }
+    setRoute({
+      path: 'feed',
+      feed: url
     });
   }
 

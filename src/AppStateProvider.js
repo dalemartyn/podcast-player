@@ -1,7 +1,9 @@
 import React, { createContext, useContext } from 'react';
+import { createBrowserHistory } from 'history';
 
 export const AppStateContext = createContext(null);
 export const AppDispatchContext = createContext(null);
+export const AppHistoryContext = createContext(null);
 
 export function useAppState() {
   return useContext(AppStateContext);
@@ -9,6 +11,10 @@ export function useAppState() {
 
 export function useAppDispatch() {
   return useContext(AppDispatchContext);
+}
+
+export function useAppHistory() {
+  return useContext(AppHistoryContext);
 }
 
 function appReducer(state, action) {
@@ -40,7 +46,7 @@ function appReducer(state, action) {
     case "SET_ROUTE": {
       return {
         ...state,
-        route: action.data
+        route: action.data || { path: 'home' }
       }
     }
     default:
@@ -58,11 +64,14 @@ const initialState = {
 
 export default function AppStateProvider({children}) {
   const [state, dispatch] = React.useReducer(appReducer, initialState);
+  const history = createBrowserHistory();
 
   return (
     <AppStateContext.Provider value={state}>
       <AppDispatchContext.Provider value={dispatch}>
-        {children}
+        <AppHistoryContext.Provider value={history}>
+          {children}
+        </AppHistoryContext.Provider>
       </AppDispatchContext.Provider>
     </AppStateContext.Provider>
   );

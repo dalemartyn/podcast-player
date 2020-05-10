@@ -1,19 +1,16 @@
 import React from 'react';
 import useKeydown from '../hooks/useKeydown';
-import { useAppDispatch } from '../AppStateProvider';
+import useRouter from '../hooks/useRouter';
 
 export default function Header() {
-  const dispatch = useAppDispatch();
+  const setRoute = useRouter();
 
   function goHome(e) {
     e.preventDefault();
 
-    dispatch({
-      type: 'SET_ROUTE',
-      data: {
-        path: 'home',
-      }
-    });
+    setRoute({
+      path: ''
+    })
   }
 
   return (
