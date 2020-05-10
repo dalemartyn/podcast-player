@@ -2,7 +2,7 @@ import React from 'react';
 import podcasts from '../podcasts.json';
 import useRouter from '../hooks/useRouter';
 
-export default function Home({ dispatch }) {
+export default function Home() {
   const setRoute = useRouter();
 
   function showPodcastFeed(url) {
@@ -13,23 +13,31 @@ export default function Home({ dispatch }) {
   }
 
   const podcastGridItems = podcasts.map(function(podcast) {
-    return <PodcastGridItem podcast={podcast} onPodcastClick={showPodcastFeed} key={podcast.url} />
+    return <PodcastGridItem podcast={podcast} showPodcastFeed={showPodcastFeed} key={podcast.url} />
   });
 
+  return (
+    <HomeLayout>
+      {podcastGridItems}
+    </HomeLayout>
+  );
+}
+
+function HomeLayout({ children }) {
   return (
     <>
       <h1 className="ts-page-title u-margin-bottom-xxlarge">Podcasts</h1>
       <ul className="c-podcast-grid">
-        { podcastGridItems }
+        {children}
       </ul>
     </>
   );
 }
 
-function PodcastGridItem({ podcast, onPodcastClick }) {
+function PodcastGridItem({ podcast, showPodcastFeed }) {
   function handleClick(e) {
     e.preventDefault();
-    onPodcastClick(podcast.url);
+    showPodcastFeed(podcast.url);
   }
 
   return (
