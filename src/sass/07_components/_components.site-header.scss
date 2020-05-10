@@ -1,0 +1,100 @@
+/* ==========================================================================
+   #SITE-HEADER
+   ========================================================================== */
+
+.c-site-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: sticky;
+  z-index: 3;
+  background-color: sem-color(surface, .98);
+  @include theme-transition(background-color box-shadow);
+  box-shadow: var(--shadow-2);
+}
+
+.c-site-header__main {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-template-areas:
+    "logo darkmode"
+    "menu menu";
+
+  @include mq($until: lg) {
+    padding-top: sp(xmicro);
+    padding-bottom: sp(xmicro);
+  }
+
+  @include mq($from: lg) {
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas:
+      "logo menu darkmode";
+  }
+}
+
+  .c-site-header__logo {
+    grid-area: logo;
+    justify-self: start;
+    padding-top: sp();
+    padding-bottom: sp();
+
+    @include mq($from: lg) {
+      margin-top: sp(xmicro);
+      margin-bottom: sp(xmicro);
+    }
+  }
+
+  .c-site-header__darkmode {
+    grid-area: darkmode;
+    width: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media print {
+      display: none;
+    }
+  }
+
+    .c-site-header__logo-link {
+      color: sem-color(text);
+      @include theme-transition(color);
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      padding: sp(small) sp(tiny);
+      margin: calc(#{sp(small)} * -1) calc(#{sp(tiny)} * -1);
+      transition:
+        background-color $hover-transition,
+        box-shadow $hover-transition;
+      @include theme-transition(color background-color);
+      border-radius: sp(xmicro);
+
+      &:hover {
+        background-color: var(--state-color-hover);
+        color: sem-color(text);
+        text-decoration: none;
+      }
+
+      &:active {
+        background-color: var(--state-color-active);
+      }
+
+      @include focus-style {
+        outline: none;
+        box-shadow: 0 0 0 3px sem-color(link) inset;
+        background-color: sem-color(link, .375);
+      }
+    }
+
+  .c-site-header__menu {
+    grid-area: menu;
+
+    @include mq($from: lg) {
+      justify-self: center;
+      padding-left: sp();
+      padding-right: sp();
+    }
+  }

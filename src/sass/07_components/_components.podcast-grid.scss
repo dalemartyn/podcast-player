@@ -1,0 +1,65 @@
+/* ==========================================================================
+   #PODCAST-GRID
+   ========================================================================== */
+
+.c-podcast-grid {
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: sp(large);
+
+  @include mq($from: sm) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include mq($from: md) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+  .c-podcast-grid__item {
+    margin: 0;
+  }
+
+    .c-podcast-grid__link {
+      display: block;
+      background-color: sem-color(background-code);
+      overflow: hidden;
+      border-radius: sp(xxmicro);
+
+      &::after {
+        transition: background-color $hover-transition;
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover,
+      &:focus {
+
+        &::after {
+          background-color: var(--state-color-hover-img);
+        }
+      }
+
+      &:active::after {
+        background-color: var(--state-color-active-img);
+      }
+
+      @include focus-style {
+        outline: none;
+        box-shadow: 0 0 0 sp(xmicro) sem-color(link);
+        background-color: sem-color(link, .2);
+      }
+    }
+
+      .c-podcast-grid__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }

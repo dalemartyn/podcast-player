@@ -1,0 +1,47 @@
+[
+  {
+    "title": "React Podcast",
+    "image": "https://media.simplecast.com/podcast/image/6265/1550288890-artwork.jpg",
+    "url": "https://rss.simplecast.com/podcasts/6265/rss"
+  },
+  {
+    "title": "JavaScript Air",
+    "image": "https://pbcdn1.podbean.com/imglogo/image-logo/862611/2048.png",
+    "url": "https://feed.podbean.com/audio.javascriptair.com/feed.xml"
+  },
+  {
+    "title": "HTTP 203",
+    "image": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png",
+    "url": "http://http203.googledevelopers.libsynpro.com/rss"
+  },
+  {
+    "title": "JavaScript Jabber",
+    "image": "https://s3.amazonaws.com/devchat.tv/javascript_jabber_thumb.jpg",
+    "url": "https://feeds.feedwrench.com/js-jabber.rss"
+  },
+  {
+    "title": "The Vanilla JS Podcast",
+    "image": "https://vanillajspodcast.com/img/vanilla-js-podcast.jpg",
+    "url": "https://gomakethings.com/podcast/feed.rss"
+  },
+  {
+    "title": "The Changelog: Software Dev & Open Source",
+    "image": "https://cdn.changelog.com/uploads/covers/the-changelog-original.png?v=63725770322",
+    "url": "https://changelog.com/podcast/feed"
+  },
+  {
+    "title": "Exponent",
+    "image": "https://exponent.fm/wp-content/uploads/powerpress/Exponent-3-wp.png",
+    "url": "http://exponent.fm/feed/"
+  },
+  {
+    "title": "Freakonomics Radio",
+    "image": "https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/14a43378-edb2-49be-8511-ab0d000a7030/d1b9612f-bb1b-4b85-9c0c-ab0d004ab37a/image.jpg?t=1574397273&size=Large",
+    "url": "https://rss.art19.com/freakonomics-radio"
+  },
+  {
+    "title": "Maintainers Anonymous",
+    "image": "https://images.transistor.fm/file/transistor/images/show/1719/full_1554926632-artwork.jpg",
+    "url": "https://feeds.transistor.fm/maintainers-anonymous"
+  }
+]
