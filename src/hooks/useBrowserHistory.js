@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useAppHistory, useAppDispatch } from '../AppStateProvider';
 
 
-export default function useHistory(route) {
+export default function useBrowserHistory(route) {
   const history = useAppHistory();
 
   useScrollOnRouteChange(route);

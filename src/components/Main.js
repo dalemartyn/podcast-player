@@ -2,11 +2,13 @@ import React from 'react';
 import Feed from './Feed';
 import Home from './Home';
 import { useAppState, useAppDispatch } from '../AppStateProvider';
-import useHistory from '../hooks/useHistory';
+import useBrowserHistory from '../hooks/useBrowserHistory';
 
 export default function Main() {
   const { feed, player, route } = useAppState();
   const dispatch = useAppDispatch();
+  useBrowserHistory(route);
+
   let main;
 
   if (route.path === '/') {
@@ -16,8 +18,6 @@ export default function Main() {
   } else {
     main = <NotFound route={route} />;
   }
-
-  useHistory(route);
 
   return (
     <MainLayout>
