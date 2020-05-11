@@ -1,9 +1,7 @@
 import React, { createContext, useContext } from 'react';
-import { createBrowserHistory } from 'history';
 
 export const AppStateContext = createContext(null);
 export const AppDispatchContext = createContext(null);
-export const AppHistoryContext = createContext(null);
 
 export function useAppState() {
   return useContext(AppStateContext);
@@ -13,21 +11,9 @@ export function useAppDispatch() {
   return useContext(AppDispatchContext);
 }
 
-export function useAppHistory() {
-  return useContext(AppHistoryContext);
-}
-
-function initialRoute() {
-  const path = window.location.pathname;
-  return {
-    path: path
-  };
-}
-
 const initialState = {
   feed: {},
   player: {},
-  route: initialRoute()
 }
 
 function appReducer(state, action) {
@@ -56,12 +42,6 @@ function appReducer(state, action) {
         feed: action.data
       }
     }
-    case "SET_ROUTE": {
-      return {
-        ...state,
-        route: action.data || initialRoute()
-      }
-    }
     default:
       return state;
   }
@@ -69,14 +49,11 @@ function appReducer(state, action) {
 
 export default function AppStateProvider({children}) {
   const [state, dispatch] = React.useReducer(appReducer, initialState);
-  const history = createBrowserHistory();
 
   return (
     <AppStateContext.Provider value={state}>
       <AppDispatchContext.Provider value={dispatch}>
-        <AppHistoryContext.Provider value={history}>
-          {children}
-        </AppHistoryContext.Provider>
+        {children}
       </AppDispatchContext.Provider>
     </AppStateContext.Provider>
   );

@@ -1,24 +1,15 @@
 import React from 'react';
 import useKeydown from '../hooks/useKeydown';
-import useRouter from '../hooks/useRouter';
+import { Link } from 'react-router-dom'
 
 export default function Header() {
-  const setRoute = useRouter();
-
-  function goHome(e) {
-    e.preventDefault();
-
-    setRoute({
-      path: '/'
-    })
-  }
 
   return (
     <div className="c-site-header">
       <div className="o-wrapper-l">
         <div className="c-site-header__main">
           <div className="c-site-header__logo">
-            <a className="c-site-header__logo-link ts-title" href="/" onClick={goHome}>Podcasts</a>
+            <Link className="c-site-header__logo-link ts-title" to="/">Podcasts</Link>
           </div>
 
           <div className="c-site-header__darkmode">

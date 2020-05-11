@@ -1,9 +1,19 @@
 import React from 'react';
 import usePodcastFeed from '../hooks/usePodcastFeed';
+import { useLocation } from 'react-router-dom';
+import {
+  useAppState,
+  useAppDispatch
+} from '../AppStateProvider';
 
-export default function Feed({ feed, route, player, dispatch }) {
+export default function Feed() {
+  const location = useLocation();
+  const { feed, player } = useAppState();
+  const dispatch = useAppDispatch();
+  const params = new URLSearchParams(location.search);
+  const podcastUrl = params.get('rss');
 
-  usePodcastFeed( route.feed );
+  usePodcastFeed( podcastUrl );
 
   function playPodcast(podcastUrl) {
     dispatch({

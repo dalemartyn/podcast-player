@@ -1,15 +1,33 @@
 import React from 'react';
-import Main from './components/Main';
+import AppStateProvider from './AppStateProvider';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
 import Playbar from './components/Playbar';
 import Header from './components/Header';
-import AppStateProvider from './AppStateProvider';
+import Feed from './components/Feed';
+import Home from './components/Home';
+import NotFound from './components/NotFound';
+import MainLayout from './components/MainLayout';
 
 function PodcastApp() {
   return (
     <AppStateProvider>
-      <Header />
-      <Main />
-      <Playbar />
+      <BrowserRouter>
+        <Header />
+        <MainLayout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/podcast"
+              element={<Feed />}
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </MainLayout>
+        <Playbar />
+      </BrowserRouter>
     </AppStateProvider>
   );
 }
