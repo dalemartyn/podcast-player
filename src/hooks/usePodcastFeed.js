@@ -21,7 +21,9 @@ export default function usePodcastFeed(url) {
   useEffect(() => {
     dispatch({
       type: 'SET_FEED',
-      data: {}
+      data: {
+        state: 'loading'
+      }
     });
 
     async function fetchData() {
@@ -29,10 +31,19 @@ export default function usePodcastFeed(url) {
         const data = await getPodcastData(url);
         dispatch({
           type: 'SET_FEED',
-          data: data
+          data: {
+            state: 'ready',
+            data
+          }
         });
       } catch (e) {
-        console.log(e);
+        dispatch({
+          type: 'SET_FEED',
+          data: {
+            state: 'failed',
+            error: e.toString()
+          }
+        });
       }
     }
     fetchData();

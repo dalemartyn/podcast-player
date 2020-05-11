@@ -25,7 +25,7 @@ function initialRoute() {
 }
 
 const initialState = {
-  feed: [],
+  feed: {},
   player: {},
   route: initialRoute()
 }

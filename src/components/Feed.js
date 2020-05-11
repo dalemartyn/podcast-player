@@ -5,8 +5,6 @@ export default function Feed({ feed, route, player, dispatch }) {
 
   usePodcastFeed( route.feed );
 
-  const items = feed.items;
-
   function playPodcast(podcastUrl) {
     dispatch({
       type: 'PLAY_PODCAST',
@@ -23,7 +21,10 @@ export default function Feed({ feed, route, player, dispatch }) {
   }
 
   function feedContent() {
-    if ( items && items.length ) {
+    if ( feed.state === 'loading' ) {
+      return <p>Loading...</p>;
+    } else if (feed.state === 'ready') {
+      const items = feed.data.items;
       return items.map((item) => <Item
         item={item}
         key={item.guid}
@@ -31,14 +32,21 @@ export default function Feed({ feed, route, player, dispatch }) {
         onPlayButtonClick={() => playPodcast(item.enclosure.url) }
         onPauseButtonClick={() => pausePodcast(item.enclosure.url) } />
       );
-    } else {
-      return <p>Loading...</p>;
+    } else if (feed.state === 'failed' && feed.error) {
+      return <><p>Couldn’t load feed.</p><pre>{feed.error}</pre></>;
     }
+  }
+
+  function feedTitle() {
+    if (feed.data) {
+      return feed.data.title;
+    }
+    return 'Feed';
   }
 
   return (
     <>
-      <h1 className="ts-post-title u-margin-bottom-xxlarge">{ feed.title }</h1>
+      <h1 className="ts-post-title u-margin-bottom-xxlarge">{ feedTitle() }</h1>
       { feedContent() }
     </>
   );
