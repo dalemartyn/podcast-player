@@ -37,7 +37,6 @@
     ]
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
     "mathsass": "^0.11.0",
     "modularscale-sass": "^3.0.10",
     "netlify-cli": "^2.50.0",

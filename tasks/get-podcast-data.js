@@ -40,8 +40,8 @@ async function getPodcastData(url) {
   return {
     url: url
   };
-
 }
+
 Promise.all(podcasts.map(getPodcastData))
   .then((data) => {
     writeFile('./src/podcasts.json', JSON.stringify(data, null, 2));

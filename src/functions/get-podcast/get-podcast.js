@@ -1,4 +1,3 @@
-require('dotenv').config();
 const Parser = require('rss-parser');
 const parser = new Parser({
   headers: {
