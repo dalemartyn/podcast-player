@@ -1,0 +1,41 @@
+/* ==========================================================================
+   #SPINNER
+   ========================================================================== */
+
+.c-spinner {
+  display: flex;
+  justify-content: center;
+}
+
+.c-spinner__inner {
+  animation-timing-function: linear;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-duration: 0.75s;
+
+  > svg {
+    display: block;
+  }
+}
+
+.c-spinner__track {
+  stroke: sem-color("text");
+  opacity: 0.2;
+}
+
+.c-spinner__progress {
+  stroke: sem-color("text");
+  stroke-dasharray: 80;
+  stroke-dashoffset: 60;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

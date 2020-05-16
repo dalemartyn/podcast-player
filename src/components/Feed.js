@@ -5,6 +5,7 @@ import {
   useAppState,
   useAppDispatch
 } from '../AppStateProvider';
+import Spinner from './Spinner';
 
 export default function Feed() {
   const location = useLocation();
@@ -32,7 +33,7 @@ export default function Feed() {
 
   function feedContent() {
     if ( feed.state === 'loading' ) {
-      return <p>Loading...</p>;
+      return <Spinner />;
     } else if (feed.state === 'ready') {
       const items = feed.data.items;
       return items.map((item) => <Item
@@ -49,14 +50,13 @@ export default function Feed() {
 
   function feedTitle() {
     if (feed.data) {
-      return feed.data.title;
+      return <h1 className="ts-post-title u-margin-bottom-xxlarge">{ feed.data.title }</h1>;
     }
-    return 'Feed';
   }
 
   return (
     <>
-      <h1 className="ts-post-title u-margin-bottom-xxlarge">{ feedTitle() }</h1>
+      { feedTitle() }
       { feedContent() }
     </>
   );
