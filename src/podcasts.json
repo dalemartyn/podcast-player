@@ -30,18 +30,23 @@
     "url": "https://changelog.com/podcast/feed"
   },
   {
+    "title": "Svelte Radio",
+    "image": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/2728423/2728423-1575391650956-9f8e7eb17bbc1.jpg",
+    "url": "https://anchor.fm/s/10dbd4bc/podcast/rss"
+  },
+  {
+    "title": "Maintainers Anonymous",
+    "image": "https://images.transistor.fm/file/transistor/images/show/1719/full_1554926632-artwork.jpg",
+    "url": "https://feeds.transistor.fm/maintainers-anonymous"
+  },
+  {
     "title": "Exponent",
     "image": "https://exponent.fm/wp-content/uploads/powerpress/Exponent-3-wp.png",
     "url": "http://exponent.fm/feed/"
   },
   {
     "title": "Freakonomics Radio",
-    "image": "https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/14a43378-edb2-49be-8511-ab0d000a7030/d1b9612f-bb1b-4b85-9c0c-ab0d004ab37a/image.jpg?t=1574397273&size=Large",
+    "image": "https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/14a43378-edb2-49be-8511-ab0d000a7030/d1b9612f-bb1b-4b85-9c0c-ab0d004ab37a/image.jpg?t=1589407970&size=Large",
     "url": "https://rss.art19.com/freakonomics-radio"
-  },
-  {
-    "title": "Maintainers Anonymous",
-    "image": "https://images.transistor.fm/file/transistor/images/show/1719/full_1554926632-artwork.jpg",
-    "url": "https://feeds.transistor.fm/maintainers-anonymous"
   }
 ]

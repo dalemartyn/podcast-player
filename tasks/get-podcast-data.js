@@ -16,9 +16,10 @@ let podcasts = [
   "https://feeds.feedwrench.com/js-jabber.rss",
   "https://gomakethings.com/podcast/feed.rss",
   "https://changelog.com/podcast/feed",
+  "https://anchor.fm/s/10dbd4bc/podcast/rss",
+  "https://feeds.transistor.fm/maintainers-anonymous",
   "http://exponent.fm/feed/",
-  "https://rss.art19.com/freakonomics-radio",
-  "https://feeds.transistor.fm/maintainers-anonymous"
+  "https://rss.art19.com/freakonomics-radio"
 ];
 
 async function getPodcastData(url) {
