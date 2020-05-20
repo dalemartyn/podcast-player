@@ -2,7 +2,9 @@ import React, { useRef, useEffect } from "react";
 import { useAppState } from '../AppStateProvider';
 
 export default function Playbar() {
-  const { player } = useAppState();
+  const state = useAppState();
+
+  const player = state.player;
   const audioElement = useRef(null);
   window.audioElement = audioElement;
   
