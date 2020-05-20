@@ -34,7 +34,6 @@ export default function Feed() {
 
   function feedContent() {
     const feed = getFeed(podcasts);
-    console.log(feed);
 
     if ( !feed.data ) {
       return <Spinner />;

@@ -2,7 +2,7 @@ import podcasts from './podcasts';
 import player from './player';
 
 export default function podcastApp(state = {}, action = {}) {
-  const newState = {
+  return {
     podcasts: podcasts(
       state.podcasts,
       action
@@ -11,7 +11,5 @@ export default function podcastApp(state = {}, action = {}) {
       state.player,
       action
     )
-  }
-  console.log(action, newState);
-  return newState;
+  };
 }

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { useAppDispatch } from '../AppStateProvider';
 
 export async function getPodcastData(url) {
@@ -18,7 +18,7 @@ export async function getPodcastData(url) {
 export default function usePodcastFeed(url) {
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     dispatch({
       type: 'SET_FEED',
       data: {
