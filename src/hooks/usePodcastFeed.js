@@ -22,18 +22,20 @@ export default function usePodcastFeed(url) {
     dispatch({
       type: 'SET_FEED',
       data: {
+        url,
         state: 'loading'
       }
     });
 
     async function fetchData() {
       try {
-        const data = await getPodcastData(url);
+        const podcastData = await getPodcastData(url);
         dispatch({
-          type: 'SET_FEED',
+          type: 'ADD_FEED',
           data: {
-            state: 'ready',
-            data
+            podcastData,
+            url,
+            state: 'ready'
           }
         });
       } catch (e) {
@@ -41,7 +43,8 @@ export default function usePodcastFeed(url) {
           type: 'SET_FEED',
           data: {
             state: 'failed',
-            error: e.toString()
+            error: e.toString(),
+            url
           }
         });
       }

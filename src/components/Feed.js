@@ -5,11 +5,13 @@ import {
   useAppState,
   useAppDispatch
 } from '../AppStateProvider';
+import { getFeed } from '../reducers/podcasts';
 import Spinner from './Spinner';
 
 export default function Feed() {
   const location = useLocation();
-  const { feed, player } = useAppState();
+  const { podcasts, player } = useAppState();
+  const feed = getFeed( podcasts );
   const dispatch = useAppDispatch();
   const params = new URLSearchParams(location.search);
   const podcastUrl = params.get('rss');
@@ -32,9 +34,11 @@ export default function Feed() {
   }
 
   function feedContent() {
-    if ( feed.state === 'loading' ) {
+    if ( feed.state === 'loading' && !feed.data ) {
       return <Spinner />;
-    } else if (feed.state === 'ready') {
+    } else if (feed.state === 'failed' && feed.error) {
+      return <><p>Couldn’t load feed.</p><pre>{feed.error}</pre></>;
+    } else if ((feed.state === 'loading' || feed.state === 'ready') && feed.data.items.length) {
       const items = feed.data.items;
       return items.map((item) => <Item
         item={item}
@@ -43,8 +47,6 @@ export default function Feed() {
         onPlayButtonClick={() => playPodcast(item.enclosure.url) }
         onPauseButtonClick={() => pausePodcast(item.enclosure.url) } />
       );
-    } else if (feed.state === 'failed' && feed.error) {
-      return <><p>Couldn’t load feed.</p><pre>{feed.error}</pre></>;
     }
   }
 

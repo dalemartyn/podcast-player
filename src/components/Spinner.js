@@ -10,7 +10,7 @@ export default function Spinner() {
                 cy="16"
                 fill="none"
                 r="14"
-                stroke-width="4"
+                strokeWidth="4"
                 className="c-spinner__track">
             </circle>
             <circle
@@ -18,7 +18,7 @@ export default function Spinner() {
                 cy="16"
                 fill="none"
                 r="14"
-                stroke-width="4"
+                strokeWidth="4"
                 className="c-spinner__progress">
             </circle>
         </svg>

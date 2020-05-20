@@ -1,10 +1,10 @@
-import feed from './feed';
+import podcasts from './podcasts';
 import player from './player';
 
 export default function podcastApp(state = {}, action = {}) {
-  return {
-    feed: feed(
-      state.feed,
+  const newState = {
+    podcasts: podcasts(
+      state.podcasts,
       action
     ),
     player: player(
@@ -12,4 +12,6 @@ export default function podcastApp(state = {}, action = {}) {
       action
     )
   }
+  console.log(action, newState);
+  return newState;
 }
