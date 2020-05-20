@@ -11,7 +11,6 @@ import Spinner from './Spinner';
 export default function Feed() {
   const location = useLocation();
   const { podcasts, player } = useAppState();
-  const feed = getFeed( podcasts );
   const dispatch = useAppDispatch();
   const params = new URLSearchParams(location.search);
   const podcastUrl = params.get('rss');
@@ -34,11 +33,14 @@ export default function Feed() {
   }
 
   function feedContent() {
-    if ( feed.state === 'loading' && !feed.data ) {
+    const feed = getFeed(podcasts);
+    console.log(feed);
+
+    if ( !feed.data ) {
       return <Spinner />;
     } else if (feed.state === 'failed' && feed.error) {
       return <><p>Couldn’t load feed.</p><pre>{feed.error}</pre></>;
-    } else if ((feed.state === 'loading' || feed.state === 'ready') && feed.data.items.length) {
+    } else if (feed.data.items && feed.data.items.length) {
       const items = feed.data.items;
       return items.map((item) => <Item
         item={item}
@@ -51,6 +53,7 @@ export default function Feed() {
   }
 
   function feedTitle() {
+    const feed = getFeed(podcasts);
     if (feed.data) {
       return <h1 className="ts-post-title u-margin-bottom-xxlarge">{ feed.data.title }</h1>;
     }

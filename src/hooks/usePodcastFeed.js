@@ -22,8 +22,7 @@ export default function usePodcastFeed(url) {
     dispatch({
       type: 'SET_FEED',
       data: {
-        url,
-        state: 'loading'
+        url
       }
     });
 
@@ -34,15 +33,13 @@ export default function usePodcastFeed(url) {
           type: 'ADD_FEED',
           data: {
             podcastData,
-            url,
-            state: 'ready'
+            url
           }
         });
       } catch (e) {
         dispatch({
           type: 'SET_FEED',
           data: {
-            state: 'failed',
             error: e.toString(),
             url
           }

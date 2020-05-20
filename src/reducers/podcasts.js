@@ -20,11 +20,7 @@ function byUrl(state = {}, action) {
 function feed(state={}, action) {
   switch (action.type) {
     case "SET_FEED":
-    case "ADD_FEED":
-      return {
-        state: action.data.state,
-        url: action.data.url
-      };
+      return action.data;
     default:
       return state;
   }
