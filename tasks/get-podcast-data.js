@@ -4,6 +4,8 @@ const parser = new Parser({
     Accept: 'application/rss+xml, application/xml'
   }
 });
+const savePodcastImage = require('./save-podcast-image');
+const slugify = require('@sindresorhus/slugify');
 
 const { writeFile } = require('fs/promises');
 
@@ -29,9 +31,14 @@ async function getPodcastData(url) {
   }
 
   if (data) {
+    const filename = slugify(data.title, {
+      decamelize: false
+    });
+    await savePodcastImage(filename, data.itunes.image);
+
     return {
       title: data.title,
-      image: data.itunes.image,
+      image: `/img/podcast-images/${filename}.png`,
       url: url,
       description: data.description
     }

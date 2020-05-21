@@ -1,52 +1,62 @@
 [
   {
     "title": "React Podcast",
-    "image": "https://media.simplecast.com/podcast/image/6265/1550288890-artwork.jpg",
-    "url": "https://rss.simplecast.com/podcasts/6265/rss"
+    "image": "/img/podcast-images/react-podcast.png",
+    "url": "https://rss.simplecast.com/podcasts/6265/rss",
+    "description": "Conversations about React with your favorite developers."
   },
   {
     "title": "JavaScript Air",
-    "image": "https://pbcdn1.podbean.com/imglogo/image-logo/862611/2048.png",
-    "url": "https://feed.podbean.com/audio.javascriptair.com/feed.xml"
+    "image": "/img/podcast-images/javascript-air.png",
+    "url": "https://feed.podbean.com/audio.javascriptair.com/feed.xml",
+    "description": "The live broadcast podcast all about JavaScript and the Web"
   },
   {
     "title": "HTTP 203",
-    "image": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png",
-    "url": "http://http203.googledevelopers.libsynpro.com/rss"
+    "image": "/img/podcast-images/http-203.png",
+    "url": "http://http203.googledevelopers.libsynpro.com/rss",
+    "description": "Surma and Jake talk about whatever's going on in the world of web development."
   },
   {
     "title": "JavaScript Jabber",
-    "image": "https://s3.amazonaws.com/devchat.tv/javascript_jabber_thumb.jpg",
-    "url": "https://feeds.feedwrench.com/js-jabber.rss"
+    "image": "/img/podcast-images/javascript-jabber.png",
+    "url": "https://feeds.feedwrench.com/js-jabber.rss",
+    "description": "\n      Weekly podcast discussion about Javascript on the front and back ends. Also discuss programming practices, coding environments, and the communities related to the technology. \n    "
   },
   {
     "title": "The Vanilla JS Podcast",
-    "image": "https://vanillajspodcast.com/img/vanilla-js-podcast.jpg",
-    "url": "https://gomakethings.com/podcast/feed.rss"
+    "image": "/img/podcast-images/the-vanilla-js-podcast.png",
+    "url": "https://gomakethings.com/podcast/feed.rss",
+    "description": "A show about JavaScript for people who hate the complexity of modern front‑end web development."
   },
   {
     "title": "The Changelog: Software Dev & Open Source",
-    "image": "https://cdn.changelog.com/uploads/covers/the-changelog-original.png?v=63725770322",
-    "url": "https://changelog.com/podcast/feed"
+    "image": "/img/podcast-images/the-changelog-software-dev-and-open-source.png",
+    "url": "https://changelog.com/podcast/feed",
+    "description": "Conversations with the hackers, leaders, and innovators of software development.  Hosts Adam Stacoviak and Jerod Santo face their imposter syndrome so you don’t have to. Expect in-depth interviews with the best and brightest in software engineering, open source, and leadership. This is a polyglot podcast. All programming languages, platforms, and communities are welcome. Open source moves fast. Keep up."
   },
   {
     "title": "Svelte Radio",
-    "image": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/2728423/2728423-1575391650956-9f8e7eb17bbc1.jpg",
-    "url": "https://anchor.fm/s/10dbd4bc/podcast/rss"
+    "image": "/img/podcast-images/svelte-radio.png",
+    "url": "https://anchor.fm/s/10dbd4bc/podcast/rss",
+    "description": "Things about Svelte. Sometimes weekly, sometimes not."
   },
   {
     "title": "Maintainers Anonymous",
-    "image": "https://images.transistor.fm/file/transistor/images/show/1719/full_1554926632-artwork.jpg",
-    "url": "https://feeds.transistor.fm/maintainers-anonymous"
+    "image": "/img/podcast-images/maintainers-anonymous.png",
+    "url": "https://feeds.transistor.fm/maintainers-anonymous",
+    "description": "How can we work together to achieve a common goal: whether in our code, cities, or infrastructure? Henry Zhu chats with fellow maintainers across all disciplines of life on their process, motivations, and struggles as they learn in public."
   },
   {
     "title": "Exponent",
-    "image": "https://exponent.fm/wp-content/uploads/powerpress/Exponent-3-wp.png",
-    "url": "http://exponent.fm/feed/"
+    "image": "/img/podcast-images/exponent.png",
+    "url": "http://exponent.fm/feed/",
+    "description": "A podcast about tech and society, hosted by Ben Thompson and James Allworth"
   },
   {
     "title": "Freakonomics Radio",
-    "image": "https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/14a43378-edb2-49be-8511-ab0d000a7030/d1b9612f-bb1b-4b85-9c0c-ab0d004ab37a/image.jpg?t=1589407970&size=Large",
-    "url": "https://rss.art19.com/freakonomics-radio"
+    "image": "/img/podcast-images/freakonomics-radio.png",
+    "url": "https://rss.art19.com/freakonomics-radio",
+    "description": "<p>Discover the hidden side of everything with Stephen J. Dubner, co-author of the&nbsp;<em>Freakonomics</em>&nbsp;books. Each week,&nbsp;<em>Freakonomics Radio</em>&nbsp;tells you things you always thought you knew (but didn’t) and things you never thought you wanted to know (but do) —&nbsp;from the economics of sleep to how to become great at just about anything. Dubner speaks with Nobel laureates and provocateurs, intellectuals and entrepreneurs, and various other underachievers. Special features include series like “The Secret Life of a C.E.O.” as well as a live game show, “Tell Me Something I Don’t Know.”&nbsp;</p>"
   }
 ]
