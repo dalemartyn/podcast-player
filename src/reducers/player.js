@@ -8,7 +8,7 @@ export default function player(state={}, action) {
     }
     case "PAUSE_PODCAST": {
       return {
-        url: state.player.url,
+        url: state.url,
         state: "pause"
       };
     }

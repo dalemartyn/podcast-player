@@ -5,9 +5,7 @@ const parser = new Parser({
   }
 });
 
-const fs = require('fs');
-const util = require('util');
-const writeFile = util.promisify(fs.writeFile);
+const { writeFile } = require('fs/promises');
 
 let podcasts = [
   "https://rss.simplecast.com/podcasts/6265/rss",
@@ -34,7 +32,8 @@ async function getPodcastData(url) {
     return {
       title: data.title,
       image: data.itunes.image,
-      url: url
+      url: url,
+      description: data.description
     }
   }
 

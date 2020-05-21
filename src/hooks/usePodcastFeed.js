@@ -2,7 +2,7 @@ import { useLayoutEffect, useEffect } from 'react';
 import { useAppDispatch } from '../AppStateProvider';
 
 export async function getPodcastData(url) {
-  const res = await fetch('/.netlify/functions/get-podcast', {
+  const res = await fetch('/.netlify/functions/get-all-episodes', {
     'method': 'POST',
     'headers': {
       'Content-Type': 'application/json'

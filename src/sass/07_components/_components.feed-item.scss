@@ -1,14 +1,14 @@
 /* ==========================================================================
-   #PODCAST-ITEM
+   #FEED-ITEM
    ========================================================================== */
 
 
-.c-podcast-item {
+.c-feed-item {
   display: flex;
   border-top: 1px solid sem-color(border);
 }
 
-.c-podcast-item__button button {
+.c-feed-item__button button {
   @include button-reset;
   @include ms-respond(font-size, .75);
   font-weight: fw(semibold);
@@ -18,7 +18,7 @@
 }
 
 
-  .c-podcast-item__description {
+  .c-feed-item__description {
     p {
       @include ms-respond(font-size, .75);
       line-height: var(--body-2-line-height);
