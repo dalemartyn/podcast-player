@@ -40,13 +40,13 @@ export default function Feed() {
     } else if (feed.state === 'failed' && feed.error) {
       return <><p>Couldn’t load feed.</p><pre>{feed.error}</pre></>;
     } else if (feed.data.items && feed.data.items.length) {
-      const items = feed.data.items;
-      return items.map((item) => <Item
-        item={item}
-        key={item.guid}
+      const episodes = feed.data.items;
+      return episodes.map((episode) => <FeedItem
+        episode={episode}
+        key={episode.guid}
         player={player}
-        onPlayButtonClick={() => playPodcast(item.enclosure.url) }
-        onPauseButtonClick={() => pausePodcast(item.enclosure.url) } />
+        onPlayButtonClick={() => playPodcast(episode.enclosure.url) }
+        onPauseButtonClick={() => pausePodcast(episode.enclosure.url) } />
       );
     }
   }
@@ -66,15 +66,15 @@ export default function Feed() {
   );
 }
 
-function Item({item, player, onPlayButtonClick, onPauseButtonClick}) {
+function FeedItem({episode, player, onPlayButtonClick, onPauseButtonClick}) {
   let url;
   let button;
 
-  if (typeof item.enclosure !== "undefined") {
-    url = item.enclosure.url;
+  if (typeof episode.enclosure !== "undefined") {
+    url = episode.enclosure.url;
   } else {
-    // redacted podcast.
-    console.log(item);
+    // redacted podcast episode.
+    console.log(episode);
   }
 
   const isPlaying = url === player.url && player.state === "play";
@@ -84,22 +84,22 @@ function Item({item, player, onPlayButtonClick, onPauseButtonClick}) {
       Pause
     </button>
   } else {
-    button = <button className="ts-body-2" onClick={() => onPlayButtonClick(item) }>
+    button = <button className="ts-body-2" onClick={() => onPlayButtonClick(episode) }>
       Play
     </button>;
   }
 
   return (
-    <div className="c-podcast-item u-padding-top u-padding-bottom-large">
-      <div className="c-podcast-item__button u-margin-right">
+    <div className="c-feed-item u-padding-top u-padding-bottom-large">
+      <div className="c-feed-item__button u-margin-right">
         {button}
       </div>
-      <div className="c-podcast-item__content">
+      <div className="c-feed-item__content">
         <h3 className="u-margin-top-none u-margin-bottom-micro">
-          {item.title}
+          {episode.title}
         </h3>
-        <div className="c-podcast-item__description">
-          <p>{item.contentSnippet}</p>
+        <div className="c-feed-item__description">
+          <p>{episode.contentSnippet}</p>
         </div>
       </div>
     </div>
