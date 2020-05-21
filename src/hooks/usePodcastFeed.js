@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, useEffect } from 'react';
 import { useAppDispatch } from '../AppStateProvider';
 
 export async function getPodcastData(url) {
@@ -25,7 +25,9 @@ export default function usePodcastFeed(url) {
         url
       }
     });
+  }, [url, dispatch]);
 
+  useEffect(() => {
     async function fetchData() {
       try {
         const podcastData = await getPodcastData(url);
