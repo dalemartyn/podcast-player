@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 import Playbar from './components/Playbar';
 import Header from './components/Header';
-import Feed from './components/Feed';
-import Home from './components/Home';
+import PodcastView from './components/PodcastView';
+import HomeView from './components/HomeView';
 import NotFound from './components/NotFound';
 import MainLayout from './components/MainLayout';
 
@@ -19,9 +19,9 @@ function PodcastApp() {
         <Header />
         <MainLayout>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomeView />} />
             <Route path="/podcast"
-              element={<Feed />}
+              element={<PodcastView />}
             />
             <Route path="*" element={<NotFound />} />
           </Routes>

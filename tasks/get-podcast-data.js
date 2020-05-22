@@ -9,9 +9,8 @@ const slugify = require('@sindresorhus/slugify');
 
 const { writeFile } = require('fs/promises');
 
-let podcasts = [
+let allUrls = [
   "https://rss.simplecast.com/podcasts/6265/rss",
-  "https://feed.podbean.com/audio.javascriptair.com/feed.xml",
   "http://http203.googledevelopers.libsynpro.com/rss",
   "https://feeds.feedwrench.com/js-jabber.rss",
   "https://gomakethings.com/podcast/feed.rss",
@@ -49,8 +48,15 @@ async function getPodcastData(url) {
   };
 }
 
-Promise.all(podcasts.map(getPodcastData))
+Promise.all(allUrls.map(getPodcastData))
   .then((data) => {
-    writeFile('./src/podcasts.json', JSON.stringify(data, null, 2));
+    const byUrl = {};
+    data.forEach((podcast) => byUrl[podcast.url] = podcast);
+
+    const initialState = {
+      byUrl,
+      allUrls
+    };
+    writeFile('./src/podcasts.json', JSON.stringify(initialState, null, 2));
   });
 

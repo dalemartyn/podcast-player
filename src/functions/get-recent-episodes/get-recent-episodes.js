@@ -1,5 +1,9 @@
 const fetch = require('node-fetch');
 const FeedParser = require('feedparser');
+const {
+  getSanitizedContent,
+  getSummary
+} = require('./utils');
 
 exports.handler = function(event, context, callback) {
   const body = JSON.parse(event.body);
@@ -20,24 +24,25 @@ exports.handler = function(event, context, callback) {
     feedparser.on('end', sendResponse);
     feedparser.on('readable', function () {
 
-      if (episodes.length > 9) {
+      if (episodes.length > 49) {
         responseStream.destroy();
       }
 
       let post = this.read();
 
-      while (post) {
+      while (post && episodes.length < 50) {
+        // post.summary and post.description should have the same content.
+        const content = getSanitizedContent(post.summary);
+        const summary = getSummary(content);
 
         const episode = {
           title: post.title,
           date: post.date,
           guid: post.guid,
           media: post.enclosures[0],
-          enclosure: post.enclosures[0],
-          description: post.description,
+          content,
+          summary
         }
-
-        console.log(episodes.length + 1, episode.title);
 
         episodes.push(episode);
         post = this.read();

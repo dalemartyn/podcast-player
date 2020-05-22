@@ -4,18 +4,18 @@
 
 @font-face {
   font-family: IBM Plex Sans;
-  src: url("/fonts/plex-sans/plex-roman-subset-xs.woff2") format("woff2-variations");
+  src: url("/fonts/plex-sans/plex-roman-subset-xs-2.woff2") format("woff2-variations");
   font-weight: 400 700;
   font-style: normal;
-  unicode-range: U+0000-00A4, U+0020, U+00A0, U+2013-201E, U+2022;
+  unicode-range: U+0000-00A4, U+0020, U+00A0, U+2013-201E, U+2022, U+2026;
 }
 
 @font-face {
   font-family: IBM Plex Sans;
-  src: url("/fonts/plex-sans/plex-italic-subset-xs.woff2") format("woff2-variations");
+  src: url("/fonts/plex-sans/plex-italic-subset-xs-2.woff2") format("woff2-variations");
   font-weight: 400 700;
   font-style: italic;
-  unicode-range: U+0000-00A4, U+0020, U+00A0, U+2013-201E, U+2022;
+  unicode-range: U+0000-00A4, U+0020, U+00A0, U+2013-201E, U+2022, U+2026;
 }
 
 @font-face {

@@ -1,10 +1,12 @@
 import React from 'react';
-import podcasts from '../podcasts.json';
 import { Link } from 'react-router-dom';
+import { useAppState } from '../AppStateProvider';
 
-export default function Home() {
+export default function HomeView() {
+  const { podcasts } = useAppState();
 
-  const podcastGridItems = podcasts.map(function(podcast) {
+  const podcastGridItems = podcasts.allUrls.map(function(url) {
+    const podcast = podcasts.byUrl[url];
     return <PodcastGridItem podcast={podcast} key={podcast.url} />
   });
 
