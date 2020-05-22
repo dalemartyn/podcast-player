@@ -1,8 +1,13 @@
 const fetch = require('node-fetch');
 const FeedParser = require('feedparser');
 const {
-  getSanitizedContent,
-  getSummary
+  getTitle,
+  getContent,
+  getSubtitle,
+  getSummary,
+  getMedia,
+  getDuration,
+  getDate
 } = require('./utils');
 
 exports.handler = function(event, context, callback) {
@@ -31,17 +36,36 @@ exports.handler = function(event, context, callback) {
       let post = this.read();
 
       while (post && episodes.length < 50) {
-        // post.summary and post.description should have the same content.
-        const content = getSanitizedContent(post.summary);
-        const summary = getSummary(content);
+        const media = getMedia(post);
+
+        if (!media) {
+          post = this.read();
+          continue;
+        }
+
+        const title = getTitle(post);
+        const content = getContent(post);
+        const subtitle = getSubtitle(post);
+        const summary = getSummary(post);
+        const duration = getDuration(post);
+        const date = getDate(post.date);
+        const guid = post.guid;
 
         const episode = {
-          title: post.title,
-          date: post.date,
-          guid: post.guid,
-          media: post.enclosures[0],
+          title,
+          date,
+          guid,
+          media,
+          subtitle,
+          summary,
           content,
-          summary
+          duration
+        }
+
+        console.log(episodes.length, post.title);
+
+        if (episodes.length === 0) {
+          console.log(JSON.stringify(post, null, 2));
         }
 
         episodes.push(episode);

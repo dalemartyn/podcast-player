@@ -40,7 +40,8 @@
 
 .ts-label {
   @include ms-respond(font-size, .5);
-  font-weight: fw(regular);
+  font-weight: fw(semibold);
+  color: sem-color(text-2);
   line-height: 1.25;
 }
 

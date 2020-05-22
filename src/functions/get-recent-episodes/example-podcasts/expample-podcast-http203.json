@@ -1,0 +1,271 @@
+{
+  "title": "How to avoid getting UTF'd by text encodings",
+  "description": "<p>- The Count from Sesame Street swearing → <a href=\"https://goo.gle/3ftsgqL\">https://goo.gle/3ftsgqL</a> (warning: silly/rude)</p> <p>- Ofcom research into broadcast swearing → <a href=\"https://goo.gle/2A9xM1B\">https://goo.gle/2A9xM1B</a> (warning: lots of really bad language) (bigger warning: PDF)</p> <p>- Banned word list read by a computer → <a href=\"https://goo.gle/2SNkgat\">https://goo.gle/2SNkgat</a> (warning: lots of really bad language)</p> <p> </p> <p>- Beat saber stretches → <a href=\"https://goo.gle/2Ac4gZf\">https://goo.gle/2Ac4gZf</a> </p> <p> </p> <p>- Remy's question about text encoding → <a href=\"https://goo.gle/3bftse1\">https://goo.gle/3bftse1</a> </p> <p>- TextEncoder → <a href= \"https://goo.gle/2zlvBaE\">https://goo.gle/2zlvBaE</a> </p> <p>- TextDecoder → <a href= \"https://goo.gle/35K5Wou\">https://goo.gle/35K5Wou</a> </p> <p>- Streaming versions → <a href=\"https://goo.gle/2Wh4qHn\">https://goo.gle/2Wh4qHn</a>  </p> <p>- Josh's joke encoding PR → <a href=\"https://goo.gle/2YK2316\">https://goo.gle/2YK2316</a> </p> <p>- atob → <a href= \"https://goo.gle/2YK2316\">https://goo.gle/2YK2316</a> </p> <p>- bota → <a href= \"https://goo.gle/2YKEuoP\">https://goo.gle/2YKEuoP</a> </p> <p>- Binary strings in JS → <a href=\"https://goo.gle/3ch7R68\">https://goo.gle/3ch7R68</a> </p> <p>- readAsBinaryString in FileReader → <a href=\"https://goo.gle/2Wdnoyz\">https://goo.gle/2Wdnoyz</a> </p> <p> </p> <p>- DOMContentLoaded → <a href=\"https://goo.gle/3fon4EF\">https://goo.gle/3fon4EF</a> </p> <p>- defer and IE bugs → <a href=\"https://goo.gle/2WfOntj\">https://goo.gle/2WfOntj</a> </p> <p>- DOM ready in jQuery → <a href=\"https://goo.gle/3cdvnRN\">https://goo.gle/3cdvnRN</a> </p> <p>- readyState → <a href= \"https://goo.gle/2xJnHrf\">https://goo.gle/2xJnHrf</a> </p> <p>- doScroll trick → <a href=\"https://goo.gle/2WFuCtW\">https://goo.gle/2WFuCtW</a> </p> <p>- \"The end\" → <a href= \"https://goo.gle/3fw8CKz\">https://goo.gle/3fw8CKz</a> </p> <p> See <a href= \"https://goo.gle/HTTP203Podcast\">https://goo.gle/HTTP203Podcast</a> for other episodes.</p>",
+  "summary": "<p><span style=\"font-weight: 400;\">- The Count from Sesame Street swearing →</span> <a href=\"https://goo.gle/3ftsgqL\"><span style= \"font-weight: 400;\">https://goo.gle/3ftsgqL</span></a> <span style= \"font-weight: 400;\">(warning: silly/rude)</span></p> <p><span style=\"font-weight: 400;\">- Ofcom research into broadcast swearing →</span> <a href=\"https://goo.gle/2A9xM1B\"><span style= \"font-weight: 400;\">https://goo.gle/2A9xM1B</span></a> <span style= \"font-weight: 400;\">(warning: lots of really bad language) (bigger warning: PDF)</span></p> <p><span style=\"font-weight: 400;\">- Banned word list read by a computer →</span> <a href=\"https://goo.gle/2SNkgat\"><span style= \"font-weight: 400;\">https://goo.gle/2SNkgat</span></a> <span style= \"font-weight: 400;\">(warning: lots of really bad language)</span></p> <p> </p> <p><span style=\"font-weight: 400;\">- Beat saber stretches →</span> <a href=\"https://goo.gle/2Ac4gZf\"><span style= \"font-weight: 400;\">https://goo.gle/2Ac4gZf</span></a><span style= \"font-weight: 400;\"> </span></p> <p> </p> <p><span style=\"font-weight: 400;\">- Remy's question about text encoding →</span> <a href=\"https://goo.gle/3bftse1\"><span style= \"font-weight: 400;\">https://goo.gle/3bftse1</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- TextEncoder →</span> <a href= \"https://goo.gle/2zlvBaE\"><span style= \"font-weight: 400;\">https://goo.gle/2zlvBaE</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- TextDecoder →</span> <a href= \"https://goo.gle/35K5Wou\"><span style= \"font-weight: 400;\">https://goo.gle/35K5Wou</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- Streaming versions →</span> <a href=\"https://goo.gle/2Wh4qHn\"><span style= \"font-weight: 400;\">https://goo.gle/2Wh4qHn</span></a><span style= \"font-weight: 400;\">  </span></p> <p><span style=\"font-weight: 400;\">- Josh's joke encoding PR →</span> <a href=\"https://goo.gle/2YK2316\"><span style= \"font-weight: 400;\">https://goo.gle/2YK2316</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- atob →</span> <a href= \"https://goo.gle/2YK2316\"><span style= \"font-weight: 400;\">https://goo.gle/2YK2316</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- bota →</span> <a href= \"https://goo.gle/2YKEuoP\"><span style= \"font-weight: 400;\">https://goo.gle/2YKEuoP</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- Binary strings in JS →</span> <a href=\"https://goo.gle/3ch7R68\"><span style= \"font-weight: 400;\">https://goo.gle/3ch7R68</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- readAsBinaryString in FileReader →</span> <a href=\"https://goo.gle/2Wdnoyz\"><span style= \"font-weight: 400;\">https://goo.gle/2Wdnoyz</span></a><span style= \"font-weight: 400;\"> </span></p> <p> </p> <p><span style=\"font-weight: 400;\">- DOMContentLoaded →</span> <a href=\"https://goo.gle/3fon4EF\"><span style= \"font-weight: 400;\">https://goo.gle/3fon4EF</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- defer and IE bugs →</span> <a href=\"https://goo.gle/2WfOntj\"><span style= \"font-weight: 400;\">https://goo.gle/2WfOntj</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- DOM ready in jQuery →</span> <a href=\"https://goo.gle/3cdvnRN\"><span style= \"font-weight: 400;\">https://goo.gle/3cdvnRN</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- readyState →</span> <a href= \"https://goo.gle/2xJnHrf\"><span style= \"font-weight: 400;\">https://goo.gle/2xJnHrf</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- doScroll trick →</span> <a href=\"https://goo.gle/2WFuCtW\"><span style= \"font-weight: 400;\">https://goo.gle/2WFuCtW</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- \"The end\" →</span> <a href= \"https://goo.gle/3fw8CKz\"><span style= \"font-weight: 400;\">https://goo.gle/3fw8CKz</span></a><span style= \"font-weight: 400;\"> </span></p> <p><br /> <span style=\"font-weight: 400;\">See</span> <a href= \"https://goo.gle/HTTP203Podcast\"><span style= \"font-weight: 400;\">https://goo.gle/HTTP203Podcast</span></a> <span style=\"font-weight: 400;\">for other episodes.</span></p>",
+  "date": "2020-05-08T17:00:00.000Z",
+  "pubdate": "2020-05-08T17:00:00.000Z",
+  "pubDate": "2020-05-08T17:00:00.000Z",
+  "link": "http://traffic.libsyn.com/http203/HTT_P004.m4a",
+  "guid": "6ab1d691-18ba-4c2f-904e-653d62c3ebfa",
+  "author": "Google",
+  "comments": null,
+  "origlink": null,
+  "image": {
+    "url": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png"
+  },
+  "source": {},
+  "categories": [],
+  "enclosures": [
+    {
+      "url": "http://traffic.libsyn.com/http203/HTT_P004.m4a?dest-id=1969313",
+      "type": "audio/mp4",
+      "length": "24743513"
+    }
+  ],
+  "rss:@": {},
+  "rss:title": {
+    "@": {},
+    "#": "How to avoid getting UTF'd by text encodings"
+  },
+  "itunes:title": {
+    "@": {},
+    "#": "How to avoid getting UTF'd by text encodings"
+  },
+  "rss:pubdate": {
+    "@": {},
+    "#": "Fri, 08 May 2020 17:00:00 +0000"
+  },
+  "rss:guid": {
+    "@": {
+      "ispermalink": "false"
+    },
+    "#": "6ab1d691-18ba-4c2f-904e-653d62c3ebfa"
+  },
+  "rss:link": {
+    "@": {},
+    "#": "http://traffic.libsyn.com/http203/HTT_P004.m4a"
+  },
+  "itunes:image": {
+    "@": {
+      "href": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png"
+    }
+  },
+  "rss:description": {
+    "@": {},
+    "#": "<p><span style=\"font-weight: 400;\">- The Count from Sesame Street swearing →</span> <a href=\"https://goo.gle/3ftsgqL\"><span style= \"font-weight: 400;\">https://goo.gle/3ftsgqL</span></a> <span style= \"font-weight: 400;\">(warning: silly/rude)</span></p> <p><span style=\"font-weight: 400;\">- Ofcom research into broadcast swearing →</span> <a href=\"https://goo.gle/2A9xM1B\"><span style= \"font-weight: 400;\">https://goo.gle/2A9xM1B</span></a> <span style= \"font-weight: 400;\">(warning: lots of really bad language) (bigger warning: PDF)</span></p> <p><span style=\"font-weight: 400;\">- Banned word list read by a computer →</span> <a href=\"https://goo.gle/2SNkgat\"><span style= \"font-weight: 400;\">https://goo.gle/2SNkgat</span></a> <span style= \"font-weight: 400;\">(warning: lots of really bad language)</span></p> <p> </p> <p><span style=\"font-weight: 400;\">- Beat saber stretches →</span> <a href=\"https://goo.gle/2Ac4gZf\"><span style= \"font-weight: 400;\">https://goo.gle/2Ac4gZf</span></a><span style= \"font-weight: 400;\"> </span></p> <p> </p> <p><span style=\"font-weight: 400;\">- Remy's question about text encoding →</span> <a href=\"https://goo.gle/3bftse1\"><span style= \"font-weight: 400;\">https://goo.gle/3bftse1</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- TextEncoder →</span> <a href= \"https://goo.gle/2zlvBaE\"><span style= \"font-weight: 400;\">https://goo.gle/2zlvBaE</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- TextDecoder →</span> <a href= \"https://goo.gle/35K5Wou\"><span style= \"font-weight: 400;\">https://goo.gle/35K5Wou</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- Streaming versions →</span> <a href=\"https://goo.gle/2Wh4qHn\"><span style= \"font-weight: 400;\">https://goo.gle/2Wh4qHn</span></a><span style= \"font-weight: 400;\">  </span></p> <p><span style=\"font-weight: 400;\">- Josh's joke encoding PR →</span> <a href=\"https://goo.gle/2YK2316\"><span style= \"font-weight: 400;\">https://goo.gle/2YK2316</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- atob →</span> <a href= \"https://goo.gle/2YK2316\"><span style= \"font-weight: 400;\">https://goo.gle/2YK2316</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- bota →</span> <a href= \"https://goo.gle/2YKEuoP\"><span style= \"font-weight: 400;\">https://goo.gle/2YKEuoP</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- Binary strings in JS →</span> <a href=\"https://goo.gle/3ch7R68\"><span style= \"font-weight: 400;\">https://goo.gle/3ch7R68</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- readAsBinaryString in FileReader →</span> <a href=\"https://goo.gle/2Wdnoyz\"><span style= \"font-weight: 400;\">https://goo.gle/2Wdnoyz</span></a><span style= \"font-weight: 400;\"> </span></p> <p> </p> <p><span style=\"font-weight: 400;\">- DOMContentLoaded →</span> <a href=\"https://goo.gle/3fon4EF\"><span style= \"font-weight: 400;\">https://goo.gle/3fon4EF</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- defer and IE bugs →</span> <a href=\"https://goo.gle/2WfOntj\"><span style= \"font-weight: 400;\">https://goo.gle/2WfOntj</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- DOM ready in jQuery →</span> <a href=\"https://goo.gle/3cdvnRN\"><span style= \"font-weight: 400;\">https://goo.gle/3cdvnRN</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- readyState →</span> <a href= \"https://goo.gle/2xJnHrf\"><span style= \"font-weight: 400;\">https://goo.gle/2xJnHrf</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- doScroll trick →</span> <a href=\"https://goo.gle/2WFuCtW\"><span style= \"font-weight: 400;\">https://goo.gle/2WFuCtW</span></a><span style= \"font-weight: 400;\"> </span></p> <p><span style=\"font-weight: 400;\">- \"The end\" →</span> <a href= \"https://goo.gle/3fw8CKz\"><span style= \"font-weight: 400;\">https://goo.gle/3fw8CKz</span></a><span style= \"font-weight: 400;\"> </span></p> <p><br /> <span style=\"font-weight: 400;\">See</span> <a href= \"https://goo.gle/HTTP203Podcast\"><span style= \"font-weight: 400;\">https://goo.gle/HTTP203Podcast</span></a> <span style=\"font-weight: 400;\">for other episodes.</span></p>"
+  },
+  "content:encoded": {
+    "@": {},
+    "#": "<p>- The Count from Sesame Street swearing → <a href=\"https://goo.gle/3ftsgqL\">https://goo.gle/3ftsgqL</a> (warning: silly/rude)</p> <p>- Ofcom research into broadcast swearing → <a href=\"https://goo.gle/2A9xM1B\">https://goo.gle/2A9xM1B</a> (warning: lots of really bad language) (bigger warning: PDF)</p> <p>- Banned word list read by a computer → <a href=\"https://goo.gle/2SNkgat\">https://goo.gle/2SNkgat</a> (warning: lots of really bad language)</p> <p> </p> <p>- Beat saber stretches → <a href=\"https://goo.gle/2Ac4gZf\">https://goo.gle/2Ac4gZf</a> </p> <p> </p> <p>- Remy's question about text encoding → <a href=\"https://goo.gle/3bftse1\">https://goo.gle/3bftse1</a> </p> <p>- TextEncoder → <a href= \"https://goo.gle/2zlvBaE\">https://goo.gle/2zlvBaE</a> </p> <p>- TextDecoder → <a href= \"https://goo.gle/35K5Wou\">https://goo.gle/35K5Wou</a> </p> <p>- Streaming versions → <a href=\"https://goo.gle/2Wh4qHn\">https://goo.gle/2Wh4qHn</a>  </p> <p>- Josh's joke encoding PR → <a href=\"https://goo.gle/2YK2316\">https://goo.gle/2YK2316</a> </p> <p>- atob → <a href= \"https://goo.gle/2YK2316\">https://goo.gle/2YK2316</a> </p> <p>- bota → <a href= \"https://goo.gle/2YKEuoP\">https://goo.gle/2YKEuoP</a> </p> <p>- Binary strings in JS → <a href=\"https://goo.gle/3ch7R68\">https://goo.gle/3ch7R68</a> </p> <p>- readAsBinaryString in FileReader → <a href=\"https://goo.gle/2Wdnoyz\">https://goo.gle/2Wdnoyz</a> </p> <p> </p> <p>- DOMContentLoaded → <a href=\"https://goo.gle/3fon4EF\">https://goo.gle/3fon4EF</a> </p> <p>- defer and IE bugs → <a href=\"https://goo.gle/2WfOntj\">https://goo.gle/2WfOntj</a> </p> <p>- DOM ready in jQuery → <a href=\"https://goo.gle/3cdvnRN\">https://goo.gle/3cdvnRN</a> </p> <p>- readyState → <a href= \"https://goo.gle/2xJnHrf\">https://goo.gle/2xJnHrf</a> </p> <p>- doScroll trick → <a href=\"https://goo.gle/2WFuCtW\">https://goo.gle/2WFuCtW</a> </p> <p>- \"The end\" → <a href= \"https://goo.gle/3fw8CKz\">https://goo.gle/3fw8CKz</a> </p> <p> See <a href= \"https://goo.gle/HTTP203Podcast\">https://goo.gle/HTTP203Podcast</a> for other episodes.</p>"
+  },
+  "rss:enclosure": {
+    "@": {
+      "length": "24743513",
+      "type": "audio/mp4",
+      "url": "http://traffic.libsyn.com/http203/HTT_P004.m4a?dest-id=1969313"
+    }
+  },
+  "itunes:duration": {
+    "@": {},
+    "#": "01:01:00"
+  },
+  "itunes:explicit": {
+    "@": {},
+    "#": "clean"
+  },
+  "itunes:keywords": {
+    "@": {},
+    "#": "web,ready,development,javascript,jquery,text,techpodcasts,encoding,chrome,developers,dom,streams,decoding,newpodcasts,googlepodcast,chromepodcast"
+  },
+  "itunes:subtitle": {
+    "@": {},
+    "#": "And how to be DOM-ready for anything."
+  },
+  "itunes:summary": {
+    "@": {},
+    "#": "- Remy's question about text encoding → https://goo.gle/3bftse1 \r\n- TextEncoder → https://goo.gle/2zlvBaE\r\n- Josh's joke encoding PR → https://goo.gle/2YK2316\r\n- Binary strings in JS → https://goo.gle/3ch7R68 \r\n- readAsBinaryString → https://goo.gle/2Wdnoyz \r\n- defer and IE bugs → https://goo.gle/2WfOntj \r\n- DOM ready in jQuery → https://goo.gle/3cdvnRN \r\n- doScroll trick → https://goo.gle/2WFuCtW \r\n- \"The end\" → https://goo.gle/3fw8CKz \r\n\r\nSee https://goo.gle/HTTP203Podcast for more"
+  },
+  "itunes:episodetype": {
+    "@": {},
+    "#": "full"
+  },
+  "itunes:author": {
+    "@": {},
+    "#": "Google"
+  },
+  "meta": {
+    "#ns": [
+      {
+        "xmlns:atom": "http://www.w3.org/2005/Atom"
+      },
+      {
+        "xmlns:cc": "http://web.resource.org/cc/"
+      },
+      {
+        "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"
+      },
+      {
+        "xmlns:media": "http://search.yahoo.com/mrss/"
+      },
+      {
+        "xmlns:content": "http://purl.org/rss/1.0/modules/content/"
+      },
+      {
+        "xmlns:rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      }
+    ],
+    "@": [
+      {
+        "xmlns:atom": "http://www.w3.org/2005/Atom"
+      },
+      {
+        "xmlns:cc": "http://web.resource.org/cc/"
+      },
+      {
+        "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"
+      },
+      {
+        "xmlns:media": "http://search.yahoo.com/mrss/"
+      },
+      {
+        "xmlns:content": "http://purl.org/rss/1.0/modules/content/"
+      },
+      {
+        "xmlns:rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      }
+    ],
+    "#xml": {
+      "version": "1.0",
+      "encoding": "UTF-8"
+    },
+    "#type": "rss",
+    "#version": "2.0",
+    "title": "HTTP 203",
+    "description": "Surma and Jake talk about whatever's going on in the world of web development.",
+    "date": "2020-05-21T18:34:36.000Z",
+    "pubdate": "2020-05-08T17:00:00.000Z",
+    "pubDate": "2020-05-08T17:00:00.000Z",
+    "link": "https://developers.google.com/web/shows/http203/podcast/",
+    "xmlurl": "http://http203.googledevelopers.libsynpro.com/rss",
+    "xmlUrl": "http://http203.googledevelopers.libsynpro.com/rss",
+    "author": "jaffathecake@gmail.com",
+    "language": "en",
+    "favicon": null,
+    "copyright": "2020 © Google",
+    "generator": "Libsyn WebEngine 2.0",
+    "cloud": {},
+    "image": {
+      "url": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png",
+      "title": "HTTP 203"
+    },
+    "categories": [
+      "Technology"
+    ],
+    "rss:@": {},
+    "atom:link": {
+      "@": {
+        "href": "http://http203.googledevelopers.libsynpro.com/rss",
+        "rel": "self",
+        "type": "application/rss+xml"
+      }
+    },
+    "rss:title": {
+      "@": {},
+      "#": "HTTP 203"
+    },
+    "rss:pubdate": {
+      "@": {},
+      "#": "Fri, 08 May 2020 17:00:00 +0000"
+    },
+    "rss:lastbuilddate": {
+      "@": {},
+      "#": "Thu, 21 May 2020 18:34:36 +0000"
+    },
+    "rss:generator": {
+      "@": {},
+      "#": "Libsyn WebEngine 2.0"
+    },
+    "rss:link": {
+      "@": {},
+      "#": "https://developers.google.com/web/shows/http203/podcast/"
+    },
+    "rss:language": {
+      "@": {},
+      "#": "en"
+    },
+    "rss:copyright": {
+      "@": {},
+      "#": "2020 © Google"
+    },
+    "rss:docs": {
+      "@": {},
+      "#": "https://developers.google.com/web/shows/http203/podcast/"
+    },
+    "rss:managingeditor": {
+      "@": {},
+      "#": "jaffathecake@gmail.com (jaffathecake@gmail.com)",
+      "name": "",
+      "email": "jaffathecake@gmail.com"
+    },
+    "itunes:summary": {
+      "@": {},
+      "#": "Surma and Jake talk about whatever's going on in the world of web development."
+    },
+    "rss:image": {
+      "@": {},
+      "url": {
+        "@": {},
+        "#": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png"
+      },
+      "title": {
+        "@": {},
+        "#": "HTTP 203"
+      },
+      "link": {
+        "@": {},
+        "#": "https://developers.google.com/web/shows/http203/podcast/"
+      }
+    },
+    "itunes:author": {
+      "@": {},
+      "#": "Surma & Jake"
+    },
+    "itunes:category": {
+      "@": {
+        "text": "Technology"
+      }
+    },
+    "itunes:image": {
+      "@": {
+        "href": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png"
+      }
+    },
+    "itunes:explicit": {
+      "@": {},
+      "#": "clean"
+    },
+    "itunes:owner": {
+      "@": {},
+      "itunes:name": {
+        "@": {},
+        "#": "Google"
+      },
+      "itunes:email": {
+        "@": {},
+        "#": "trinhdinh@google.com"
+      }
+    },
+    "rss:description": {
+      "@": {},
+      "#": "Surma and Jake talk about whatever's going on in the world of web development."
+    },
+    "itunes:subtitle": {
+      "@": {},
+      "#": "Where Surma and Jake occasionally talk web."
+    },
+    "itunes:type": {
+      "@": {},
+      "#": "episodic"
+    }
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "title": "JSJ 425: The Evolution of JavaScript",
+  "description": "<h3>Dan Shappir takes the lead and walks the panel through the history of JavaScript and a discussion on ES6, TypeScript, the direction and future of JavaScript, and what features to be looking at and looking for in the current iteration of JavaScript.</h3>\r\n\r\n<h3><strong>Panel</strong></h3>\r\n\r\n<ul>\r\n\t<li>AJ O&rsquo;Neal</li>\r\n\t<li>Aimee Knight</li>\r\n\t<li>Charles Max Wood</li>\r\n\t<li>Steve Edwards</li>\r\n\t<li>Dan Shappir</li>\r\n</ul>\r\n\r\n<h3><strong>Sponsors</strong></h3>\r\n\r\n<ul>\r\n\t<li><a href=\"https://taiko.dev/\">Taiko</a> - free and open source browser test automation</li>\r\n\t<li><a href=\"https://on.split.io/37M1fu2\">Split</a></li>\r\n</ul>\r\n\r\n<h2><strong>____________________________________________________________</strong></h2>\r\n\r\n<blockquote>\r\n<p><strong>&quot;The MaxCoders Guide to Finding Your Dream Developer Job&quot; by Charles Max Wood is now available on Amazon.</strong><a href=\"https://www.amazon.com/gp/product/B081MBL5C9/ref=as_li_ss_tl?ie=UTF8&amp;linkCode=sl1&amp;tag=devchattv-20&amp;linkId=9d61363241636e2546ef46abba198746&amp;language=en_US\"> <strong>Get Your Copy Today!</strong></a></p>\r\n</blockquote>\r\n\r\n<h2><strong>____________________________________________________________</strong></h2>\r\n\r\n<h3><strong>Links</strong></h3>\r\n\r\n<ul>\r\n\t<li><a href=\"https://tc39.es/process-document/\">The TC39 Process</a></li>\r\n\t<li><a href=\"https://www.williams-sonoma.com/products/le-creuset-star-wars-han-solo-roaster/?catalogId=21&amp;sku=9286855&amp;cm_ven=PLA&amp;cm_cat=Google&amp;cm_pla=Cookware%20%3E%20Roasting%20Pans&amp;cm_ite=9286855&amp;adlclid=ADL-07188926-36f3-479c-baa2-979e2468b1b3\">Le Creuset Star Wars&trade; Han Solo Roaster | Williams Sonoma</a></li>\r\n\t<li><a href=\"https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich/\">124 JSJ The Origin of Javascript with Brendan Eich</a></li>\r\n\t<li><a href=\"https://www.youtube.com/playlist?list=PL7664379246A246CB\">Crockford on JavaScript</a></li>\r\n\t<li><a href=\"https://www.lecreuset.com.tr/\">Le Creuset Turkey</a></li>\r\n\t<li><a href=\"https://devchat.tv/my-javascript-story/mjs-108-dan-shappir/\">MJS 108: Dan Shappir</a></li>\r\n\t<li><a href=\"https://devchat.tv/my-javascript-story/mjs-132-douglas-crockford/\">MJS 132: Douglas Crockford</a></li>\r\n\t<li><a href=\"https://devchat.tv/js-jabber/jsj-392-the-murky-past-and-misty-future-of-javascript-with-douglas-crockford/\">JSJ 392: The Murky Past and Misty Future of JavaScript with Douglas Crockford</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=GbVAMgU3Jj0\">&quot;Things You Can Do In ES6 That Can&#39;t Be Done In ES5&quot; - View Source talk by Dan Shappir</a></li>\r\n\t<li><a href=\"https://alligator.io/js/object-property-shorthand-es6/\">Object Property Value Shorthand in JavaScript with ES6</a></li>\r\n\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax\">Spread syntax - JavaScript | MDN</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=Nzokr6Boeaw\">JavaScript for-loops are&hellip; complicated - HTTP203</a></li>\r\n\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining\">Optional chaining - JavaScript | MDN</a></li>\r\n\t<li><a href=\"https://www.wix.engineering/post/breaking-chains-with-pipelines-in-modern-javascript\">Breaking Chains with Pipelines in Modern JavaScript</a></li>\r\n</ul>\r\n\r\n<h3><strong>Picks</strong></h3>\r\n\r\n<p><strong>AJ O&rsquo;Neal:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://amzn.to/37CvSS7\">Expert Secrets</a></li>\r\n\t<li><a href=\"https://courses.coursecreatorpro.com/?affcode=279641_gt48gggn\">Course Creator Pro</a></li>\r\n\t<li><a href=\"https://amzn.to/2P5OHXm\">Braun Series 7</a></li>\r\n</ul>\r\n\r\n<p><strong>Aimee Knight:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://www.vice.com/en_us/article/3a8pp5/kickstarter-employees-win-historic-union-election\">Kickstarter Employees Win Historic Union Election</a></li>\r\n\t<li><a href=\"https://www.refinery29.com/en-us/broccoli-sprouts-sulforaphane-benefits\">Broccoli Sprouts Nutrition And Benefits Of Sulforaphane</a></li>\r\n</ul>\r\n\r\n<p><strong>Charles Max Wood:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://amzn.to/2wnPgVZ\">The Expanse</a></li>\r\n\t<li><a href=\"https://www.fox.com/the-masked-singer/\">The Masked Singer</a></li>\r\n\t<li><a href=\"https://www.fox.com/lego-masters/\">LEGO Masters</a></li>\r\n</ul>\r\n\r\n<p><strong>Steve Edwards:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://www.beanogas.com/\">Beano</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=UB8ZDrNb3B0\">Steve Wright HBO special</a></li>\r\n</ul>\r\n\r\n<p><strong>Dan Shappir:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://devchat.tv/clean-coders/cc-001-clean-agile-with-robert-uncle-bob-martin/\">CC 001: Clean Agile with Robert &quot;Uncle Bob&quot; Martin</a></li>\r\n\t<li><a href=\"https://devchat.tv/adventures-in-dotnet/net-019-the-history-of-net-with-richard-campbell/\">.NET 019: The History of .NET with Richard Campbell</a></li>\r\n\t<li><a href=\"https://devchat.tv/react-round-up/rru-097-state-management-and-react-component-design-with-becca-bailey/\">RRU 097: State Management and React Component Design with Becca Bailey</a></li>\r\n</ul>\r\n\r\n<p>Follow JavaScript Jabber on Twitter &gt; <a href=\"https://twitter.com/JSJabber\">@JSJabber</a></p>",
+  "summary": "<h3>Dan Shappir takes the lead and walks the panel through the history of JavaScript and a discussion on ES6, TypeScript, the direction and future of JavaScript, and what features to be looking at and looking for in the current iteration of JavaScript.</h3>\r\n\r\n<h3><strong>Panel</strong></h3>\r\n\r\n<ul>\r\n\t<li>AJ O&rsquo;Neal</li>\r\n\t<li>Aimee Knight</li>\r\n\t<li>Charles Max Wood</li>\r\n\t<li>Steve Edwards</li>\r\n\t<li>Dan Shappir</li>\r\n</ul>\r\n\r\n<h3><strong>Sponsors</strong></h3>\r\n\r\n<ul>\r\n\t<li><a href=\"https://taiko.dev/\">Taiko</a> - free and open source browser test automation</li>\r\n\t<li><a href=\"https://on.split.io/37M1fu2\">Split</a></li>\r\n</ul>\r\n\r\n<h2><strong>____________________________________________________________</strong></h2>\r\n\r\n<blockquote>\r\n<p><strong>&quot;The MaxCoders Guide to Finding Your Dream Developer Job&quot; by Charles Max Wood is now available on Amazon.</strong><a href=\"https://www.amazon.com/gp/product/B081MBL5C9/ref=as_li_ss_tl?ie=UTF8&amp;linkCode=sl1&amp;tag=devchattv-20&amp;linkId=9d61363241636e2546ef46abba198746&amp;language=en_US\"> <strong>Get Your Copy Today!</strong></a></p>\r\n</blockquote>\r\n\r\n<h2><strong>____________________________________________________________</strong></h2>\r\n\r\n<h3><strong>Links</strong></h3>\r\n\r\n<ul>\r\n\t<li><a href=\"https://tc39.es/process-document/\">The TC39 Process</a></li>\r\n\t<li><a href=\"https://www.williams-sonoma.com/products/le-creuset-star-wars-han-solo-roaster/?catalogId=21&amp;sku=9286855&amp;cm_ven=PLA&amp;cm_cat=Google&amp;cm_pla=Cookware%20%3E%20Roasting%20Pans&amp;cm_ite=9286855&amp;adlclid=ADL-07188926-36f3-479c-baa2-979e2468b1b3\">Le Creuset Star Wars&trade; Han Solo Roaster | Williams Sonoma</a></li>\r\n\t<li><a href=\"https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich/\">124 JSJ The Origin of Javascript with Brendan Eich</a></li>\r\n\t<li><a href=\"https://www.youtube.com/playlist?list=PL7664379246A246CB\">Crockford on JavaScript</a></li>\r\n\t<li><a href=\"https://www.lecreuset.com.tr/\">Le Creuset Turkey</a></li>\r\n\t<li><a href=\"https://devchat.tv/my-javascript-story/mjs-108-dan-shappir/\">MJS 108: Dan Shappir</a></li>\r\n\t<li><a href=\"https://devchat.tv/my-javascript-story/mjs-132-douglas-crockford/\">MJS 132: Douglas Crockford</a></li>\r\n\t<li><a href=\"https://devchat.tv/js-jabber/jsj-392-the-murky-past-and-misty-future-of-javascript-with-douglas-crockford/\">JSJ 392: The Murky Past and Misty Future of JavaScript with Douglas Crockford</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=GbVAMgU3Jj0\">&quot;Things You Can Do In ES6 That Can&#39;t Be Done In ES5&quot; - View Source talk by Dan Shappir</a></li>\r\n\t<li><a href=\"https://alligator.io/js/object-property-shorthand-es6/\">Object Property Value Shorthand in JavaScript with ES6</a></li>\r\n\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax\">Spread syntax - JavaScript | MDN</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=Nzokr6Boeaw\">JavaScript for-loops are&hellip; complicated - HTTP203</a></li>\r\n\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining\">Optional chaining - JavaScript | MDN</a></li>\r\n\t<li><a href=\"https://www.wix.engineering/post/breaking-chains-with-pipelines-in-modern-javascript\">Breaking Chains with Pipelines in Modern JavaScript</a></li>\r\n</ul>\r\n\r\n<h3><strong>Picks</strong></h3>\r\n\r\n<p><strong>AJ O&rsquo;Neal:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://amzn.to/37CvSS7\">Expert Secrets</a></li>\r\n\t<li><a href=\"https://courses.coursecreatorpro.com/?affcode=279641_gt48gggn\">Course Creator Pro</a></li>\r\n\t<li><a href=\"https://amzn.to/2P5OHXm\">Braun Series 7</a></li>\r\n</ul>\r\n\r\n<p><strong>Aimee Knight:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://www.vice.com/en_us/article/3a8pp5/kickstarter-employees-win-historic-union-election\">Kickstarter Employees Win Historic Union Election</a></li>\r\n\t<li><a href=\"https://www.refinery29.com/en-us/broccoli-sprouts-sulforaphane-benefits\">Broccoli Sprouts Nutrition And Benefits Of Sulforaphane</a></li>\r\n</ul>\r\n\r\n<p><strong>Charles Max Wood:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://amzn.to/2wnPgVZ\">The Expanse</a></li>\r\n\t<li><a href=\"https://www.fox.com/the-masked-singer/\">The Masked Singer</a></li>\r\n\t<li><a href=\"https://www.fox.com/lego-masters/\">LEGO Masters</a></li>\r\n</ul>\r\n\r\n<p><strong>Steve Edwards:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://www.beanogas.com/\">Beano</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=UB8ZDrNb3B0\">Steve Wright HBO special</a></li>\r\n</ul>\r\n\r\n<p><strong>Dan Shappir:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://devchat.tv/clean-coders/cc-001-clean-agile-with-robert-uncle-bob-martin/\">CC 001: Clean Agile with Robert &quot;Uncle Bob&quot; Martin</a></li>\r\n\t<li><a href=\"https://devchat.tv/adventures-in-dotnet/net-019-the-history-of-net-with-richard-campbell/\">.NET 019: The History of .NET with Richard Campbell</a></li>\r\n\t<li><a href=\"https://devchat.tv/react-round-up/rru-097-state-management-and-react-component-design-with-becca-bailey/\">RRU 097: State Management and React Component Design with Becca Bailey</a></li>\r\n</ul>\r\n\r\n<p>Follow JavaScript Jabber on Twitter &gt; <a href=\"https://twitter.com/JSJabber\">@JSJabber</a></p>",
+  "date": "2020-03-17T10:05:00.000Z",
+  "pubdate": "2020-03-17T10:05:00.000Z",
+  "pubDate": "2020-03-17T10:05:00.000Z",
+  "link": "https://devchat.tv/js-jabber/jsj-425-the-evolution-of-javascript/",
+  "guid": "03163c42-79a0-4892-a912-59a910930f69",
+  "author": "chuck@devchat.tv",
+  "comments": null,
+  "origlink": null,
+  "image": {},
+  "source": {
+    "title": "JavaScript Jabber",
+    "url": "http://javascriptjabber.com"
+  },
+  "categories": [],
+  "enclosures": [
+    {
+      "url": "https://media.devchat.tv/js-jabber/JSJ_425_Panel.mp3",
+      "type": "audio/mpeg",
+      "length": "75154876"
+    }
+  ],
+  "rss:@": {},
+  "rss:title": {
+    "@": {},
+    "#": "JSJ 425: The Evolution of JavaScript"
+  },
+  "rss:link": {
+    "@": {},
+    "#": "https://devchat.tv/js-jabber/jsj-425-the-evolution-of-javascript/"
+  },
+  "rss:pubdate": {
+    "@": {},
+    "#": "Tue, 17 Mar 2020 06:05:00 -0400"
+  },
+  "rss:description": {
+    "@": {},
+    "#": "<h3>Dan Shappir takes the lead and walks the panel through the history of JavaScript and a discussion on ES6, TypeScript, the direction and future of JavaScript, and what features to be looking at and looking for in the current iteration of JavaScript.</h3>\r\n\r\n<h3><strong>Panel</strong></h3>\r\n\r\n<ul>\r\n\t<li>AJ O&rsquo;Neal</li>\r\n\t<li>Aimee Knight</li>\r\n\t<li>Charles Max Wood</li>\r\n\t<li>Steve Edwards</li>\r\n\t<li>Dan Shappir</li>\r\n</ul>\r\n\r\n<h3><strong>Sponsors</strong></h3>\r\n\r\n<ul>\r\n\t<li><a href=\"https://taiko.dev/\">Taiko</a> - free and open source browser test automation</li>\r\n\t<li><a href=\"https://on.split.io/37M1fu2\">Split</a></li>\r\n</ul>\r\n\r\n<h2><strong>____________________________________________________________</strong></h2>\r\n\r\n<blockquote>\r\n<p><strong>&quot;The MaxCoders Guide to Finding Your Dream Developer Job&quot; by Charles Max Wood is now available on Amazon.</strong><a href=\"https://www.amazon.com/gp/product/B081MBL5C9/ref=as_li_ss_tl?ie=UTF8&amp;linkCode=sl1&amp;tag=devchattv-20&amp;linkId=9d61363241636e2546ef46abba198746&amp;language=en_US\"> <strong>Get Your Copy Today!</strong></a></p>\r\n</blockquote>\r\n\r\n<h2><strong>____________________________________________________________</strong></h2>\r\n\r\n<h3><strong>Links</strong></h3>\r\n\r\n<ul>\r\n\t<li><a href=\"https://tc39.es/process-document/\">The TC39 Process</a></li>\r\n\t<li><a href=\"https://www.williams-sonoma.com/products/le-creuset-star-wars-han-solo-roaster/?catalogId=21&amp;sku=9286855&amp;cm_ven=PLA&amp;cm_cat=Google&amp;cm_pla=Cookware%20%3E%20Roasting%20Pans&amp;cm_ite=9286855&amp;adlclid=ADL-07188926-36f3-479c-baa2-979e2468b1b3\">Le Creuset Star Wars&trade; Han Solo Roaster | Williams Sonoma</a></li>\r\n\t<li><a href=\"https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich/\">124 JSJ The Origin of Javascript with Brendan Eich</a></li>\r\n\t<li><a href=\"https://www.youtube.com/playlist?list=PL7664379246A246CB\">Crockford on JavaScript</a></li>\r\n\t<li><a href=\"https://www.lecreuset.com.tr/\">Le Creuset Turkey</a></li>\r\n\t<li><a href=\"https://devchat.tv/my-javascript-story/mjs-108-dan-shappir/\">MJS 108: Dan Shappir</a></li>\r\n\t<li><a href=\"https://devchat.tv/my-javascript-story/mjs-132-douglas-crockford/\">MJS 132: Douglas Crockford</a></li>\r\n\t<li><a href=\"https://devchat.tv/js-jabber/jsj-392-the-murky-past-and-misty-future-of-javascript-with-douglas-crockford/\">JSJ 392: The Murky Past and Misty Future of JavaScript with Douglas Crockford</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=GbVAMgU3Jj0\">&quot;Things You Can Do In ES6 That Can&#39;t Be Done In ES5&quot; - View Source talk by Dan Shappir</a></li>\r\n\t<li><a href=\"https://alligator.io/js/object-property-shorthand-es6/\">Object Property Value Shorthand in JavaScript with ES6</a></li>\r\n\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax\">Spread syntax - JavaScript | MDN</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=Nzokr6Boeaw\">JavaScript for-loops are&hellip; complicated - HTTP203</a></li>\r\n\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining\">Optional chaining - JavaScript | MDN</a></li>\r\n\t<li><a href=\"https://www.wix.engineering/post/breaking-chains-with-pipelines-in-modern-javascript\">Breaking Chains with Pipelines in Modern JavaScript</a></li>\r\n</ul>\r\n\r\n<h3><strong>Picks</strong></h3>\r\n\r\n<p><strong>AJ O&rsquo;Neal:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://amzn.to/37CvSS7\">Expert Secrets</a></li>\r\n\t<li><a href=\"https://courses.coursecreatorpro.com/?affcode=279641_gt48gggn\">Course Creator Pro</a></li>\r\n\t<li><a href=\"https://amzn.to/2P5OHXm\">Braun Series 7</a></li>\r\n</ul>\r\n\r\n<p><strong>Aimee Knight:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://www.vice.com/en_us/article/3a8pp5/kickstarter-employees-win-historic-union-election\">Kickstarter Employees Win Historic Union Election</a></li>\r\n\t<li><a href=\"https://www.refinery29.com/en-us/broccoli-sprouts-sulforaphane-benefits\">Broccoli Sprouts Nutrition And Benefits Of Sulforaphane</a></li>\r\n</ul>\r\n\r\n<p><strong>Charles Max Wood:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://amzn.to/2wnPgVZ\">The Expanse</a></li>\r\n\t<li><a href=\"https://www.fox.com/the-masked-singer/\">The Masked Singer</a></li>\r\n\t<li><a href=\"https://www.fox.com/lego-masters/\">LEGO Masters</a></li>\r\n</ul>\r\n\r\n<p><strong>Steve Edwards:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://www.beanogas.com/\">Beano</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=UB8ZDrNb3B0\">Steve Wright HBO special</a></li>\r\n</ul>\r\n\r\n<p><strong>Dan Shappir:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://devchat.tv/clean-coders/cc-001-clean-agile-with-robert-uncle-bob-martin/\">CC 001: Clean Agile with Robert &quot;Uncle Bob&quot; Martin</a></li>\r\n\t<li><a href=\"https://devchat.tv/adventures-in-dotnet/net-019-the-history-of-net-with-richard-campbell/\">.NET 019: The History of .NET with Richard Campbell</a></li>\r\n\t<li><a href=\"https://devchat.tv/react-round-up/rru-097-state-management-and-react-component-design-with-becca-bailey/\">RRU 097: State Management and React Component Design with Becca Bailey</a></li>\r\n</ul>\r\n\r\n<p>Follow JavaScript Jabber on Twitter &gt; <a href=\"https://twitter.com/JSJabber\">@JSJabber</a></p>"
+  },
+  "rss:source": {
+    "@": {
+      "url": "http://javascriptjabber.com"
+    },
+    "#": "JavaScript Jabber"
+  },
+  "rss:guid": {
+    "@": {
+      "ispermalink": "false"
+    },
+    "#": "03163c42-79a0-4892-a912-59a910930f69"
+  },
+  "itunes:author": {
+    "@": {}
+  },
+  "itunes:subtitle": {
+    "@": {}
+  },
+  "itunes:summary": {
+    "@": {},
+    "#": "<h3>Dan Shappir takes the lead and walks the panel through the history of JavaScript and a discussion on ES6, TypeScript, the direction and future of JavaScript, and what features to be looking at and looking for in the current iteration of JavaScript.</h3>\r\n\r\n<h3><strong>Panel</strong></h3>\r\n\r\n<ul>\r\n\t<li>AJ O&rsquo;Neal</li>\r\n\t<li>Aimee Knight</li>\r\n\t<li>Charles Max Wood</li>\r\n\t<li>Steve Edwards</li>\r\n\t<li>Dan Shappir</li>\r\n</ul>\r\n\r\n<h3><strong>Sponsors</strong></h3>\r\n\r\n<ul>\r\n\t<li><a href=\"https://taiko.dev/\">Taiko</a> - free and open source browser test automation</li>\r\n\t<li><a href=\"https://on.split.io/37M1fu2\">Split</a></li>\r\n</ul>\r\n\r\n<h2><strong>____________________________________________________________</strong></h2>\r\n\r\n<blockquote>\r\n<p><strong>&quot;The MaxCoders Guide to Finding Your Dream Developer Job&quot; by Charles Max Wood is now available on Amazon.</strong><a href=\"https://www.amazon.com/gp/product/B081MBL5C9/ref=as_li_ss_tl?ie=UTF8&amp;linkCode=sl1&amp;tag=devchattv-20&amp;linkId=9d61363241636e2546ef46abba198746&amp;language=en_US\"> <strong>Get Your Copy Today!</strong></a></p>\r\n</blockquote>\r\n\r\n<h2><strong>____________________________________________________________</strong></h2>\r\n\r\n<h3><strong>Links</strong></h3>\r\n\r\n<ul>\r\n\t<li><a href=\"https://tc39.es/process-document/\">The TC39 Process</a></li>\r\n\t<li><a href=\"https://www.williams-sonoma.com/products/le-creuset-star-wars-han-solo-roaster/?catalogId=21&amp;sku=9286855&amp;cm_ven=PLA&amp;cm_cat=Google&amp;cm_pla=Cookware%20%3E%20Roasting%20Pans&amp;cm_ite=9286855&amp;adlclid=ADL-07188926-36f3-479c-baa2-979e2468b1b3\">Le Creuset Star Wars&trade; Han Solo Roaster | Williams Sonoma</a></li>\r\n\t<li><a href=\"https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich/\">124 JSJ The Origin of Javascript with Brendan Eich</a></li>\r\n\t<li><a href=\"https://www.youtube.com/playlist?list=PL7664379246A246CB\">Crockford on JavaScript</a></li>\r\n\t<li><a href=\"https://www.lecreuset.com.tr/\">Le Creuset Turkey</a></li>\r\n\t<li><a href=\"https://devchat.tv/my-javascript-story/mjs-108-dan-shappir/\">MJS 108: Dan Shappir</a></li>\r\n\t<li><a href=\"https://devchat.tv/my-javascript-story/mjs-132-douglas-crockford/\">MJS 132: Douglas Crockford</a></li>\r\n\t<li><a href=\"https://devchat.tv/js-jabber/jsj-392-the-murky-past-and-misty-future-of-javascript-with-douglas-crockford/\">JSJ 392: The Murky Past and Misty Future of JavaScript with Douglas Crockford</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=GbVAMgU3Jj0\">&quot;Things You Can Do In ES6 That Can&#39;t Be Done In ES5&quot; - View Source talk by Dan Shappir</a></li>\r\n\t<li><a href=\"https://alligator.io/js/object-property-shorthand-es6/\">Object Property Value Shorthand in JavaScript with ES6</a></li>\r\n\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax\">Spread syntax - JavaScript | MDN</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=Nzokr6Boeaw\">JavaScript for-loops are&hellip; complicated - HTTP203</a></li>\r\n\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining\">Optional chaining - JavaScript | MDN</a></li>\r\n\t<li><a href=\"https://www.wix.engineering/post/breaking-chains-with-pipelines-in-modern-javascript\">Breaking Chains with Pipelines in Modern JavaScript</a></li>\r\n</ul>\r\n\r\n<h3><strong>Picks</strong></h3>\r\n\r\n<p><strong>AJ O&rsquo;Neal:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://amzn.to/37CvSS7\">Expert Secrets</a></li>\r\n\t<li><a href=\"https://courses.coursecreatorpro.com/?affcode=279641_gt48gggn\">Course Creator Pro</a></li>\r\n\t<li><a href=\"https://amzn.to/2P5OHXm\">Braun Series 7</a></li>\r\n</ul>\r\n\r\n<p><strong>Aimee Knight:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://www.vice.com/en_us/article/3a8pp5/kickstarter-employees-win-historic-union-election\">Kickstarter Employees Win Historic Union Election</a></li>\r\n\t<li><a href=\"https://www.refinery29.com/en-us/broccoli-sprouts-sulforaphane-benefits\">Broccoli Sprouts Nutrition And Benefits Of Sulforaphane</a></li>\r\n</ul>\r\n\r\n<p><strong>Charles Max Wood:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://amzn.to/2wnPgVZ\">The Expanse</a></li>\r\n\t<li><a href=\"https://www.fox.com/the-masked-singer/\">The Masked Singer</a></li>\r\n\t<li><a href=\"https://www.fox.com/lego-masters/\">LEGO Masters</a></li>\r\n</ul>\r\n\r\n<p><strong>Steve Edwards:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://www.beanogas.com/\">Beano</a></li>\r\n\t<li><a href=\"https://www.youtube.com/watch?v=UB8ZDrNb3B0\">Steve Wright HBO special</a></li>\r\n</ul>\r\n\r\n<p><strong>Dan Shappir:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://devchat.tv/clean-coders/cc-001-clean-agile-with-robert-uncle-bob-martin/\">CC 001: Clean Agile with Robert &quot;Uncle Bob&quot; Martin</a></li>\r\n\t<li><a href=\"https://devchat.tv/adventures-in-dotnet/net-019-the-history-of-net-with-richard-campbell/\">.NET 019: The History of .NET with Richard Campbell</a></li>\r\n\t<li><a href=\"https://devchat.tv/react-round-up/rru-097-state-management-and-react-component-design-with-becca-bailey/\">RRU 097: State Management and React Component Design with Becca Bailey</a></li>\r\n</ul>\r\n\r\n<p>Follow JavaScript Jabber on Twitter &gt; <a href=\"https://twitter.com/JSJabber\">@JSJabber</a></p>"
+  },
+  "itunes:duration": {
+    "@": {},
+    "#": "1:18:04"
+  },
+  "rss:enclosure": {
+    "@": {
+      "url": "https://media.devchat.tv/js-jabber/JSJ_425_Panel.mp3",
+      "length": "75154876",
+      "type": "audio/mpeg"
+    }
+  },
+  "meta": {
+    "#ns": [
+      {
+        "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"
+      }
+    ],
+    "@": [
+      {
+        "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"
+      }
+    ],
+    "#xml": {
+      "version": "1.0",
+      "encoding": "UTF-8"
+    },
+    "#type": "rss",
+    "#version": "2.0",
+    "title": "JavaScript Jabber",
+    "description": "Weekly podcast discussion about Javascript on the front and back ends. Also discuss programming practices, coding environments, and the communities related to the technology.",
+    "date": "2020-05-19T10:00:23.000Z",
+    "pubdate": "2020-05-19T10:00:23.000Z",
+    "pubDate": "2020-05-19T10:00:23.000Z",
+    "link": "http://javascriptjabber.com",
+    "xmlurl": "http://javascriptjabber.com/",
+    "xmlUrl": "http://javascriptjabber.com/",
+    "author": "chuck@devchat.tv",
+    "language": "en",
+    "favicon": null,
+    "copyright": "2012-2017 Intentional Excellence Productions, LLC",
+    "generator": null,
+    "cloud": {},
+    "image": {
+      "url": "https://s3.amazonaws.com/devchat.tv/javascript_jabber_thumb.jpg",
+      "title": "JavaScript Jabber"
+    },
+    "categories": [
+      "javascript",
+      "js",
+      "programming",
+      "browser",
+      "internet",
+      "web",
+      "programmer",
+      "developer",
+      "framework",
+      "front end",
+      "node",
+      "nodejs",
+      "Education/How To",
+      "Technology",
+      "Business/Careers"
+    ],
+    "rss:@": {},
+    "rss:title": {
+      "@": {},
+      "#": "JavaScript Jabber"
+    },
+    "rss:description": {
+      "@": {},
+      "#": "Weekly podcast discussion about Javascript on the front and back ends. Also discuss programming practices, coding environments, and the communities related to the technology."
+    },
+    "rss:link": {
+      "@": {},
+      "#": "http://javascriptjabber.com/"
+    },
+    "rss:language": {
+      "@": {},
+      "#": "en"
+    },
+    "rss:managingeditor": {
+      "@": {},
+      "#": "chuck@devchat.tv",
+      "name": "",
+      "email": "chuck@devchat.tv"
+    },
+    "rss:webmaster": {
+      "@": {},
+      "#": "chuck@devchat.tv",
+      "name": "",
+      "email": "chuck@devchat.tv"
+    },
+    "rss:copyright": {
+      "@": {},
+      "#": "2012-2017 Intentional Excellence Productions, LLC"
+    },
+    "rss:lastbuilddate": {
+      "@": {},
+      "#": "Tue, 19 May 2020 06:00:23 -0400"
+    },
+    "rss:image": {
+      "@": {},
+      "link": {
+        "@": {},
+        "#": "http://javascriptjabber.com/"
+      },
+      "url": {
+        "@": {},
+        "#": "https://s3.amazonaws.com/devchat.tv/javascript_jabber_thumb.jpg"
+      },
+      "title": {
+        "@": {},
+        "#": "JavaScript Jabber"
+      }
+    },
+    "rss:category": [
+      {
+        "@": {},
+        "#": "javascript"
+      },
+      {
+        "@": {},
+        "#": "js"
+      },
+      {
+        "@": {},
+        "#": "programming"
+      },
+      {
+        "@": {},
+        "#": "browser"
+      },
+      {
+        "@": {},
+        "#": "internet"
+      },
+      {
+        "@": {},
+        "#": "web"
+      },
+      {
+        "@": {},
+        "#": "programmer"
+      },
+      {
+        "@": {},
+        "#": "programming"
+      },
+      {
+        "@": {},
+        "#": "developer"
+      },
+      {
+        "@": {},
+        "#": "framework"
+      },
+      {
+        "@": {},
+        "#": "front end"
+      },
+      {
+        "@": {},
+        "#": "node"
+      },
+      {
+        "@": {},
+        "#": "nodejs"
+      }
+    ],
+    "itunes:subtitle": {
+      "@": {},
+      "#": "Your Prototype for Great Code"
+    },
+    "itunes:author": {
+      "@": {},
+      "#": "DevChat.tv"
+    },
+    "itunes:summary": {
+      "@": {},
+      "#": "Weekly podcast discussion about Javascript on the front and back ends. Also discuss programming practices, coding environments, and the communities related to the technology."
+    },
+    "itunes:explicit": {
+      "@": {},
+      "#": "no"
+    },
+    "itunes:keywords": {
+      "@": {},
+      "#": "javascript, js, programming, browser, internet, web, programmer, programming, developer, framework, front end, node, nodejs"
+    },
+    "itunes:owner": {
+      "@": {},
+      "itunes:name": {
+        "@": {},
+        "#": "Charles Max Wood"
+      },
+      "itunes:email": {
+        "@": {},
+        "#": "chuck@devchat.tv"
+      }
+    },
+    "itunes:image": {
+      "@": {
+        "href": "https://s3.amazonaws.com/devchat.tv/javascript_jabber_thumb.jpg"
+      }
+    },
+    "itunes:category": [
+      {
+        "@": {
+          "text": "Education"
+        },
+        "itunes:category": {
+          "@": {
+            "text": "How To"
+          }
+        }
+      },
+      {
+        "@": {
+          "text": "Technology"
+        }
+      },
+      {
+        "@": {
+          "text": "Business"
+        },
+        "itunes:category": {
+          "@": {
+            "text": "Careers"
+          }
+        }
+      }
+    ]
+  }
+}
