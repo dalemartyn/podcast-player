@@ -12,6 +12,10 @@ import HomeView from './components/HomeView';
 import NotFound from './components/NotFound';
 import MainLayout from './components/MainLayout';
 
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
+
 function PodcastApp() {
   return (
     <AppStateProvider>
@@ -19,9 +23,20 @@ function PodcastApp() {
         <Header />
         <MainLayout>
           <Routes>
-            <Route path="/" element={<HomeView />} />
-            <Route path="/podcast"
+            <Route
+              path="/"
+              element={<HomeView />}
+              preload={scrollToTop}
+            />
+            <Route
+              path="/podcast"
               element={<PodcastView />}
+              preload={scrollToTop}
+            />
+            <Route
+              path="/design"
+              element={<HomeView />}
+              preload={scrollToTop}
             />
             <Route path="*" element={<NotFound />} />
           </Routes>
