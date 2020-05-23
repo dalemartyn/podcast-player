@@ -4,7 +4,7 @@ import {
   useAppState
 } from '../../AppStateProvider';
 import Feed from './Feed';
-
+import PodcastHeader from './PodcastHeader';
 
 export default function PodcastView() {
   const location = useLocation();
@@ -12,30 +12,23 @@ export default function PodcastView() {
   const params = new URLSearchParams(location.search);
   const podcastUrl = params.get('rss');
 
-  const title = getPodcastTitle(podcastUrl, podcasts);
+  const podcast = getPodcast(podcastUrl, podcasts);
 
   // TODO: handle error case.
 
   return (
     <>
-      <Title title={title} />
+      { podcast && <PodcastHeader podcast={podcast} />}
       <Feed podcastUrl={podcastUrl} />
     </>
   );
 
-  // return (<><p>something went wrong</p><pre>{JSON.stringify(feed)}</pre></>);
-
 }
 
-function Title({title}) {
-  return (
-    <h1 className="ts-post-title u-margin-bottom-xxlarge">{ title }</h1>
-  );
-}
 
-function getPodcastTitle(url, podcasts) {
+function getPodcast(url, podcasts) {
   if (podcasts.byUrl[url]) {
-    return podcasts.byUrl[url].title;
+    return podcasts.byUrl[url];
   }
   return null;
 }

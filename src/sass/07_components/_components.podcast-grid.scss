@@ -6,14 +6,19 @@
   margin: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: sp(large);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: sp();
+
+  @include mq($from: xs) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: sp(large);
+  }
 
   @include mq($from: sm) {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @include mq($from: md) {
+  @include mq($from: lg) {
     grid-template-columns: repeat(5, 1fr);
   }
 }

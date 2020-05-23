@@ -43,7 +43,7 @@ function PodcastGridItem({ podcast }) {
           <img src={podcast.image} alt={podcast.title} />
         </Link>
       </div>
-      <h2 className="ts-display-5 u-margin-top-small">
+      <h2 className="ts-display-5 u-margin-top-small u-break-word">
         {podcast.title || podcast.url}
       </h2>
     </li>

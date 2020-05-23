@@ -22,7 +22,6 @@
   line-height: 1.55;
   font-weight: fw(regular);
   -webkit-tap-highlight-color: transparent;
-  overflow-wrap: break-word;
   background-color: sem-color(background);
   color: sem-color(text);
   @include theme-transition(background-color color);

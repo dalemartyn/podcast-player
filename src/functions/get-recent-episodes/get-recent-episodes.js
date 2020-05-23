@@ -62,12 +62,6 @@ exports.handler = function(event, context, callback) {
           duration
         }
 
-        console.log(episodes.length, post.title);
-
-        if (episodes.length === 0) {
-          console.log(JSON.stringify(post, null, 2));
-        }
-
         episodes.push(episode);
         post = this.read();
       }

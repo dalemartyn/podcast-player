@@ -6,6 +6,7 @@ const parser = new Parser({
 });
 const savePodcastImage = require('./save-podcast-image');
 const slugify = require('@sindresorhus/slugify');
+const sanitize = require('./utils/sanitize');
 
 const { writeFile } = require('fs/promises');
 
@@ -39,7 +40,7 @@ async function getPodcastData(url) {
       title: data.title,
       image: `/img/podcast-images/${filename}.png`,
       url: url,
-      description: data.description
+      description: sanitize(data.description)
     }
   }
 
