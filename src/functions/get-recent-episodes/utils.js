@@ -71,11 +71,11 @@ function getItunesDuration(post) {
 }
 
 function getTitle(post) {
-  return sanitize(post.title);
+  return he.decode(sanitize(post.title));
 }
 
 function getContent(post) {
-  return sanitize(post.summary);
+  return he.decode(sanitize(post.summary));
 }
 
 function getSubtitle(post) {

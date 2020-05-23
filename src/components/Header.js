@@ -1,6 +1,7 @@
 import React from 'react';
 import useKeydown from '../hooks/useKeydown';
 import { Link } from 'react-router-dom'
+import * as DarkTheme from '../dark-theme';
 
 export default function Header() {
 
@@ -23,14 +24,18 @@ export default function Header() {
 
 function DarkModeToggle() {
 
+  function isDarkTheme() {
+    return DarkTheme.isDarkTheme();
+  }
+
   function toggleDarkMode() {
-    document.documentElement.classList.toggle('t-dark');
+    DarkTheme.toggle();
   }
 
   useKeydown('d', toggleDarkMode);
 
   return (
-    <button onClick={toggleDarkMode} role="switch" aria-checked="false" aria-label="Dark Theme" className="c-button c-button--dark-theme">
+    <button onClick={toggleDarkMode} role="switch" aria-checked={isDarkTheme()} aria-label="Dark Theme" className="c-button c-button--dark-theme">
       <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path fillRule="evenodd" clipRule="evenodd" d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" />
       <g clipPath="url(#dark-theme-icon-clip-path)">

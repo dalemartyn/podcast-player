@@ -42,6 +42,7 @@
   @include ms-respond(font-size, .5);
   font-weight: fw(text);
   color: sem-color(text-2);
+  @include theme-transition(color);
   line-height: 1.25;
 }
 

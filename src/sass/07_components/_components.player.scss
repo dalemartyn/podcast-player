@@ -10,6 +10,7 @@
   right: 0;
   background-color: sem-color("surface", .98);
   box-shadow: var(--shadow-2);
+  @include theme-transition(background-color border-color);
 }
 
   .c-player__audio {

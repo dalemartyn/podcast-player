@@ -6,6 +6,7 @@
 .c-feed-item {
   display: flex;
   border-top: 1px solid sem-color(border);
+  @include theme-transition(border-color);
 }
 
 .c-feed-item__button button {
@@ -15,6 +16,7 @@
   line-height: 1.25;
   border: sp(xxmicro) solid sem-color("text");
   padding: sp(small);
+  @include theme-transition(border-color);
 }
 
 
