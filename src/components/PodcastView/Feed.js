@@ -5,10 +5,8 @@ import {
   useAppState,
   useAppDispatch
 } from '../../AppStateProvider';
-import usePodcastFeed from '../../hooks/usePodcastFeed';
 
 export default function Feed({ podcastUrl }) {
-  usePodcastFeed(podcastUrl);
 
   const { episodes, player } = useAppState();
 
@@ -31,8 +29,8 @@ export default function Feed({ podcastUrl }) {
 
   const feed = episodes.byUrl[podcastUrl];
 
-  if ( feed && feed.items ) {
-    return feed.items.map((episode) => <FeedItem
+  if ( feed ) {
+    return feed.map((episode) => <FeedItem
       episode={episode}
       key={episode.guid}
       player={player}

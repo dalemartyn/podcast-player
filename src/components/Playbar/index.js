@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import { useAppState } from '../AppStateProvider';
+import { useAppState } from '../../AppStateProvider';
+import { Slider } from '@rmwc/slider'; // https://rmwc.io/sliders
 
 export default function Playbar() {
   const state = useAppState();
@@ -19,8 +20,12 @@ export default function Playbar() {
   }, [player.state])
 
   return (
-    <div className="c-player u-padding">
-      <audio ref={audioElement} src={player.url} controls autoPlay className="c-player__audio" />
+    <div className="c-player o-wrapper-full u-padding-top-micro u-padding-bottom-micro">
+      <Slider
+        onInput={evt => console.log(evt)}
+        onChange={evt => console.log(evt)}
+      />
+      <audio controls ref={audioElement} src={player.url} autoPlay className="c-player__audio" />
     </div>
   );
 }

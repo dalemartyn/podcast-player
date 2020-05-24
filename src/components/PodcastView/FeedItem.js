@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  PauseOutline32,
+  PlayOutline32
+} from '@carbon/icons-react';
 
 export default function FeedItem({episode, player, onPlayButtonClick, onPauseButtonClick}) {
   let url;
@@ -15,11 +19,11 @@ export default function FeedItem({episode, player, onPlayButtonClick, onPauseBut
 
   if (isPlaying) {
     button = <button className="ts-body-2" onClick={onPauseButtonClick}>
-      Pause
+      <PauseOutline32 aria-label="Pause" className="c-icon c-icon--pause" />
     </button>
   } else {
-    button = <button className="ts-body-2" onClick={() => onPlayButtonClick(episode) }>
-      Play
+    button = <button onClick={() => onPlayButtonClick(episode) }>
+      <PlayOutline32 aria-label="Play" className="c-icon c-icon--play" />
     </button>;
   }
 

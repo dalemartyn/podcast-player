@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from 'react';
 import podcastApp from './reducers';
-import { byUrl, allUrls } from './podcasts.json';
+import { byUrl, categories } from './initial-state.json';
 
 export const AppStateContext = createContext(null);
 export const AppDispatchContext = createContext(null);
@@ -17,7 +17,7 @@ export default function AppStateProvider({children}) {
   const initialState = {
     podcasts: {
       byUrl,
-      allUrls
+      categories
     },
     episodes: {
       byUrl: {}

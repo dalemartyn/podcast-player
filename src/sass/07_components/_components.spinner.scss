@@ -5,6 +5,8 @@
 .c-spinner {
   display: flex;
   justify-content: center;
+  padding-top: sp(large);
+  padding-bottom: sp(large);
 }
 
 .c-spinner__inner {

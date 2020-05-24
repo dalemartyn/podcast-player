@@ -8,9 +8,9 @@
   --color-text-3:              #{rgb-triplet("blue-grey-400")};
   --color-quote-border:        #{rgb-triplet("blue-grey-400")};
   --color-border:              #{rgb-triplet("blue-grey-50")};
-  --color-selection:           #{rgb-triplet("green-500")};
+  --color-selection:           #{rgb-material("cyan", "400")};
   --color-selection-inactive:  #{rgb-triplet("blue-grey-300")};
-  --color-link:                #{rgb-triplet("green-500")};
+  --color-link:                #{rgb-material("cyan", "400")};
   --color-twitter-profile:     #{rgb-triplet("blue-grey-600")};
 
   --color-code-red:            #{rgb-material("red", "500")};
@@ -32,6 +32,8 @@
   --color-code-brown:          #{rgb-material("brown", "800")};
   --color-code-blue-grey:      #{rgb-material("blue-grey", "500")};
   --color-code-dark-blue-grey: #{rgb-material("blue-grey", "700")};
+
+  --mdc-theme-secondary:       #{material-color("cyan", "600")};
 }
 
 @mixin dark-color-vars {
@@ -43,9 +45,9 @@
   --color-text-3:              #{rgb-triplet("blue-grey-300")};
   --color-quote-border:        #{rgb-triplet("blue-grey-300")};
   --color-border:              #{rgb-triplet("blue-grey-850")};
-  --color-selection:           #{rgb-triplet("green-300")};
+  --color-selection:           #{rgb-material("cyan", "300")};
   --color-selection-inactive:  #{rgb-triplet("blue-grey-300")};
-  --color-link:                #{rgb-triplet("green-300")};
+  --color-link:                #{rgb-material("cyan", "300")};
   --color-twitter-profile:     #{rgb-triplet("blue-grey-700")};
 
   --color-code-red:            #{rgb-material("red", "200")};
@@ -67,4 +69,6 @@
   --color-code-brown:          #{rgb-material("brown", "200")};
   --color-code-blue-grey:      #{rgb-material("blue-grey", "200")};
   --color-code-dark-blue-grey: #{rgb-material("blue-grey", "50")};
+
+  --mdc-theme-secondary:       #{material-color("cyan", "400")};
 }

@@ -26,12 +26,6 @@
   color: sem-color(text);
   @include theme-transition(background-color color);
   -webkit-font-smoothing: antialiased;
-
-  @include ms-respond(--menu-item-font-size, .75);
-  --site-menu-height: calc(#{sp()} * 2 + var(--menu-item-font-size) * 1.25);
-
-  @include mq($until: lg) {
-    padding-bottom: var(--site-menu-height);
-  }
+  padding-bottom: var(--player-height);
 }
 

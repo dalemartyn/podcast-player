@@ -11,16 +11,11 @@
 
 .c-feed-item__button button {
   @include button-reset;
-  @include ms-respond(font-size, .75);
-  font-weight: fw(semibold);
-  line-height: 1.25;
-  border: sp(xxmicro) solid sem-color("text");
-  padding: sp(small);
-  @include theme-transition(border-color);
 }
 
 
   .c-feed-item__description {
+
     p {
       @include ms-respond(font-size, .75);
       line-height: var(--body-2-line-height);

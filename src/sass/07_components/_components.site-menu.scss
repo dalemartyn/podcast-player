@@ -1,0 +1,27 @@
+/* ==========================================================================
+   #SITE-MENU
+   ========================================================================== */
+
+.c-site-menu {
+  @include mq($until: lg) {
+    margin-left: calc(var(--site-margin) * -1);
+    margin-right: calc(var(--site-margin) * -1);
+    display: flex;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+  .c-site-menu__nav {
+    padding-left: var(--site-margin);
+    padding-right: var(--site-margin);
+    flex: 1;
+  }

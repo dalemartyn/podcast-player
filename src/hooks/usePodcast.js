@@ -15,12 +15,12 @@ export async function getPodcastData(url) {
   return json;
 }
 
-export default function usePodcastFeed(url) {
+export default function usePodcast(url) {
   const dispatch = useAppDispatch();
 
   useLayoutEffect(() => {
     dispatch({
-      type: 'SET_FEED',
+      type: 'SET_PODCAST',
       data: {
         url
       }
@@ -32,7 +32,7 @@ export default function usePodcastFeed(url) {
       try {
         const podcastData = await getPodcastData(url);
         dispatch({
-          type: 'ADD_FEED',
+          type: 'ADD_PODCAST',
           data: {
             podcastData,
             url
@@ -40,7 +40,7 @@ export default function usePodcastFeed(url) {
         });
       } catch (e) {
         dispatch({
-          type: 'SET_FEED',
+          type: 'SET_PODCAST',
           data: {
             error: e.toString(),
             url

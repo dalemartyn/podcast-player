@@ -35,3 +35,8 @@
   padding-right: var(--site-margin);
   max-width: calc(var(--container-width-xl) + var(--site-margin) * 2);
 }
+
+.o-wrapper-full {
+  padding-left: var(--site-margin);
+  padding-right: var(--site-margin);
+}

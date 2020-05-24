@@ -1,28 +1,8 @@
 import React from 'react';
-import useKeydown from '../hooks/useKeydown';
-import { Link } from 'react-router-dom'
-import * as DarkTheme from '../dark-theme';
+import useKeydown from '../../hooks/useKeydown';
+import * as DarkTheme from '../../dark-theme';
 
-export default function Header() {
-
-  return (
-    <div className="c-site-header">
-      <div className="o-wrapper-l">
-        <div className="c-site-header__main">
-          <div className="c-site-header__logo">
-            <Link className="c-site-header__logo-link ts-title" to="/">Podcasts</Link>
-          </div>
-
-          <div className="c-site-header__darkmode">
-            <DarkModeToggle />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function DarkModeToggle() {
+export default function DarkModeToggle() {
 
   function isDarkTheme() {
     return DarkTheme.isDarkTheme();

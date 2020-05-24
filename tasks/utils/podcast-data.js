@@ -10,7 +10,7 @@ const window = new JSDOM('').window;
 const DOMPurify = createDOMPurify(window);
 
 function sanitize(dirty) {
-  return DOMPurify.sanitize(dirty);
+  return replaceNonBreakingSpaces(DOMPurify.sanitize(dirty));
 }
 
 function truncate(text) {
@@ -21,6 +21,10 @@ function truncate(text) {
   }
 
   return words.slice(0, 31).join(' ') + '…';
+}
+
+function replaceNonBreakingSpaces(str) {
+  return str.replace(/&nbsp;/g, ' ');
 }
 
 function getSanitizedContent(str) {
@@ -36,7 +40,7 @@ function getFirstParagraph(unsanitizedContent) {
   const a = content.indexOf('<p>') + 3;
   const b = content.indexOf('</p>');
   const firstPara = content.substring(a, b);
-  return firstPara.replace(/&nbsp;/g, ' ');
+  return replaceNonBreakingSpaces(firstPara);
 }
 
 function getRSSSubtitle(post) {
@@ -112,6 +116,24 @@ function getDate(jsDate) {
   return dt.toFormat('MMM dd, yyyy');
 }
 
+function getPodcastMeta(post, url) {
+  const meta = {
+    title: sanitize(post.title),
+    description: sanitize(post.description),
+    originalImage: sanitize(post.image.url),
+    link: sanitize(post.link),
+    date: sanitize(post.date),
+    url
+  };
+
+  const subtitle = getItunesSubtitle(post);
+  if (subtitle) {
+    meta.subtitle = subtitle;
+  }
+
+  return meta;
+}
+
 module.exports = {
   getTitle,
   getContent,
@@ -119,5 +141,6 @@ module.exports = {
   getSummary,
   getMedia,
   getDuration,
-  getDate
+  getDate,
+  getPodcastMeta
 }

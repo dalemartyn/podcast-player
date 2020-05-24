@@ -7,10 +7,10 @@ export default function episodes(state = {}, action) {
 
 function byUrl(state = {}, action) {
   switch (action.type) {
-    case "ADD_FEED":
+    case "ADD_PODCAST":
       return {
         ...state,
-        [action.data.url]: action.data.podcastData
+        [action.data.url]: action.data.podcastData.items
       }
     default:
       return state;
@@ -19,7 +19,7 @@ function byUrl(state = {}, action) {
 
 function feed(state = {}, action) {
   switch (action.type) {
-    case "SET_FEED":
+    case "SET_PODCAST":
       return action.data;
     default:
       return state;

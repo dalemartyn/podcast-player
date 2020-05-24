@@ -6,9 +6,10 @@ import {
   Route
 } from 'react-router-dom';
 import Playbar from './components/Playbar';
-import Header from './components/Header';
+import SiteHeader from './components/SiteHeader';
 import PodcastView from './components/PodcastView';
 import HomeView from './components/HomeView';
+import GridView from './components/GridView';
 import NotFound from './components/NotFound';
 import MainLayout from './components/MainLayout';
 
@@ -20,7 +21,7 @@ function PodcastApp() {
   return (
     <AppStateProvider>
       <BrowserRouter>
-        <Header />
+        <SiteHeader />
         <MainLayout>
           <Routes>
             <Route
@@ -34,8 +35,18 @@ function PodcastApp() {
               preload={scrollToTop}
             />
             <Route
-              path="/design"
-              element={<HomeView />}
+              path="/web"
+              element={<GridView category="web" />}
+              preload={scrollToTop}
+            />
+            <Route
+              path="/business"
+              element={<GridView category="business" />}
+              preload={scrollToTop}
+            />
+            <Route
+              path="/football"
+              element={<GridView category="football" />}
               preload={scrollToTop}
             />
             <Route path="*" element={<NotFound />} />

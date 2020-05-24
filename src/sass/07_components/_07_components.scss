@@ -5,13 +5,18 @@
 
 /* stylelint-disable scss/partial-no-import */
 
-@import './components.player';
-@import './components.feed-item';
 @import './components.site-header';
+@import './components.site-logo';
+@import './components.site-menu';
+@import './components.tab-menu';
 @import './components.buttons';
+@import './components.icons';
 @import './components.image';
 @import './components.podcast-grid';
 @import './components.podcast-header';
+@import './components.feed-item';
 @import './components.spinner';
+@import './components.player';
+@import './components.slider';
 
 /* stylelint-enable scss/partial-no-import */

@@ -1,63 +1,88 @@
-const Parser = require('rss-parser');
-const parser = new Parser({
-  headers: {
-    Accept: 'application/rss+xml, application/xml'
-  }
-});
-const savePodcastImage = require('./save-podcast-image');
-const slugify = require('@sindresorhus/slugify');
-const sanitize = require('./utils/sanitize');
+const fetch = require('node-fetch');
+const FeedParser = require('feedparser');
+const {
+  getTitle,
+  getContent,
+  getSubtitle,
+  getSummary,
+  getMedia,
+  getDuration,
+  getDate,
+  getPodcastMeta
+} = require('./utils/podcast-data');
 
-const { writeFile } = require('fs/promises');
+module.exports = function getPodcastData(url, numEpisodes) {
+  return new Promise(function(resolve, reject) {
+    let podcastMeta = {};
+    let episodes = [];
 
-let allUrls = [
-  "https://rss.simplecast.com/podcasts/6265/rss",
-  "http://http203.googledevelopers.libsynpro.com/rss",
-  "https://feeds.feedwrench.com/js-jabber.rss",
-  "https://gomakethings.com/podcast/feed.rss",
-  "https://changelog.com/podcast/feed",
-  "https://anchor.fm/s/10dbd4bc/podcast/rss",
-  "https://feeds.transistor.fm/maintainers-anonymous",
-  "http://exponent.fm/feed/",
-  "https://rss.art19.com/freakonomics-radio"
-];
+    fetch(url, {
+      headers: {
+        Accept: 'application/rss+xml, application/xml'
+      }
+    }).then(function (res) {
+      if (res.status !== 200) throw new Error('Bad status code');
+      const responseStream = res.body;
 
-async function getPodcastData(url) {
-  let data;
-  try {
-    data = await parser.parseURL(url);
-  } catch (e) {
-    console.log(e);
-  }
+      const feedparser = new FeedParser();
+      feedparser.on('error', reject);
+      feedparser.on('end', resolveWithData);
 
-  if (data) {
-    const filename = slugify(data.title, {
-      decamelize: false
-    });
-    await savePodcastImage(filename, data.itunes.image);
+      feedparser.on('readable', function () {
 
-    return {
-      title: data.title,
-      image: `/img/podcast-images/${filename}.png`,
-      url: url,
-      description: sanitize(data.description)
+        if (episodes.length >= numEpisodes) {
+          responseStream.destroy();
+        }
+
+        let post = this.read();
+
+        while (post && episodes.length <= numEpisodes) {
+          const media = getMedia(post);
+
+          if (!media) {
+            post = this.read();
+            continue;
+          }
+
+          const title = getTitle(post);
+          const content = getContent(post);
+          const subtitle = getSubtitle(post);
+          const summary = getSummary(post);
+          const duration = getDuration(post);
+          const date = getDate(post.date);
+          const guid = post.guid;
+
+          const episode = {
+            title,
+            date,
+            guid,
+            media,
+            subtitle,
+            summary,
+            content,
+            duration
+          }
+
+          if (episodes.length === 0) {
+            podcastMeta = getPodcastMeta(post.meta, url);
+          }
+
+          episodes.push(episode);
+          post = this.read();
+        }
+      });
+
+      responseStream.pipe(feedparser);
+      responseStream.on('close', resolveWithData);
+
+    }).catch(reject);
+
+    function resolveWithData() {
+      resolve({
+        meta: podcastMeta,
+        items: episodes
+      })
     }
-  }
 
-  return {
-    url: url
-  };
-}
-
-Promise.all(allUrls.map(getPodcastData))
-  .then((data) => {
-    const byUrl = {};
-    data.forEach((podcast) => byUrl[podcast.url] = podcast);
-
-    const initialState = {
-      byUrl,
-      allUrls
-    };
-    writeFile('./src/podcasts.json', JSON.stringify(initialState, null, 2));
   });
-
+}

@@ -1,0 +1,309 @@
+{
+  "byUrl": {
+    "https://rss.simplecast.com/podcasts/6265/rss": {
+      "title": "React Podcast",
+      "description": "Conversations about React with your favorite developers.",
+      "originalImage": "https://media.simplecast.com/podcast/image/6265/1550288890-artwork.jpg",
+      "link": "http://reactpodcast.com/",
+      "date": "Sun May 24 2020 12:21:35 GMT+0100 (British Summer Time)",
+      "url": "https://rss.simplecast.com/podcasts/6265/rss",
+      "subtitle": "Conversations about React with your favorite developers..",
+      "image": "/img/podcast-images/react-podcast.png"
+    },
+    "http://http203.googledevelopers.libsynpro.com/rss": {
+      "title": "HTTP 203",
+      "description": "Surma and Jake talk about whatever's going on in the world of web development.",
+      "originalImage": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png",
+      "link": "https://developers.google.com/web/shows/http203/podcast/",
+      "date": "Sat May 23 2020 19:37:05 GMT+0100 (British Summer Time)",
+      "url": "http://http203.googledevelopers.libsynpro.com/rss",
+      "subtitle": "Where Surma and Jake occasionally talk web.",
+      "image": "/img/podcast-images/http-203.png"
+    },
+    "https://feeds.feedwrench.com/js-jabber.rss": {
+      "title": "JavaScript Jabber",
+      "description": "Weekly podcast discussion about Javascript on the front and back ends. Also discuss programming practices, coding environments, and the communities related to the technology.",
+      "originalImage": "https://s3.amazonaws.com/devchat.tv/javascript_jabber_thumb.jpg",
+      "link": "http://javascriptjabber.com",
+      "date": "Tue May 19 2020 11:00:23 GMT+0100 (British Summer Time)",
+      "url": "https://feeds.feedwrench.com/js-jabber.rss",
+      "subtitle": "Your Prototype for Great Code",
+      "image": "/img/podcast-images/javascript-jabber.png"
+    },
+    "https://gomakethings.com/podcast/feed.rss": {
+      "title": "The Vanilla JS Podcast",
+      "description": "A show about JavaScript for people who hate the complexity of modern front‑end web development.",
+      "originalImage": "https://vanillajspodcast.com/img/vanilla-js-podcast.jpg",
+      "link": "https://vanillajspodcast.com/",
+      "date": "Tue Jan 16 2018 17:38:44 GMT+0000 (Greenwich Mean Time)",
+      "url": "https://gomakethings.com/podcast/feed.rss",
+      "subtitle": "A show about JavaScript for people who hate the complexity of modern front‑end web development.",
+      "image": "/img/podcast-images/the-vanilla-js-podcast.png"
+    },
+    "https://changelog.com/podcast/feed": {
+      "title": "The Changelog: Software Dev &amp; Open Source",
+      "description": "Conversations with the hackers, leaders, and innovators of software development.  Hosts Adam Stacoviak and Jerod Santo face their imposter syndrome so you don’t have to. Expect in-depth interviews with the best and brightest in software engineering, open source, and leadership. This is a polyglot podcast. All programming languages, platforms, and communities are welcome. Open source moves fast. Keep up.",
+      "originalImage": "https://cdn.changelog.com/uploads/covers/the-changelog-original.png?v=63725770322",
+      "link": "https://changelog.com/podcast",
+      "date": "",
+      "url": "https://changelog.com/podcast/feed",
+      "image": "/img/podcast-images/the-changelog-software-dev-and-amp-open-source.png"
+    },
+    "https://anchor.fm/s/10dbd4bc/podcast/rss": {
+      "title": "Svelte Radio",
+      "description": "Things about Svelte. Sometimes weekly, sometimes not.",
+      "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/2728423/2728423-1575391650956-9f8e7eb17bbc1.jpg",
+      "link": "https://www.svelteradio.com/",
+      "date": "Sun May 24 2020 14:26:23 GMT+0100 (British Summer Time)",
+      "url": "https://anchor.fm/s/10dbd4bc/podcast/rss",
+      "image": "/img/podcast-images/svelte-radio.png"
+    },
+    "https://feeds.transistor.fm/maintainers-anonymous": {
+      "title": "Maintainers Anonymous",
+      "description": "How can we work together to achieve a common goal: whether in our code, cities, or infrastructure? Henry Zhu chats with fellow maintainers across all disciplines of life on their process, motivations, and struggles as they learn in public.",
+      "originalImage": "https://images.transistor.fm/file/transistor/images/show/1719/full_1554926632-artwork.jpg",
+      "link": "https://maintainersanonymous.com/",
+      "date": "Wed May 20 2020 14:16:53 GMT+0100 (British Summer Time)",
+      "url": "https://feeds.transistor.fm/maintainers-anonymous",
+      "subtitle": "How can we work together to achieve a common goal: whether in our code, cities, or infrastructure.",
+      "image": "/img/podcast-images/maintainers-anonymous.png"
+    },
+    "https://pinecast.com/feed/ladybug-podcast": {
+      "title": "Ladybug Podcast",
+      "description": "We're Emma Bostian, Kelly Vaughn, and Ali Spittel - three seasoned software developers working in different sectors. Since there's a major lack of technical podcasts out there, we've decided to start one. Just kidding -- there's already a ton! But, we wanted to add our voices to the space and share our experiences and advice. We'll have great discussions around how to start coding, the hot technologies right now, how to get your first developer job, and more!",
+      "originalImage": "https://storage.pinecast.net/podcasts/covers/c617f912-02e9-488c-898e-59a87bdccd2f/ladybug_logo.png",
+      "link": "https://ladybug.dev/",
+      "date": "",
+      "url": "https://pinecast.com/feed/ladybug-podcast",
+      "subtitle": "Three ladies debugging the tech industry",
+      "image": "/img/podcast-images/ladybug-podcast.png"
+    },
+    "https://anchor.fm/s/cf40bd0/podcast/rss": {
+      "title": "Fish and Scripts",
+      "description": "The all things web development podcast by two Brits with opinions and puns. Join Phil and Jack for a relaxed chat as we sprinkle some salt and lavishly apply vinegar to a variety of topics from the world of frontend web development.",
+      "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/2073204/2073204-1566552571667-6a834123f44b.jpg",
+      "link": "https://www.fishandscripts.com/",
+      "date": "Sun May 24 2020 14:23:51 GMT+0100 (British Summer Time)",
+      "url": "https://anchor.fm/s/cf40bd0/podcast/rss",
+      "image": "/img/podcast-images/fish-and-scripts.png"
+    },
+    "http://exponent.fm/feed/": {
+      "title": "Exponent",
+      "description": "A podcast about tech and society, hosted by Ben Thompson and James Allworth",
+      "originalImage": "https://exponent.fm/wp-content/uploads/powerpress/Exponent-3-wp.png",
+      "link": "http://exponent.fm/",
+      "date": "Fri May 15 2020 09:14:05 GMT+0100 (British Summer Time)",
+      "url": "http://exponent.fm/feed/",
+      "subtitle": "Ben Thompson & James Allworth on Tech and Society",
+      "image": "/img/podcast-images/exponent.png"
+    },
+    "https://rss.art19.com/freakonomics-radio": {
+      "title": "Freakonomics Radio",
+      "description": "Discover the hidden side of everything with Stephen J. Dubner, co-author of the Freakonomics books. Each week, Freakonomics Radio tells you things you always thought you knew (but didn’t) and things you never thought you wanted to know (but do) — from the economics of sleep to how to become great at just about anything. Dubner speaks with Nobel laureates and provocateurs, intellectuals and entrepreneurs, and various other underachievers. Special features include series like “The Secret Life of a C.E.O.” as well as a live game show, “Tell Me Something I Don’t Know.” ",
+      "originalImage": "https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/14a43378-edb2-49be-8511-ab0d000a7030/d1b9612f-bb1b-4b85-9c0c-ab0d004ab37a/image.jpg?t=1589407970&amp;size=Large",
+      "link": "http://freakonomics.com/",
+      "date": "",
+      "url": "https://rss.art19.com/freakonomics-radio",
+      "image": "/img/podcast-images/freakonomics-radio.png"
+    },
+    "https://feeds.simplecast.com/JGE3yC0V": {
+      "title": "a16z Podcast",
+      "description": "The a16z Podcast discusses tech and culture trends, news, and the future – especially as ‘software eats the world’. It features industry experts, business leaders, and other interesting thinkers and voices from around the world. This podcast is produced by Andreessen Horowitz (aka “a16z”), a Silicon Valley-based venture capital firm. Multiple episodes are released every week; visit a16z.com for more details and to sign up for our newsletters and other content as well!",
+      "originalImage": "https://cdn.simplecast.com/images/3f86df7b-51c6-4101-88a2-550dba782de8/cba4ff5a-8ac3-4b47-8e99-7dca48bd2861/3000x3000/avatars00007312059946q7imoriginal.jpg?aid=rss_feed",
+      "link": "https://www.a16z.com/",
+      "date": "Sat May 23 2020 05:56:00 GMT+0100 (British Summer Time)",
+      "url": "https://feeds.simplecast.com/JGE3yC0V",
+      "subtitle": "The a16z Podcast discusses tech and culture trends...",
+      "image": "/img/podcast-images/a16z-podcast.png"
+    },
+    "https://feeds.megaphone.fm/recodedecode": {
+      "title": "Recode Decode",
+      "description": "Kara Swisher, Silicon Valley’s most revered journalist, hosts candid interviews with tech execs, politicians, celebrities and more about their big ideas and how they’re changing our world. Produced by Recode and the Vox Media Podcast Network.",
+      "originalImage": "https://images.megaphone.fm/-plCBxO0O-P9YXbPEwqYEqvbbGsw0BSTW0oof2TNn-w/plain/s3://megaphone-prod/podcasts/5c6a4f4a-e69c-11e8-8066-17a10182e4c8/image/uploads_2F1567104881501-7jj9dux2ly5-bfe7d3d30c5a358d2ba6c0d71f251a82_2FRecodeDecode_Tile_3000x3000.png",
+      "link": "https://www.vox.com/recode-decode-podcast-kara-swisher",
+      "date": "",
+      "url": "https://feeds.megaphone.fm/recodedecode",
+      "subtitle": "Conversations with tech and media's key players about their big ideas and how they're changing our world.",
+      "image": "/img/podcast-images/recode-decode.png"
+    },
+    "https://rss.art19.com/tim-ferriss-show": {
+      "title": "The Tim Ferriss Show",
+      "description": "Tim Ferriss is a self-experimenter and bestselling author, best known for The 4-Hour Workweek, which has been translated into 40+ languages.  Newsweek calls him \"the world's best human guinea pig,\" and The New York Times calls him \"a cross between Jack Welch and a Buddhist monk.\"  In this show, he deconstructs world-class performers from eclectic areas (investing, chess, pro sports, etc.), digging deep to find the tools, tactics, and tricks that listeners can use.",
+      "originalImage": "https://content.production.cdn.art19.com/images/69/10/10/fb/691010fb-625e-4abe-993c-a57228b28dbe/91cb53ae0d5dbb379b9dffecf0a772593891d0d09bbe6d90ee746edbdb79e3ec75584f2ceb8260e9f675a90c05419b9b99842a76905b686f0f51c1a9d3e227ab.jpeg",
+      "link": "https://tim.blog/podcast",
+      "date": "",
+      "url": "https://rss.art19.com/tim-ferriss-show",
+      "image": "/img/podcast-images/the-tim-ferriss-show.png"
+    },
+    "https://feeds.npr.org/510313/podcast.xml": {
+      "title": "How I Built This with Guy Raz",
+      "description": "Guy Raz dives into the stories behind some of the world's best known companies. How I Built This weaves a narrative journey about innovators, entrepreneurs and idealists—and the movements they built.",
+      "originalImage": "https://media.npr.org/assets/img/2018/08/03/npr_hibt_podcasttile_sq-98320b282169a8cea04a406530e6e7b957665b3f.jpg?s=1400",
+      "link": "http://www.npr.org/series/490248027/how-i-built-this",
+      "date": "Sat May 23 2020 05:01:05 GMT+0100 (British Summer Time)",
+      "url": "https://feeds.npr.org/510313/podcast.xml",
+      "image": "/img/podcast-images/how-i-built-this-with-guy-raz.png"
+    },
+    "https://feeds.transistor.fm/rework": {
+      "title": "Rework",
+      "description": "A podcast by Basecamp about the better way to work and run your business. We bring you stories and unconventional wisdom from Basecamp’s co-founders and other business owners.",
+      "originalImage": "https://images.transistor.fm/file/transistor/images/show/4671/full_1569860119-artwork.jpg",
+      "link": "https://rework.fm/",
+      "date": "Tue May 19 2020 16:49:34 GMT+0100 (British Summer Time)",
+      "url": "https://feeds.transistor.fm/rework",
+      "subtitle": "A podcast by Basecamp about the better way to work and run your business.",
+      "image": "/img/podcast-images/rework.png"
+    },
+    "https://sivers.org/podcast.rss": {
+      "title": "Derek Sivers",
+      "description": "sivers.org",
+      "originalImage": "https://sivers.org/images/DerekSivers-20141209a-1400.jpg",
+      "link": "https://sivers.org/",
+      "date": "",
+      "url": "https://sivers.org/podcast.rss",
+      "subtitle": "Derek Sivers posts from sivers.org",
+      "image": "/img/podcast-images/derek-sivers.png"
+    },
+    "https://naval.libsyn.com/rss": {
+      "title": "Naval",
+      "description": "Naval on wealth and happiness. On Twitter at @naval.",
+      "originalImage": "https://ssl-static.libsyn.com/p/assets/5/c/e/b/5ceb9fba4ff0ab14/podcast_artwork.jpg",
+      "link": "https://nav.al/",
+      "date": "Sat May 23 2020 22:40:57 GMT+0100 (British Summer Time)",
+      "url": "https://naval.libsyn.com/rss",
+      "image": "/img/podcast-images/naval.png"
+    },
+    "https://audioboom.com/channels/2402227.rss": {
+      "title": "The Anfield Wrap",
+      "description": "Liverpool FC through the eyes of match-going supporters, the award-winning Anfield Wrap podcast talks honestly and passionately about every game The Reds play home and away in the Premier League, the cups and European competition. Also covering LFC news, gossip and analysis, TAW has grown from two free shows a week in 2011 to a subscription package of circa 30 shows a month in 2016. More information at http://www.theanfieldwrap.com",
+      "originalImage": "https://images.theabcdn.com/i/28012647.jpg",
+      "link": "https://audioboom.com/channel/theanfieldwrappodcast",
+      "date": "Fri May 22 2020 10:04:19 GMT+0100 (British Summer Time)",
+      "url": "https://audioboom.com/channels/2402227.rss",
+      "image": "/img/podcast-images/the-anfield-wrap.png"
+    },
+    "https://audioboom.com/channels/5005036.rss": {
+      "title": "The Greatest Game with Jamie Carragher",
+      "description": "Welcome to the Greatest Game with Jamie Carragher, where each week Jamie will be speaking to a footballer or a football fan, about their team, their love of football and asking what is the greatest game of football that they have ever seen or played in.\nTwitter @GreatestGamePod\nInstagram @greatestgamepod\nEmail greatestgamepod@gmail.com",
+      "originalImage": "https://images.theabcdn.com/i/35415467.jpg",
+      "link": "https://audioboom.com/channels/5005036",
+      "date": "Tue May 05 2020 17:35:58 GMT+0100 (British Summer Time)",
+      "url": "https://audioboom.com/channels/5005036.rss",
+      "image": "/img/podcast-images/the-greatest-game-with-jamie-carragher.png"
+    },
+    "https://www.spreaker.com/show/3382900/episodes/feed": {
+      "title": "The Gary Neville Podcast",
+      "description": "A weekly review of the weekend’s football from Sky Sports’ expert and Manchester United legend Gary Neville",
+      "originalImage": "https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/d47f9776d310ed14a773111a204f74ff.jpg",
+      "link": "https://www.spreaker.com/show/the-gary-neville-podcast",
+      "date": "",
+      "url": "https://www.spreaker.com/show/3382900/episodes/feed",
+      "subtitle": "A weekly review of the weekend’s football from Sky Sports’ expert and Manchester United legend Gary Neville",
+      "image": "/img/podcast-images/the-gary-neville-podcast.png"
+    },
+    "https://podcasts.files.bbci.co.uk/p06kyljg.rss": {
+      "title": "That Peter Crouch Podcast",
+      "description": "Peter Crouch, Tom Fordyce and Chris Stark bring you their guide to being a professional footballer. #backstronger",
+      "originalImage": "http://ichef.bbci.co.uk/images/ic/3000x3000/p06kylqp.jpg",
+      "link": "http://www.bbc.co.uk/programmes/p06kyljg",
+      "date": "Fri May 22 2020 00:01:00 GMT+0100 (British Summer Time)",
+      "url": "https://podcasts.files.bbci.co.uk/p06kyljg.rss",
+      "image": "/img/podcast-images/that-peter-crouch-podcast.png"
+    },
+    "https://rss.acast.com/footballweekly": {
+      "title": "Football Weekly",
+      "description": "The Football Weekly podcast squad brings you a twice-weekly dose of puns and punditry, news and analysis – from the Premier League and beyond",
+      "originalImage": "https://thumborcdn.acast.com/klaTt9xu2klnAgW1X41sIMZb4Jo=/1500x1500/https://uploads.guim.co.uk/2018/08/06/football-weekly-3000_(1).jpg",
+      "link": "https://www.theguardian.com/football/series/footballweekly",
+      "date": "Thu May 21 2020 17:41:29 GMT+0100 (British Summer Time)",
+      "url": "https://rss.acast.com/footballweekly",
+      "subtitle": "The Football Weekly podcast squad brings you a twice-weekly dose of puns and punditry, news and analysis – from the Premier League and beyond",
+      "image": "/img/podcast-images/football-weekly.png"
+    },
+    "https://www.spreaker.com/show/3382902/episodes/feed": {
+      "title": "The Sky Sports Football Podcast",
+      "description": "The major talking points and post-match analysis from Redknapp, Neville, Carragher and co following the big matches on Sky Sports",
+      "originalImage": "https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/6ea89705f49ea1e7d9756ed1dafc198e.jpg",
+      "link": "https://www.spreaker.com/show/the-sky-sports-football-podcast_1",
+      "date": "",
+      "url": "https://www.spreaker.com/show/3382902/episodes/feed",
+      "subtitle": "The major talking points and post-match analysis from Redknapp, Neville, Carragher and co following the big matches on Sky Sports",
+      "image": "/img/podcast-images/the-sky-sports-football-podcast.png"
+    },
+    "https://rss.acast.com/quicklykevin": {
+      "title": "Quickly Kevin; will he score? The 90s Football Show",
+      "description": "A series in which 90’s football aficionado Josh Widdicombe is joined by friends, and fellow 90s experts, co-host Chris Scull and ‘Director of Podcast’ Michael Marden, as the trio embark on a tour of niche football topics of the period 1st January 1990 to 31st December 1999.",
+      "originalImage": "https://thumborcdn.acast.com/_kZI4EswIqFAqQ8bEkACV9YK7w0=/1500x1500/https://acastprod.blob.core.windows.net:443/media/v1//-j0kuky30-kev.jpg",
+      "link": "https://rss.acast.com/www.quicklykevin.com",
+      "date": "Fri May 22 2020 08:06:28 GMT+0100 (British Summer Time)",
+      "url": "https://rss.acast.com/quicklykevin",
+      "subtitle": "Quickly Kevin; will he score? Yes. Ohhh.",
+      "image": "/img/podcast-images/quickly-kevin-will-he-score-the-90s-football-show.png"
+    },
+    "https://rss.acast.com/athleticomince": {
+      "title": "Athletico Mince",
+      "description": "Bob Mortimer and Andy Dawson's podcast - brass hands, blue drink and more. It's not really about football, d'you know what I mean?",
+      "originalImage": "https://thumborcdn.acast.com/msLtgjVYQISbWuQf0B_E9uMYWXs=/1500x1500/https://mediacdn.acast.com/assets/512e6e5b-1328-4152-869e-16ad11c71e70/-k7v2fx8q-athletico-mince-1400x1400-no_balls.png",
+      "link": "https://athleticomince.com/",
+      "date": "Tue May 19 2020 20:27:26 GMT+0100 (British Summer Time)",
+      "url": "https://rss.acast.com/athleticomince",
+      "subtitle": "Bob Mortimer and Andy Dawson's podcast - brass hands, blue drink and more. It's not really about football, d'you know what I mean?",
+      "image": "/img/podcast-images/athletico-mince.png"
+    },
+    "https://feeds.simplecast.com/_cY16e7I": {
+      "title": "The Red Agenda - A show about Liverpool FC",
+      "description": "The Athletic's James Pearce and Simon Hughes are alongside Steve Hothersall to bring you the very best insight into Liverpool Football Club every week. Subscribe for big name guests and breaking news from the red half of Merseyside.\n\nSubscribe to The Athletic using the special promo code LIVERPOOLPOD  and receive 40% off! Also, subscribers will have access to exclusive episodes.\n\nSIGN UP NOW: http://theathletic.com/liverpoolpod",
+      "originalImage": "https://cdn.simplecast.com/images/81a8a0e1-96a6-4046-b6cf-8c6baf8d94db/b2d23875-4122-4fbf-8c72-098d41cbe79d/3000x3000/theredagenda.jpg?aid=rss_feed",
+      "link": "https://the-red-agenda.simplecast.com/",
+      "date": "Tue May 19 2020 06:00:25 GMT+0100 (British Summer Time)",
+      "url": "https://feeds.simplecast.com/_cY16e7I",
+      "image": "/img/podcast-images/the-red-agenda-a-show-about-liverpool-fc.png"
+    },
+    "https://podcast.global.com/show/4329967/episodes/feed": {
+      "title": "Blood Red: The Liverpool FC Podcast",
+      "description": "Liverpool FC podcasts from the Liverpool ECHO, including our main Blood Red show with Ian Doyle, Joe Rimmer, Paul Gorst, Sean Bradbury, Caoimhe O'Neill, Connor Dunn and Theo Squires; Neil Fitzmaurice's Poetry in Motion; Peter Hooton's Allez Les Rouges; Analysing Anfield with Kristian Walsh and Josh Williams, and Post-Game, Behind Enemy Lines and View from the Kop with Paul Wheelock",
+      "originalImage": "https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/03e5a76057ebb7b110a17be58c9e6e0a.jpg",
+      "link": "https://www.spreaker.com/show/blood-red-the-liverpool-fc-podcast",
+      "date": "",
+      "url": "https://podcast.global.com/show/4329967/episodes/feed",
+      "subtitle": "Liverpool FC podcasts from the Liverpool ECHO, including our main Blood Red show with Ian Doyle, Joe Rimmer, Paul Gorst, Sean Bradbury, Caoimhe O'Neill, Connor Dunn and Theo Squires; Neil Fitzmaurice's…",
+      "image": "/img/podcast-images/blood-red-the-liverpool-fc-podcast.png"
+    }
+  },
+  "categories": {
+    "web": [
+      "https://rss.simplecast.com/podcasts/6265/rss",
+      "http://http203.googledevelopers.libsynpro.com/rss",
+      "https://feeds.feedwrench.com/js-jabber.rss",
+      "https://gomakethings.com/podcast/feed.rss",
+      "https://changelog.com/podcast/feed",
+      "https://anchor.fm/s/10dbd4bc/podcast/rss",
+      "https://feeds.transistor.fm/maintainers-anonymous",
+      "https://pinecast.com/feed/ladybug-podcast",
+      "https://anchor.fm/s/cf40bd0/podcast/rss"
+    ],
+    "business": [
+      "http://exponent.fm/feed/",
+      "https://rss.art19.com/freakonomics-radio",
+      "https://feeds.simplecast.com/JGE3yC0V",
+      "https://feeds.megaphone.fm/recodedecode",
+      "https://rss.art19.com/tim-ferriss-show",
+      "https://feeds.npr.org/510313/podcast.xml",
+      "https://feeds.transistor.fm/rework",
+      "https://sivers.org/podcast.rss",
+      "https://naval.libsyn.com/rss"
+    ],
+    "football": [
+      "https://audioboom.com/channels/2402227.rss",
+      "https://audioboom.com/channels/5005036.rss",
+      "https://www.spreaker.com/show/3382900/episodes/feed",
+      "https://podcasts.files.bbci.co.uk/p06kyljg.rss",
+      "https://rss.acast.com/footballweekly",
+      "https://www.spreaker.com/show/3382902/episodes/feed",
+      "https://rss.acast.com/quicklykevin",
+      "https://rss.acast.com/athleticomince",
+      "https://feeds.simplecast.com/_cY16e7I",
+      "https://podcast.global.com/show/4329967/episodes/feed"
+    ]
+  }
+}

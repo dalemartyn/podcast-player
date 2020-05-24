@@ -1,0 +1,245 @@
+{
+  "title": "Lower League Show: Points-Per-Game Pain",
+  "description": "<p>John Gibbons speaks James Richard from the D3D4 podcast about the current situation in Leagues One and Two, as well as Matt Jones whose Tranmere side would be relegated by a points-per-game scenario...</p>",
+  "summary": "<p>John Gibbons speaks James Richard from the D3D4 podcast about the current situation in Leagues One and Two, as well as Matt Jones whose Tranmere side would be relegated by a points-per-game scenario...</p>",
+  "date": "2020-05-24T10:55:00.000Z",
+  "pubdate": "2020-05-24T10:55:00.000Z",
+  "pubDate": "2020-05-24T10:55:00.000Z",
+  "link": "http://d1qmc81z5r9o20.cloudfront.net/LOWERLEAGUE240520.mp3",
+  "guid": "http://d1qmc81z5r9o20.cloudfront.net/LOWERLEAGUE240520.mp3",
+  "author": "theanfieldwrap@gmail.com",
+  "comments": null,
+  "origlink": null,
+  "image": {
+    "url": "http://www.theanfieldwrap.com/player-theanfieldwrap.jpg"
+  },
+  "source": {},
+  "categories": [],
+  "enclosures": [
+    {
+      "url": "http://d1qmc81z5r9o20.cloudfront.net/LOWERLEAGUE240520.mp3",
+      "type": "audio/x-m4a",
+      "length": "0"
+    }
+  ],
+  "rss:@": {},
+  "rss:title": {
+    "@": {},
+    "#": "Lower League Show: Points-Per-Game Pain"
+  },
+  "rss:pubdate": {
+    "@": {},
+    "#": "Sun, 24 May 2020 10:55:00 +0000"
+  },
+  "rss:guid": {
+    "@": {
+      "ispermalink": "false"
+    },
+    "#": "http://d1qmc81z5r9o20.cloudfront.net/LOWERLEAGUE240520.mp3"
+  },
+  "rss:link": {
+    "@": {},
+    "#": "http://d1qmc81z5r9o20.cloudfront.net/LOWERLEAGUE240520.mp3"
+  },
+  "itunes:image": {
+    "@": {
+      "href": "http://www.theanfieldwrap.com/player-theanfieldwrap.jpg"
+    }
+  },
+  "rss:description": {
+    "@": {},
+    "#": "<p>John Gibbons speaks James Richard from the D3D4 podcast about the current situation in Leagues One and Two, as well as Matt Jones whose Tranmere side would be relegated by a points-per-game scenario...</p>"
+  },
+  "rss:enclosure": {
+    "@": {
+      "length": "0",
+      "type": "audio/x-m4a",
+      "url": "http://d1qmc81z5r9o20.cloudfront.net/LOWERLEAGUE240520.mp3"
+    }
+  },
+  "itunes:duration": {
+    "@": {},
+    "#": "26:00"
+  },
+  "itunes:explicit": {
+    "@": {},
+    "#": "yes"
+  },
+  "itunes:keywords": {
+    "@": {}
+  },
+  "itunes:subtitle": {
+    "@": {},
+    "#": "John Gibbons speaks James Richard from the D3D4 podcast about the current situation in Leagues One and Two, as well as Matt Jones whose Tranmere side would be relegated by a points-per-game scenario..."
+  },
+  "meta": {
+    "#ns": [
+      {
+        "xmlns:atom": "http://www.w3.org/2005/Atom"
+      },
+      {
+        "xmlns:cc": "http://web.resource.org/cc/"
+      },
+      {
+        "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"
+      },
+      {
+        "xmlns:media": "http://search.yahoo.com/mrss/"
+      },
+      {
+        "xmlns:rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      }
+    ],
+    "@": [
+      {
+        "xmlns:atom": "http://www.w3.org/2005/Atom"
+      },
+      {
+        "xmlns:cc": "http://web.resource.org/cc/"
+      },
+      {
+        "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"
+      },
+      {
+        "xmlns:media": "http://search.yahoo.com/mrss/"
+      },
+      {
+        "xmlns:rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      }
+    ],
+    "#xml": {
+      "version": "1.0",
+      "encoding": "UTF-8"
+    },
+    "#type": "rss",
+    "#version": "2.0",
+    "title": "TAW Player",
+    "description": "TAW Player is the subscription-only package of shows from The Anfield Wrap. More analysis of the Reds from match-going fans, regular look backs at past Liverpool seasons, more talk of past players, speculation, news, specials on issues in and around the game, culture and music in Liverpool and the madness that is AFQ. What more do you want? #TAWPLAYER",
+    "date": "2020-05-24T10:55:00.000Z",
+    "pubdate": "2020-05-24T10:55:00.000Z",
+    "pubDate": "2020-05-24T10:55:00.000Z",
+    "link": "http://www.theanfieldwrap.com/",
+    "xmlurl": "http://www.theanfieldwrap.com/player/subscribe",
+    "xmlUrl": "http://www.theanfieldwrap.com/player/subscribe",
+    "author": "theanfieldwrap@gmail.com",
+    "language": "en",
+    "favicon": null,
+    "copyright": "The Anfield Wrap",
+    "generator": "http://wordpress.org/?v=3.9.3",
+    "cloud": {},
+    "image": {
+      "url": "http://www.theanfieldwrap.com/player-theanfieldwrap.jpg",
+      "title": "TAW Player"
+    },
+    "categories": [
+      "Professional/Professional"
+    ],
+    "rss:@": {},
+    "atom:link": {
+      "@": {
+        "href": "http://www.theanfieldwrap.com/player/subscribe",
+        "rel": "self",
+        "type": "application/rss+xml"
+      }
+    },
+    "rss:title": {
+      "@": {},
+      "#": "TAW Player"
+    },
+    "rss:pubdate": {
+      "@": {},
+      "#": "Sun, 24 May 2020 10:55:00 +0000"
+    },
+    "rss:lastbuilddate": {
+      "@": {},
+      "#": "Sun, 24 May 2020 10:55:00 +0000"
+    },
+    "rss:generator": {
+      "@": {},
+      "#": "http://wordpress.org/?v=3.9.3"
+    },
+    "rss:link": {
+      "@": {},
+      "#": "http://www.theanfieldwrap.com/"
+    },
+    "rss:language": {
+      "@": {},
+      "#": "en"
+    },
+    "rss:copyright": {
+      "@": {},
+      "#": "The Anfield Wrap"
+    },
+    "rss:docs": {
+      "@": {},
+      "#": "http://www.theanfieldwrap.com"
+    },
+    "rss:managingeditor": {
+      "@": {},
+      "#": "theanfieldwrap@gmail.com (theanfieldwrap@gmail.com)",
+      "name": "",
+      "email": "theanfieldwrap@gmail.com"
+    },
+    "rss:description": {
+      "@": {},
+      "#": "TAW Player is the subscription-only package of shows from The Anfield Wrap. More analysis of the Reds from match-going fans, regular look backs at past Liverpool seasons, more talk of past players, speculation, news, specials on issues in and around the game, culture and music in Liverpool and the madness that is AFQ. What more do you want? #TAWPLAYER"
+    },
+    "rss:image": {
+      "@": {},
+      "url": {
+        "@": {},
+        "#": "http://www.theanfieldwrap.com/player-theanfieldwrap.jpg"
+      },
+      "title": {
+        "@": {},
+        "#": "TAW Player"
+      },
+      "link": {
+        "@": {},
+        "#": "http://www.theanfieldwrap.com/"
+      }
+    },
+    "itunes:author": {
+      "@": {},
+      "#": "The Anfield Wrap"
+    },
+    "itunes:keywords": {
+      "@": {},
+      "#": "anfield,culture,fashion,football,footie,league,lfc,liverpool,liverpoolfc,music,premier,wrap"
+    },
+    "itunes:category": {
+      "@": {
+        "text": "Sports & Recreation"
+      },
+      "itunes:category": {
+        "@": {
+          "text": "Professional"
+        }
+      }
+    },
+    "itunes:image": {
+      "@": {
+        "href": "http://www.theanfieldwrap.com/player-theanfieldwrap.jpg"
+      }
+    },
+    "itunes:explicit": {
+      "@": {},
+      "#": "yes"
+    },
+    "itunes:owner": {
+      "@": {},
+      "itunes:name": {
+        "@": {},
+        "#": "The Anfield Wrap"
+      },
+      "itunes:email": {
+        "@": {},
+        "#": "theanfieldwrap@gmail.com"
+      }
+    },
+    "itunes:subtitle": {
+      "@": {},
+      "#": "TAW Player is the subscription-only package of shows from The Anfield Wrap"
+    }
+  }
+}

@@ -21,12 +21,7 @@
     "logo darkmode"
     "menu menu";
 
-  @include mq($until: lg) {
-    padding-top: sp(xmicro);
-    padding-bottom: sp(xmicro);
-  }
-
-  @include mq($from: lg) {
+  @include mq($from: md) {
     grid-template-columns: 200px 1fr 200px;
     grid-template-areas:
       "logo menu darkmode";
@@ -36,10 +31,8 @@
   .c-site-header__logo {
     grid-area: logo;
     justify-self: start;
-    padding-top: sp();
-    padding-bottom: sp();
 
-    @include mq($from: lg) {
+    @include mq($from: md) {
       margin-top: sp(xmicro);
       margin-bottom: sp(xmicro);
     }
@@ -64,8 +57,8 @@
       text-align: center;
       text-decoration: none;
       white-space: nowrap;
-      padding: sp(small) sp(tiny);
-      margin: calc(#{sp(small)} * -1) calc(#{sp(tiny)} * -1);
+      padding: sp(micro) sp(tiny);
+      margin: 0 calc(#{sp(tiny)} * -1);
       transition:
         background-color $hover-transition,
         box-shadow $hover-transition;
@@ -92,7 +85,7 @@
   .c-site-header__menu {
     grid-area: menu;
 
-    @include mq($from: lg) {
+    @include mq($from: md) {
       justify-self: center;
       padding-left: sp();
       padding-right: sp();

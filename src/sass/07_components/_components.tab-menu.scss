@@ -1,0 +1,116 @@
+/* ==========================================================================
+   #TAB-MENU
+   ========================================================================== */
+
+.c-tab-menu {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.c-tab-menu--stretch {
+  padding-left: sp();
+  padding-right: sp();
+}
+
+  .c-tab-menu__item {
+    margin: 0;
+    margin-right: sp(large);
+    font-size: inherit;
+
+    @include mq($from: sm) {
+      margin-right: calc(#{sp(large)} + #{sp(micro)});
+    }
+
+    .c-tab-menu--stretch & {
+      flex: 1;
+      margin-right: sp();
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.is-parent,
+    &.is-active {
+      color: sem-color(text);
+      position: relative;
+      z-index: 0;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 4px;
+        box-shadow: 0 4px #{sem-color(text)} inset;
+        left: 0;
+        right: 0;
+        z-index: -2;
+        @include theme-transition(box-shadow);
+        bottom: 0;
+      }
+    }
+
+  }
+
+    .c-tab-menu__link {
+      @include button-reset;
+      @include ms-respond(font-size, .75);
+      font-weight: fw(semibold);
+      line-height: 1.25;
+      display: block;
+      text-decoration: none;
+      padding-left: sp(small);
+      padding-right: sp(small);
+      padding-top: sp();
+      padding-bottom: sp();
+      margin-left: calc(#{sp(small)} * -1);
+      margin-right: calc(#{sp(small)} * -1);
+      color: sem-color(text-3);
+      transition:
+        background-color $hover-transition,
+        box-shadow $hover-transition,
+        color $hover-transition;
+      @include theme-transition(color background-color box-shadow);
+      border-radius: var(--rounded-radius);
+      
+      @include mq($from: md) {
+        margin-top: sp(xmicro);
+        margin-bottom: sp(xmicro);
+      }
+
+      .c-tab-menu--stretch & {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      @media (hover: hover) {
+
+        &:hover {
+          color: sem-color(text);
+          background-color: var(--state-color-hover);
+        }
+      }
+
+      &:active {
+        background-color: var(--state-color-active);
+      }
+
+      .is-parent > &,
+      .is-active > & {
+        color: sem-color(text);
+        position: relative;
+        z-index: 0;
+      }
+
+      @include focus-style {
+        color: sem-color(text);
+        background-color: var(--state-color-hover);
+        outline: none;
+        box-shadow: 0 0 0 3px sem-color(link) inset;
+        background-color: sem-color(link, .375);
+      }
+    }
