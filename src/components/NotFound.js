@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <h1 className="ts-page-title u-margin-bottom-xxlarge">404</h1>
-      <p>The <code>{location.pathName}</code> route couldn’t be found.</p>
+      <p>The <code>{location.pathname}</code> route couldn’t be found.</p>
     </>
   )
 }

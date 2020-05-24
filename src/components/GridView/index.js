@@ -5,10 +5,10 @@ import useDocumentTitle from '../../hooks/useDocumentTitle';
 import PodcastImage from '../PodcastImage';
 
 export default function GridView({ category }) {
-  useDocumentTitle(category);
+  useDocumentTitle(category.title);
   const { podcasts } = useAppState();
 
-  const podcastGridItems = podcasts.categories[category].map(function(url) {
+  const podcastGridItems = category.podcasts.map(function(url) {
     const podcast = podcasts.byUrl[url];
     return <PodcastGridItem podcast={podcast} key={podcast.url} />
   });

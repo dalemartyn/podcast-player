@@ -3,25 +3,12 @@ import {
   Link,
   useLocation,
   useResolvedLocation
-} from 'react-router-dom'
+} from 'react-router-dom';
+import { useAppState } from '../../AppStateProvider';
 import DarkModeToggle from './DarkModeToggle';
 
 export default function SiteHeader() {
-
-  const items = [
-    {
-      title: "Web",
-      link: "/web",
-    },
-    {
-      title: "Business",
-      link: "/business"
-    },
-    {
-      title: "Football",
-      link: "/football"
-    }
-  ];
+  const { podcasts } = useAppState();
 
   return (
     <div className="c-site-header">
@@ -34,7 +21,7 @@ export default function SiteHeader() {
           </div>
 
           <div className="c-site-header__menu">
-            <SiteMenu items={items} />
+            <SiteMenu items={podcasts.categories} />
           </div>
 
           <div className="c-site-header__darkmode">
@@ -63,7 +50,7 @@ function SiteMenu({items}) {
       <nav className="c-site-menu__nav">
         <ul className="c-tab-menu">
           {
-            items.map(({title, link, active}) => <SiteMenuItem title={title} link={link} active={active} key={title} />)
+            items.map(({title, slug}) => <SiteMenuItem title={title} slug={slug} key={title} />)
           }
         </ul>
       </nav>
@@ -71,10 +58,12 @@ function SiteMenu({items}) {
   );
 }
 
-function SiteMenuItem({title, link, active}) {
+function SiteMenuItem({title, slug}) {
   const classNames = [
     "c-tab-menu__item"
   ];
+
+  const link = '/' + slug;
 
   let location = useLocation();
   let toLocation = useResolvedLocation(link);

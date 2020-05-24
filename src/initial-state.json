@@ -54,7 +54,7 @@
       "description": "Things about Svelte. Sometimes weekly, sometimes not.",
       "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/2728423/2728423-1575391650956-9f8e7eb17bbc1.jpg",
       "link": "https://www.svelteradio.com/",
-      "date": "Sun May 24 2020 14:26:23 GMT+0100 (British Summer Time)",
+      "date": "Sun May 24 2020 15:01:27 GMT+0100 (British Summer Time)",
       "url": "https://anchor.fm/s/10dbd4bc/podcast/rss",
       "image": "/img/podcast-images/svelte-radio.png"
     },
@@ -83,7 +83,7 @@
       "description": "The all things web development podcast by two Brits with opinions and puns. Join Phil and Jack for a relaxed chat as we sprinkle some salt and lavishly apply vinegar to a variety of topics from the world of frontend web development.",
       "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/2073204/2073204-1566552571667-6a834123f44b.jpg",
       "link": "https://www.fishandscripts.com/",
-      "date": "Sun May 24 2020 14:23:51 GMT+0100 (British Summer Time)",
+      "date": "Sun May 24 2020 14:55:22 GMT+0100 (British Summer Time)",
       "url": "https://anchor.fm/s/cf40bd0/podcast/rss",
       "image": "/img/podcast-images/fish-and-scripts.png"
     },
@@ -270,40 +270,52 @@
       "image": "/img/podcast-images/blood-red-the-liverpool-fc-podcast.png"
     }
   },
-  "categories": {
-    "web": [
-      "https://rss.simplecast.com/podcasts/6265/rss",
-      "http://http203.googledevelopers.libsynpro.com/rss",
-      "https://feeds.feedwrench.com/js-jabber.rss",
-      "https://gomakethings.com/podcast/feed.rss",
-      "https://changelog.com/podcast/feed",
-      "https://anchor.fm/s/10dbd4bc/podcast/rss",
-      "https://feeds.transistor.fm/maintainers-anonymous",
-      "https://pinecast.com/feed/ladybug-podcast",
-      "https://anchor.fm/s/cf40bd0/podcast/rss"
-    ],
-    "business": [
-      "http://exponent.fm/feed/",
-      "https://rss.art19.com/freakonomics-radio",
-      "https://feeds.simplecast.com/JGE3yC0V",
-      "https://feeds.megaphone.fm/recodedecode",
-      "https://rss.art19.com/tim-ferriss-show",
-      "https://feeds.npr.org/510313/podcast.xml",
-      "https://feeds.transistor.fm/rework",
-      "https://sivers.org/podcast.rss",
-      "https://naval.libsyn.com/rss"
-    ],
-    "football": [
-      "https://audioboom.com/channels/2402227.rss",
-      "https://audioboom.com/channels/5005036.rss",
-      "https://www.spreaker.com/show/3382900/episodes/feed",
-      "https://podcasts.files.bbci.co.uk/p06kyljg.rss",
-      "https://rss.acast.com/footballweekly",
-      "https://www.spreaker.com/show/3382902/episodes/feed",
-      "https://rss.acast.com/quicklykevin",
-      "https://rss.acast.com/athleticomince",
-      "https://feeds.simplecast.com/_cY16e7I",
-      "https://podcast.global.com/show/4329967/episodes/feed"
-    ]
-  }
+  "categories": [
+    {
+      "title": "Web",
+      "slug": "web",
+      "podcasts": [
+        "https://rss.simplecast.com/podcasts/6265/rss",
+        "http://http203.googledevelopers.libsynpro.com/rss",
+        "https://feeds.feedwrench.com/js-jabber.rss",
+        "https://gomakethings.com/podcast/feed.rss",
+        "https://changelog.com/podcast/feed",
+        "https://anchor.fm/s/10dbd4bc/podcast/rss",
+        "https://feeds.transistor.fm/maintainers-anonymous",
+        "https://pinecast.com/feed/ladybug-podcast",
+        "https://anchor.fm/s/cf40bd0/podcast/rss"
+      ]
+    },
+    {
+      "title": "Business",
+      "slug": "business",
+      "podcasts": [
+        "http://exponent.fm/feed/",
+        "https://rss.art19.com/freakonomics-radio",
+        "https://feeds.simplecast.com/JGE3yC0V",
+        "https://feeds.megaphone.fm/recodedecode",
+        "https://rss.art19.com/tim-ferriss-show",
+        "https://feeds.npr.org/510313/podcast.xml",
+        "https://feeds.transistor.fm/rework",
+        "https://sivers.org/podcast.rss",
+        "https://naval.libsyn.com/rss"
+      ]
+    },
+    {
+      "title": "Football",
+      "slug": "football",
+      "podcasts": [
+        "https://audioboom.com/channels/2402227.rss",
+        "https://audioboom.com/channels/5005036.rss",
+        "https://www.spreaker.com/show/3382900/episodes/feed",
+        "https://podcasts.files.bbci.co.uk/p06kyljg.rss",
+        "https://rss.acast.com/footballweekly",
+        "https://www.spreaker.com/show/3382902/episodes/feed",
+        "https://rss.acast.com/quicklykevin",
+        "https://rss.acast.com/athleticomince",
+        "https://feeds.simplecast.com/_cY16e7I",
+        "https://podcast.global.com/show/4329967/episodes/feed"
+      ]
+    }
+  ]
 }
