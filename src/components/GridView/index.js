@@ -14,16 +14,16 @@ export default function GridView({ category }) {
   });
 
   return (
-    <GridLayout>
+    <GridLayout title={category.title}>
       {podcastGridItems}
     </GridLayout>
   );
 }
 
-function GridLayout({ children }) {
+function GridLayout({ title, children }) {
   return (
     <>
-      <h1 className="ts-page-title u-margin-bottom-xxlarge">Podcasts</h1>
+      <h1 className="ts-page-title u-margin-bottom-xxlarge">{title}</h1>
       <ul className="c-podcast-grid u-margin-bottom-xlarge">
         {children}
       </ul>
