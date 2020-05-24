@@ -3,7 +3,8 @@
    ========================================================================== */
 
 .ts-page-title {
-  @include ms-respond(font-size, 4);
+  @include ms-respond(font-size, 3.75);
+  font-variation-settings: "wdth" 95;
   line-height: 1.05;
   text-align: center;
   letter-spacing: -.005em;

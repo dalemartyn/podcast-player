@@ -118,8 +118,8 @@ function getDate(jsDate) {
 
 function getPodcastMeta(post, url) {
   const meta = {
-    title: sanitize(post.title),
-    description: sanitize(post.description),
+    title: getTitle(post),
+    description: he.decode(sanitize(post.description)),
     originalImage: sanitize(post.image.url),
     link: sanitize(post.link),
     date: sanitize(post.date),

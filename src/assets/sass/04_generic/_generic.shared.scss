@@ -29,9 +29,3 @@ fieldset {
 dd, ol, ul {
   margin-left: sp();
 }
-
-button,
-audio {
-  outline: none;
-  @include focused-link;
-}

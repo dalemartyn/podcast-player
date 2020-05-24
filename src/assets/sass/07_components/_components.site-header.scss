@@ -22,7 +22,7 @@
     "menu menu";
 
   @include mq($from: md) {
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 170px 1fr 170px;
     grid-template-areas:
       "logo menu darkmode";
   }

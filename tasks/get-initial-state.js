@@ -6,9 +6,9 @@ const { writeFile } = require('fs/promises');
 
 const categories = [
   {
-    "title": "Web",
-    "slug": "web",
-    "podcasts": [
+    title: "Web",
+    slug: "web",
+    podcasts: [
       "https://rss.simplecast.com/podcasts/6265/rss",          // react podcast
       "http://http203.googledevelopers.libsynpro.com/rss",     // http 203
       "https://feeds.feedwrench.com/js-jabber.rss",            // javascript jabber
@@ -21,9 +21,9 @@ const categories = [
     ]
   },
   {
-    "title": "Business",
-    "slug": "business",
-    "podcasts": [
+    title: "Business",
+    slug: "business",
+    podcasts: [
       "http://exponent.fm/feed/",                              // exponent
       "https://rss.art19.com/freakonomics-radio",              // feakonomics
       "https://feeds.simplecast.com/JGE3yC0V",                 // a16z
@@ -36,9 +36,20 @@ const categories = [
     ]
   },
   {
-    "title": "Football",
-    "slug": "football",
-    "podcasts": [
+    title: "Technology",
+    slug: "technology",
+    podcasts: [
+      "https://feeds.megaphone.fm/vergecast",                  // vergecast
+      "http://feeds.feedburner.com/WaveformWithMkbhd",         // waveform
+      "https://feeds.megaphone.fm/gadget-lab",                 // gadget lab
+      "https://daringfireball.net/thetalkshow/rss",            // the talk show daring fireball
+      "https://feeds.theoutline.com/tomorrow",                 // tomorrow
+    ]
+  },
+  {
+    title: "Football",
+    slug: "football",
+    podcasts: [
       "https://audioboom.com/channels/2402227.rss",            // the anfield wrap
       "https://audioboom.com/channels/5005036.rss",            // jamie carragher
       "https://www.spreaker.com/show/3382900/episodes/feed",   // gary neville
@@ -53,6 +64,10 @@ const categories = [
   }
 ];
 
+const extraPodcasts = [
+  "https://podcasts.files.bbci.co.uk/p0742833.rss",            // bbc obsessed with
+];
+
 async function getPodcast(url) {
   let data;
   try {
@@ -62,10 +77,11 @@ async function getPodcast(url) {
   }
 
   if (data.meta) {
-    const meta = data.meta
+    const meta = data.meta;
     const filename = slugify(meta.title, {
       decamelize: false
     });
+
     if (meta.originalImage) {
       await savePodcastImage(filename, meta.originalImage);
       meta.image = `/img/podcast-images/${filename}.png`
@@ -80,14 +96,19 @@ async function getPodcast(url) {
 }
 
 function getAllData(categories) {
+  const categoryPodcastPromises = categories.map(function(category) {
+    const urls = category.podcasts;
+    return Promise.all(urls.map(getPodcast));
+  });
+
+  const extraPodcastsPromises = Promise.all(extraPodcasts.map(getPodcast));
 
   return Promise.all(
-    categories.map(function(category) {
-      const urls = category.podcasts;
-      return Promise.all(urls.map(getPodcast));
-    })
+    [
+      ...categoryPodcastPromises,
+      extraPodcastsPromises
+    ]
   );
-
 }
 
 function getInitialState(data) {

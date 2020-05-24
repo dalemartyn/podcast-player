@@ -1,0 +1,101 @@
+/* ==========================================================================
+   #RSS-FORM
+   ========================================================================== */
+
+.c-rss-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;
+}
+
+  .c-rss-form__input-wrap {
+    width: 100%;
+  }
+
+    .c-rss-form__input {
+      padding-left: sp(large);
+      padding-right: sp(large);
+      padding-top: sp();
+      padding-bottom: sp();
+      width: 100%;
+      border: 3px solid sem-color(input-border, 1);
+      @include theme-transition(background-color box-shadow);
+      // box-shadow: var(--shadow-2);
+      border-radius: calc(var(--rounded-radius) * 2);
+      @include theme-transition(background-color border-color box-shadow);
+      @include ms-respond(font-size, 1);
+      font-weight: fw(text);
+      line-height: 1.2;
+      background-color: sem-color(surface);
+      color: sem-color(text);
+      transition:
+        box-shadow $hover-transition;
+
+
+      @media (hover: hover) {
+        &:hover {
+          box-shadow: var(--shadow-1);
+        }
+      }
+
+      &::placeholder {
+        color: sem-color(text-4);
+      }
+
+      @include focus-style {
+        outline: none;
+        box-shadow: var(--shadow-1);
+        border-color: sem-color(link);
+      }
+    }
+
+  .c-rss-form__actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: sp(large);
+  }
+
+    .c-rss-form__button {
+      @include button-reset;
+      @include ms-respond(font-size, .75);
+      font-weight: fw(semibold);
+      line-height: 1.25;
+      padding-left: sp(small);
+      padding-right: sp(small);
+      padding-top: sp(small);
+      padding-bottom: sp(small);
+      background-color: #FFDA68;
+      color: color("blue-grey-900");
+      border-radius: var(--rounded-radius);
+      transition:
+        background-color $hover-transition,
+        color $hover-transition,
+        box-shadow $hover-transition;
+      @include theme-transition(background-color border-color color);
+
+      &[disabled] {
+        background-color: sem-color(background-code);
+        color: sem-color(text-5);
+        cursor: default;
+      }
+
+      @media (hover: hover) {
+        &:not([disabled]):hover {
+          background-color: #FFE082;
+          box-shadow: var(--shadow-1);
+        }
+      }
+
+      &:active {
+        background-color: #FFECB3;
+      }
+
+      @include focus-style {
+        outline: none;
+        box-shadow:
+          0 0 0 3px sem-color(background),
+          0 0 0 6px sem-color(link);
+      }
+    }

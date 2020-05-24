@@ -1,0 +1,62 @@
+/* ==========================================================================
+   #SITE-LOGO
+   ========================================================================== */
+
+.c-site-logo--regular {
+  display: flex;
+  @include ms-respond(font-size, 1.75);
+  line-height: 1.2;
+  align-items: center;
+  padding-top: sp(xmicro);
+  padding-bottom: sp(xmicro);
+
+
+  .c-site-logo__img {
+    flex-shrink: 0;
+    height: 1.5em;
+
+    > svg {
+      width: auto;
+      height: 100%;
+      display: block;
+    }
+  }
+
+    .c-site-logo__text {
+      margin-left: .2em;
+      @include lh-crop(1.2, .785);
+      font-weight: 700;
+      font-variation-settings: "wdth" 85;
+    }
+}
+
+
+
+.c-site-logo--large {
+  display: flex;
+  align-items: center;
+  padding-top: sp(xmicro);
+  padding-bottom: sp(xmicro);
+  @include ms-respond(font-size, 4);
+  line-height: 1;
+
+  .c-site-logo__img {
+    flex-shrink: 0;
+    height: 1.5em;
+
+    > svg {
+      width: auto;
+      height: 100%;
+      display: block;
+    }
+  }
+
+    .c-site-logo__text {
+      margin-left: .2em;
+      @include lh-crop(1, .785);
+      font-weight: 700;
+      font-variation-settings: "wdth" 85;
+    }
+
+}
+

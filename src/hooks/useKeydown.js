@@ -5,8 +5,11 @@ import {
 export default function useKeydown(key, callback) {
   useEffect(() => {
     const handler = function (event) {
+      if (event.target.tagName === "INPUT") {
+        return;
+      };
       if (event.key === key) {
-        callback()
+        callback();
       }
     }
     window.addEventListener('keydown', handler)

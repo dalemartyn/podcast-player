@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useLayoutEffect} from 'react';
 import {
   Link,
   useLocation,
@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom';
 import { useAppState } from '../../AppStateProvider';
 import DarkModeToggle from './DarkModeToggle';
+import SiteLogo from '../SiteLogo';
+
 
 export default function SiteHeader() {
   const { podcasts } = useAppState();
@@ -15,9 +17,7 @@ export default function SiteHeader() {
       <div className="o-wrapper-l">
         <div className="c-site-header__main">
           <div className="c-site-header__logo">
-            <Link className="c-site-header__logo-link" to="/">
-              <SiteLogo />
-            </Link>
+            <SiteLogoLink className="c-site-header__logo-link" />
           </div>
 
           <div className="c-site-header__menu">
@@ -33,14 +33,16 @@ export default function SiteHeader() {
   );
 }
 
-function SiteLogo() {
+function SiteLogoLink({className}) {
+  const location = useLocation();
+  const hidden = (location.pathname === "/");
+
+  useLayoutEffect(() => {});
+
   return (
-    <div className="c-site-logo">
-      <div className="c-site-logo__img">
-        <img src="/img/site-logo.svg" alt="Podcasts" />
-      </div>
-      <div className="c-site-logo__text">Podcasts</div>
-    </div>
+    <Link className={className} to="/" style={{visibility: hidden && "hidden"}}>
+      <SiteLogo />
+    </Link>
   );
 }
 

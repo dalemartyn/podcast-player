@@ -5,7 +5,7 @@
       "description": "Conversations about React with your favorite developers.",
       "originalImage": "https://media.simplecast.com/podcast/image/6265/1550288890-artwork.jpg",
       "link": "http://reactpodcast.com/",
-      "date": "Sun May 24 2020 12:21:35 GMT+0100 (British Summer Time)",
+      "date": "Sun May 24 2020 21:25:44 GMT+0100 (British Summer Time)",
       "url": "https://rss.simplecast.com/podcasts/6265/rss",
       "subtitle": "Conversations about React with your favorite developers..",
       "image": "/img/podcast-images/react-podcast.png"
@@ -15,7 +15,7 @@
       "description": "Surma and Jake talk about whatever's going on in the world of web development.",
       "originalImage": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png",
       "link": "https://developers.google.com/web/shows/http203/podcast/",
-      "date": "Sat May 23 2020 19:37:05 GMT+0100 (British Summer Time)",
+      "date": "Sun May 24 2020 19:37:20 GMT+0100 (British Summer Time)",
       "url": "http://http203.googledevelopers.libsynpro.com/rss",
       "subtitle": "Where Surma and Jake occasionally talk web.",
       "image": "/img/podcast-images/http-203.png"
@@ -41,20 +41,20 @@
       "image": "/img/podcast-images/the-vanilla-js-podcast.png"
     },
     "https://changelog.com/podcast/feed": {
-      "title": "The Changelog: Software Dev &amp; Open Source",
+      "title": "The Changelog: Software Dev & Open Source",
       "description": "Conversations with the hackers, leaders, and innovators of software development.  Hosts Adam Stacoviak and Jerod Santo face their imposter syndrome so you don’t have to. Expect in-depth interviews with the best and brightest in software engineering, open source, and leadership. This is a polyglot podcast. All programming languages, platforms, and communities are welcome. Open source moves fast. Keep up.",
       "originalImage": "https://cdn.changelog.com/uploads/covers/the-changelog-original.png?v=63725770322",
       "link": "https://changelog.com/podcast",
       "date": "",
       "url": "https://changelog.com/podcast/feed",
-      "image": "/img/podcast-images/the-changelog-software-dev-and-amp-open-source.png"
+      "image": "/img/podcast-images/the-changelog-software-dev-and-open-source.png"
     },
     "https://anchor.fm/s/10dbd4bc/podcast/rss": {
       "title": "Svelte Radio",
       "description": "Things about Svelte. Sometimes weekly, sometimes not.",
       "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/2728423/2728423-1575391650956-9f8e7eb17bbc1.jpg",
       "link": "https://www.svelteradio.com/",
-      "date": "Sun May 24 2020 15:01:27 GMT+0100 (British Summer Time)",
+      "date": "Sun May 24 2020 22:19:18 GMT+0100 (British Summer Time)",
       "url": "https://anchor.fm/s/10dbd4bc/podcast/rss",
       "image": "/img/podcast-images/svelte-radio.png"
     },
@@ -83,7 +83,7 @@
       "description": "The all things web development podcast by two Brits with opinions and puns. Join Phil and Jack for a relaxed chat as we sprinkle some salt and lavishly apply vinegar to a variety of topics from the world of frontend web development.",
       "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/2073204/2073204-1566552571667-6a834123f44b.jpg",
       "link": "https://www.fishandscripts.com/",
-      "date": "Sun May 24 2020 14:55:22 GMT+0100 (British Summer Time)",
+      "date": "Sun May 24 2020 22:17:34 GMT+0100 (British Summer Time)",
       "url": "https://anchor.fm/s/cf40bd0/podcast/rss",
       "image": "/img/podcast-images/fish-and-scripts.png"
     },
@@ -111,7 +111,7 @@
       "description": "The a16z Podcast discusses tech and culture trends, news, and the future – especially as ‘software eats the world’. It features industry experts, business leaders, and other interesting thinkers and voices from around the world. This podcast is produced by Andreessen Horowitz (aka “a16z”), a Silicon Valley-based venture capital firm. Multiple episodes are released every week; visit a16z.com for more details and to sign up for our newsletters and other content as well!",
       "originalImage": "https://cdn.simplecast.com/images/3f86df7b-51c6-4101-88a2-550dba782de8/cba4ff5a-8ac3-4b47-8e99-7dca48bd2861/3000x3000/avatars00007312059946q7imoriginal.jpg?aid=rss_feed",
       "link": "https://www.a16z.com/",
-      "date": "Sat May 23 2020 05:56:00 GMT+0100 (British Summer Time)",
+      "date": "Sun May 24 2020 17:32:41 GMT+0100 (British Summer Time)",
       "url": "https://feeds.simplecast.com/JGE3yC0V",
       "subtitle": "The a16z Podcast discusses tech and culture trends...",
       "image": "/img/podcast-images/a16z-podcast.png"
@@ -172,6 +172,54 @@
       "date": "Sat May 23 2020 22:40:57 GMT+0100 (British Summer Time)",
       "url": "https://naval.libsyn.com/rss",
       "image": "/img/podcast-images/naval.png"
+    },
+    "https://feeds.megaphone.fm/vergecast": {
+      "title": "The Vergecast",
+      "description": "Hello! This is The Vergecast, the flagship podcast of The Verge... and your life. Every Friday, Nilay Patel and Dieter Bohn make sense of the week's tech news with help from our wide-ranging staff. And on Tuesdays, Nilay hosts in-depth, one-on-one interviews with major technology leaders. Join us every week for a fun, deeply nerdy, often off-the-rails conversation about what's happening now (and next) in technology and gadgets.",
+      "originalImage": "https://images.megaphone.fm/TxQGmVHSJLu_4SfqdsIT1uUQ2xrv7XAS3oixU70WYD4/plain/s3://megaphone-prod/podcasts/e4c412e6-e1f0-11e8-9bde-83f9d376f059/image/uploads_2F1567105071975-o6k62rq8bin-247a9596590486c06b16976bed1cefbc_2FVergecast_Tile_3000x3000.png",
+      "link": "https://www.theverge.com/the-vergecast",
+      "date": "",
+      "url": "https://feeds.megaphone.fm/vergecast",
+      "subtitle": "What’s new and next in tech",
+      "image": "/img/podcast-images/the-vergecast.png"
+    },
+    "http://feeds.feedburner.com/WaveformWithMkbhd": {
+      "title": "Waveform: The MKBHD Podcast",
+      "description": "A tech podcast for the gadget lovers and tech heads among us from the mind of Marques Brownlee, better known as MKBHD. MKBHD has made a name for himself on YouTube reviewing everything from the newest smartphones to cameras to electric cars. Pulling from over 10 years of experience covering the tech industry, MKBHD will keep you informed and entertained as he takes a deep dive into the latest and greatest in tech and what deserves your hard earned cash. New episodes every other week.\n\nLink to survey: https://bit.ly/2EcYbu4",
+      "originalImage": "https://images.megaphone.fm/YKxCfe_dsNlZGBttSaAWntxwlDPgA9KJvcOS0DJomQs/plain/s3://megaphone-prod/podcasts/ae6237e6-7e71-11e9-9c4d-3b02b0eab47c/image/uploads_2F1564425795828-hvt4q5y4lzl-7a1f990ecb9540e18bca5eb93ae5322c_2FWVFRM_CoverArt_3000x3000.png",
+      "link": "https://www.studio71.com/us/podcasts/",
+      "date": "",
+      "url": "http://feeds.feedburner.com/WaveformWithMkbhd",
+      "image": "/img/podcast-images/waveform-the-mkbhd-podcast.png"
+    },
+    "https://feeds.megaphone.fm/gadget-lab": {
+      "title": "Gadget Lab: Weekly Tech News",
+      "description": "Inside the hottest personal tech stories of the week; mobile apps, gear, social networking, and entertainment.",
+      "originalImage": "https://images.megaphone.fm/QMcwYUzVuqGGOzdg_OFw-vRNY-XuK3nS4kRQhdIVHDY/plain/s3://megaphone-prod/podcasts/19306ebc-36ce-11e9-83cc-4f129e1dff43/image/Gadget-Lab-Podcast-3000.jpg",
+      "link": "https://www.wired.com/",
+      "date": "",
+      "url": "https://feeds.megaphone.fm/gadget-lab",
+      "subtitle": "The latest tech news from WIRED.",
+      "image": "/img/podcast-images/gadget-lab-weekly-tech-news.png"
+    },
+    "https://daringfireball.net/thetalkshow/rss": {
+      "title": "The Talk Show With John Gruber",
+      "description": "The director’s commentary track for Daring Fireball.",
+      "originalImage": "https://daringfireball.net/thetalkshow/graphics/df-the-talk-show-album-art.png",
+      "link": "https://daringfireball.net/thetalkshow",
+      "date": "Sat May 23 2020 05:34:01 GMT+0100 (British Summer Time)",
+      "url": "https://daringfireball.net/thetalkshow/rss",
+      "image": "/img/podcast-images/the-talk-show-with-john-gruber.png"
+    },
+    "https://feeds.theoutline.com/tomorrow": {
+      "title": "Tomorrow with Joshua Topolsky",
+      "description": "Tomorrow with Joshua Topolsky is a podcast about what's happening right now — and next — in the world of culture, technology and the internet, music, movies, politics, and more. Whether it's dissecting the news of the day or having an in-depth conversation with a creator, deep thinker, or artist, Tomorrow will be the best hour of funny, weird, and wonderful you'll get all week.\n\nContact us at podcasts@theoutline.com for any comments, thoughts, or veiled threats.",
+      "originalImage": "https://images.megaphone.fm/TLH2gol_ryy__Q2aigkMkZ7jqC9_8P9u8MAOof0yxnA/plain/s3://megaphone-prod/podcasts/e9775a8e-503b-11e7-9ad6-5f8f2d5b2995/image/avatars-000281902479-olcv80-original.jpg",
+      "link": "http://www.theoutline.com/",
+      "date": "",
+      "url": "https://feeds.theoutline.com/tomorrow",
+      "subtitle": "An interview podcast from Joshua Topolsky and The Outline",
+      "image": "/img/podcast-images/tomorrow-with-joshua-topolsky.png"
     },
     "https://audioboom.com/channels/2402227.rss": {
       "title": "The Anfield Wrap",
@@ -268,6 +316,15 @@
       "url": "https://podcast.global.com/show/4329967/episodes/feed",
       "subtitle": "Liverpool FC podcasts from the Liverpool ECHO, including our main Blood Red show with Ian Doyle, Joe Rimmer, Paul Gorst, Sean Bradbury, Caoimhe O'Neill, Connor Dunn and Theo Squires; Neil Fitzmaurice's…",
       "image": "/img/podcast-images/blood-red-the-liverpool-fc-podcast.png"
+    },
+    "https://podcasts.files.bbci.co.uk/p0742833.rss": {
+      "title": "Obsessed With...",
+      "description": "We're obsessed with…Normal People and Killing Eve\n\nA TV companion podcast where celebrity superfans take a forensic look at some of the biggest phenomena on the small screen",
+      "originalImage": "http://ichef.bbci.co.uk/images/ic/3000x3000/p082c2xn.jpg",
+      "link": "http://www.bbc.co.uk/programmes/p0742833",
+      "date": "Sun May 24 2020 06:00:00 GMT+0100 (British Summer Time)",
+      "url": "https://podcasts.files.bbci.co.uk/p0742833.rss",
+      "image": "/img/podcast-images/obsessed-with.png"
     }
   },
   "categories": [
@@ -299,6 +356,17 @@
         "https://feeds.transistor.fm/rework",
         "https://sivers.org/podcast.rss",
         "https://naval.libsyn.com/rss"
+      ]
+    },
+    {
+      "title": "Technology",
+      "slug": "technology",
+      "podcasts": [
+        "https://feeds.megaphone.fm/vergecast",
+        "http://feeds.feedburner.com/WaveformWithMkbhd",
+        "https://feeds.megaphone.fm/gadget-lab",
+        "https://daringfireball.net/thetalkshow/rss",
+        "https://feeds.theoutline.com/tomorrow"
       ]
     },
     {

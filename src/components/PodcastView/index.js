@@ -10,7 +10,7 @@ import usePodcast from '../../hooks/usePodcast';
 
 export default function PodcastView() {
   const location = useLocation();
-  const { podcasts } = useAppState();
+  const { podcasts, episodes } = useAppState();
   const params = new URLSearchParams(location.search);
   const podcastUrl = params.get('rss');
   usePodcast(podcastUrl);
@@ -19,7 +19,14 @@ export default function PodcastView() {
 
   useDocumentTitle(podcast && podcast.title);
 
-  // TODO: handle error case.
+  if (episodes.feed && episodes.feed.error) {
+    return (
+      <div className="u-margin-bottom-xxlarge">
+        <h1 className="ts-post-title u-text-center u-margin-bottom">Something went wrong.</h1>
+        <p className="u-text-center">The podcast feed couldn’t be loaded.</p>
+      </div>
+    );
+  }
 
   return (
     <>
