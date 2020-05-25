@@ -46,7 +46,6 @@ function RSSForm() {
   }
 
   const disabled = !isValidUrl(rssFeed);
-  // console.log('feed: ', rssFeed, disabled);
 
   return (
     <form onSubmit={handleSubmit} className="c-rss-form u-margin-top-large">

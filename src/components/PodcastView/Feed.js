@@ -12,11 +12,12 @@ export default function Feed({ podcastUrl }) {
 
   const dispatch = useAppDispatch();
 
-  function playPodcast(podcastUrl) {
+  function playPodcast(episode) {
     dispatch({
       type: 'PLAY_PODCAST',
       data: {
-        url: podcastUrl
+        episode,
+        podcastUrl
       }
     });
   }
@@ -34,8 +35,8 @@ export default function Feed({ podcastUrl }) {
       episode={episode}
       key={episode.guid}
       player={player}
-      onPlayButtonClick={() => playPodcast(episode.media.url) }
-      onPauseButtonClick={() => pausePodcast(episode.media.url) } />
+      onPlayButtonClick={() => playPodcast(episode) }
+      onPauseButtonClick={() => pausePodcast(episode) } />
     );
   } else {
     return <Spinner / > ;

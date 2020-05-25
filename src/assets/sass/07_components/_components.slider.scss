@@ -2,38 +2,20 @@
    #SLIDER
    ========================================================================== */
 
-@-webkit-keyframes mdc-slider-emphasize {
-  0% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  50% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(0.667);
-            transform: scale(0.667);
-  }
-}
+
 @keyframes mdc-slider-emphasize {
   0% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   50% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    animation-timing-function: ease-in;
+    transform: scale(0.9);
   }
   100% {
-    -webkit-transform: scale(0.667);
-            transform: scale(0.667);
+    transform: scale(0.667);
   }
 }
+
 .mdc-slider {
   position: relative;
   width: 100%;

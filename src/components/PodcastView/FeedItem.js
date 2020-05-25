@@ -5,19 +5,9 @@ import {
 } from '@carbon/icons-react';
 
 export default function FeedItem({episode, player, onPlayButtonClick, onPauseButtonClick}) {
-  let url;
   let button;
 
-  if (typeof episode.media !== "undefined") {
-    url = episode.media.url;
-  } else {
-    // redacted podcast episode.
-    console.log(episode);
-  }
-
-  const isPlaying = (url === player.url && player.state === "play");
-
-  if (isPlaying) {
+  if (isPlaying(episode, player)) {
     button = <button className="ts-body-2" onClick={onPauseButtonClick}>
       <PauseOutline32 aria-label="Pause" className="c-icon c-icon--pause" />
     </button>
@@ -47,4 +37,28 @@ export default function FeedItem({episode, player, onPlayButtonClick, onPauseBut
       </div>
     </div>
   );
+}
+
+function isInPlayer(episode, player) {
+  let episodeUrl;
+
+  if (typeof episode.media !== "undefined") {
+    episodeUrl = episode.media.url;
+  } else {
+    console.log("Redacted podcast episode.", episode);
+    return false;
+  }
+
+  if (
+    player.episode && player.episode.media &&
+    (player.episode.media.url === episodeUrl)
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
+function isPlaying(episode, player) {
+  return isInPlayer(episode, player) && player.state === "play";
 }
