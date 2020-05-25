@@ -3,6 +3,7 @@
    ========================================================================== */
 
 p {
+  word-break: break-word;
   @include ms-respond(font-size, 1);
   line-height: 1.5em;
 
