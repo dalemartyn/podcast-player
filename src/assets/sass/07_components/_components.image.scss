@@ -11,6 +11,7 @@
   background-color: sem-color(background-code);
   border-radius: var(--rounded-radius);
   overflow: hidden;
+  @include theme-transition(background-color);
 
   &::after {
     content: "";
