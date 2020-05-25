@@ -38,6 +38,7 @@ export default function FeedItem({episode, player, onPlayButtonClick, onPauseBut
         </h3>
         <div className="c-feed-item__meta ts-label u-margin-bottom-xmicro">
           <span className="c-feed-item__date">{episode.date}</span>
+          <span className="c-feed-item__bullet-separator">·</span>
           <span className="c-feed-item__duration">{episode.duration}</span>
         </div>
         <div className="c-feed-item__description">

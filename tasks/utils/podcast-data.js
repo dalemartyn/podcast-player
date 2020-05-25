@@ -107,7 +107,7 @@ function getMedia(post) {
 }
 
 function getDuration(post) {
-  return getItunesDuration(post);
+  return parseDuration(getItunesDuration(post));
 }
 
 function getDate(jsDate) {
@@ -134,6 +134,34 @@ function getPodcastMeta(post, url) {
   return meta;
 }
 
+function parseDuration(duration) {
+  if (!duration) return null;
+
+  if (!isNaN(Number(duration))) {
+    return Math.floor(Number(duration / 60)) + ' mins';
+  }
+
+  let match = duration.match(/(\d?\d):(\d\d):(\d\d)/);
+
+  if (match) {
+    const hours = Number(match[1]);
+    const minutes = Math.floor(Number(match[2]));
+    if (hours === 0) {
+      return `${minutes} mins`;
+    }
+    return `${hours}h ${minutes}m`;
+  }
+
+  match = duration.match(/(\d?\d):(\d\d)/);
+
+  if (match) {
+    const minutes = Math.floor(Number(match[1]));
+    return `${minutes} mins`;
+  }
+
+  return duration;
+}
+
 module.exports = {
   getTitle,
   getContent,
@@ -142,5 +170,6 @@ module.exports = {
   getMedia,
   getDuration,
   getDate,
-  getPodcastMeta
+  getPodcastMeta,
+  parseDuration
 }

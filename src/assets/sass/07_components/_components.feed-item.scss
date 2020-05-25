@@ -42,6 +42,8 @@
     display: flex;
   }
 
-    .c-feed-item__date {
-      width: 12ch;
+    .c-feed-item__bullet-separator {
+      margin-left: sp(micro);
+      margin-right: sp(micro);
+      white-space: nowrap;
     }
