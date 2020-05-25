@@ -5,7 +5,7 @@
       "description": "Conversations about React with your favorite developers.",
       "originalImage": "https://media.simplecast.com/podcast/image/6265/1550288890-artwork.jpg",
       "link": "http://reactpodcast.com/",
-      "date": "Sun May 24 2020 21:25:44 GMT+0100 (British Summer Time)",
+      "date": "Mon May 25 2020 00:34:15 GMT+0100 (British Summer Time)",
       "url": "https://rss.simplecast.com/podcasts/6265/rss",
       "subtitle": "Conversations about React with your favorite developers..",
       "image": "/img/podcast-images/react-podcast.png"
@@ -54,7 +54,7 @@
       "description": "Things about Svelte. Sometimes weekly, sometimes not.",
       "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/2728423/2728423-1575391650956-9f8e7eb17bbc1.jpg",
       "link": "https://www.svelteradio.com/",
-      "date": "Sun May 24 2020 22:19:18 GMT+0100 (British Summer Time)",
+      "date": "Mon May 25 2020 00:45:50 GMT+0100 (British Summer Time)",
       "url": "https://anchor.fm/s/10dbd4bc/podcast/rss",
       "image": "/img/podcast-images/svelte-radio.png"
     },
@@ -83,7 +83,7 @@
       "description": "The all things web development podcast by two Brits with opinions and puns. Join Phil and Jack for a relaxed chat as we sprinkle some salt and lavishly apply vinegar to a variety of topics from the world of frontend web development.",
       "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/2073204/2073204-1566552571667-6a834123f44b.jpg",
       "link": "https://www.fishandscripts.com/",
-      "date": "Sun May 24 2020 22:17:34 GMT+0100 (British Summer Time)",
+      "date": "Mon May 25 2020 00:44:25 GMT+0100 (British Summer Time)",
       "url": "https://anchor.fm/s/cf40bd0/podcast/rss",
       "image": "/img/podcast-images/fish-and-scripts.png"
     },
@@ -169,9 +169,95 @@
       "description": "Naval on wealth and happiness. On Twitter at @naval.",
       "originalImage": "https://ssl-static.libsyn.com/p/assets/5/c/e/b/5ceb9fba4ff0ab14/podcast_artwork.jpg",
       "link": "https://nav.al/",
-      "date": "Sat May 23 2020 22:40:57 GMT+0100 (British Summer Time)",
+      "date": "Sun May 24 2020 22:40:58 GMT+0100 (British Summer Time)",
       "url": "https://naval.libsyn.com/rss",
       "image": "/img/podcast-images/naval.png"
+    },
+    "https://rss.simplecast.com/podcasts/1034/rss": {
+      "title": "Design Details",
+      "description": "A weekly conversation about design process and culture. Hosted by Marshall Bock and Brian Lovin.",
+      "originalImage": "https://media.simplecast.com/podcast/image/1034/1471485006-artwork.jpg",
+      "link": "http://spec.fm/podcasts/design-details",
+      "date": "Mon May 25 2020 00:34:49 GMT+0100 (British Summer Time)",
+      "url": "https://rss.simplecast.com/podcasts/1034/rss",
+      "subtitle": "A weekly conversation about design process and culture.",
+      "image": "/img/podcast-images/design-details.png"
+    },
+    "https://feeds.99percentinvisible.org/99percentinvisible": {
+      "title": "99% Invisible",
+      "description": "Design is everywhere in our lives, perhaps most importantly in the places where we've just stopped noticing. 99% Invisible is a weekly exploration of the process and power of design and architecture. From award winning producer Roman Mars. Learn more at 99percentinvisible.org.  \n\nA proud member of Radiotopia, from PRX. Learn more at radiotopia.fm.",
+      "originalImage": "https://f.prxu.org/96/images/a52a20dd-7b8e-46be-86a0-dda86b0953fc/99-300.png",
+      "link": "http://99percentinvisible.org/",
+      "date": "Tue May 19 2020 23:20:40 GMT+0100 (British Summer Time)",
+      "url": "https://feeds.99percentinvisible.org/99percentinvisible",
+      "subtitle": "A tiny radio show about design, architecture & the 99% invisible activity that shapes our world.",
+      "image": "/img/podcast-images/99-invisible.png"
+    },
+    "https://designobserver.com/show.designmatters2009-10.xml": {
+      "title": "Design Matters with Debbie Millman",
+      "description": "Design Matters with Debbie Millman is one of the world’s very first podcasts. Broadcasting independently for over 14 years, the show is about how incredibly creative people design the arc of their lives.",
+      "originalImage": "http://designobserver.com/images/Design_Matters_w_DebbieMillman.jpg",
+      "link": "http://designobserver.com/topic/designmatters/1039",
+      "date": "",
+      "url": "https://designobserver.com/show.designmatters2009-10.xml",
+      "image": "/img/podcast-images/design-matters-with-debbie-millman.png"
+    },
+    "https://www.relay.fm/presentable/feed": {
+      "title": "Presentable",
+      "description": "The Presentable Podcast focuses on how we design and build the products that are shaping our digital future. We'll track the tools, trends, and methods being used by teams from the biggest companies and latest startups. In each episode, Jeff will bring over two decades of experience as a designer, developer, entrepreneur, and investor as he chats with guests about how design is changing the world. Hosted by Jeff Veen.",
+      "originalImage": "http://relayfm.s3.amazonaws.com/uploads/broadcast/image/29/presentable_artwork.png",
+      "link": "https://www.relay.fm/presentable",
+      "date": "Tue May 12 2020 14:30:00 GMT+0100 (British Summer Time)",
+      "url": "https://www.relay.fm/presentable/feed",
+      "image": "/img/podcast-images/presentable.png"
+    },
+    "http://googledesignmethod.libsyn.com/rss": {
+      "title": "Method Podcast from Google Design",
+      "description": "The Method podcast profiles designers at Google, giving listeners an inside look at their journeys and design choices.",
+      "originalImage": "http://static.libsyn.com/p/assets/b/e/e/8/bee848bb83fdf0a6/avatar-A.png",
+      "link": "https://design.google/",
+      "date": "Sun May 24 2020 17:54:36 GMT+0100 (British Summer Time)",
+      "url": "http://googledesignmethod.libsyn.com/rss",
+      "subtitle": "Google Design",
+      "image": "/img/podcast-images/method-podcast-from-google-design.png"
+    },
+    "http://designnotes.fm/rss": {
+      "title": "Design Notes",
+      "description": "Design Notes is a Google Design podcast about creative work and what it teaches us, hosted by Liam Spradlin. Each episode we talk with people from unique creative fields to discover what inspires and unites us in our practice.",
+      "originalImage": "http://static.libsyn.com/p/assets/8/c/8/2/8c823317aaa6c9b6/DN_LOGO_1X1.png",
+      "link": "https://design.google/podcast",
+      "date": "Sun May 24 2020 20:32:20 GMT+0100 (British Summer Time)",
+      "url": "http://designnotes.fm/rss",
+      "subtitle": "Design Notes is a Google Design podcast about creative work and what it teaches us, hosted by Google’s Liam Spradlin. Each episode we’ll talk with people from unique creative fields to…",
+      "image": "/img/podcast-images/design-notes.png"
+    },
+    "https://feeds.simplecast.com/4MvgQ73R": {
+      "title": "UI Breakfast: UI/UX Design and Product Strategy",
+      "description": "Join us for exciting conversations about UI/UX design, SaaS products, marketing, and so much more. My awesome guests are industry experts who share actionable knowledge — so that you can apply it in your business today.",
+      "originalImage": "https://cdn.simplecast.com/images/6cd16543-f849-4954-85c0-9d1cc1460e2d/066c98d2-4d93-4a73-9189-c757c91f6fce/3000x3000/1496410699artwork.jpg?aid=rss_feed",
+      "link": "http://www.uibreakfast.com/podcast",
+      "date": "Sun May 17 2020 15:26:58 GMT+0100 (British Summer Time)",
+      "url": "https://feeds.simplecast.com/4MvgQ73R",
+      "image": "/img/podcast-images/ui-breakfast-ui-ux-design-and-product-strategy.png"
+    },
+    "http://feeds.feedburner.com/uxpodcast": {
+      "title": "UX Podcast",
+      "description": "Hosted by @axbom & @beantin, UX Podcast is for those who are passionate about balancing business, technology and people within the realm of digital media. Recorded twice monthly in Stockholm, Sweden.",
+      "originalImage": "https://uxpodcast.com/wp-content/uploads/2019/09/uxpodcast-coverart.png",
+      "link": "https://uxpodcast.com/",
+      "date": "Sat May 23 2020 10:59:33 GMT+0100 (British Summer Time)",
+      "url": "http://feeds.feedburner.com/uxpodcast",
+      "subtitle": "Breaking down digital media silos",
+      "image": "/img/podcast-images/ux-podcast.png"
+    },
+    "https://feeds.pacific-content.com/wireframe": {
+      "title": "Wireframe",
+      "description": "Wireframe reveals the stories behind user experience design, for UX/UI designers, graphic designers, and the design-curious. Hosted by Khoi Vinh, principal designer at Adobe and one of Fast Company’s 100 Most Creative People in Business, the podcast explores unexpected ways that user experience design helps technology fit into our lives.",
+      "originalImage": "https://cdn.simplecast.com/images/7dfa8d26-0674-443c-944c-bfd6457bf0cf/17eea949-df39-4428-bae0-bf8a8171ed20/3000x3000/wireframe-showart.jpg?aid=rss_feed",
+      "link": "https://xd.adobe.com/ideas/perspectives/wireframe-podcast/",
+      "date": "Fri Apr 17 2020 22:21:08 GMT+0100 (British Summer Time)",
+      "url": "https://feeds.pacific-content.com/wireframe",
+      "image": "/img/podcast-images/wireframe.png"
     },
     "https://feeds.megaphone.fm/vergecast": {
       "title": "The Vergecast",
@@ -356,6 +442,21 @@
         "https://feeds.transistor.fm/rework",
         "https://sivers.org/podcast.rss",
         "https://naval.libsyn.com/rss"
+      ]
+    },
+    {
+      "title": "Design",
+      "slug": "design",
+      "podcasts": [
+        "https://rss.simplecast.com/podcasts/1034/rss",
+        "https://feeds.99percentinvisible.org/99percentinvisible",
+        "https://designobserver.com/show.designmatters2009-10.xml",
+        "https://www.relay.fm/presentable/feed",
+        "http://googledesignmethod.libsyn.com/rss",
+        "http://designnotes.fm/rss",
+        "https://feeds.simplecast.com/4MvgQ73R",
+        "http://feeds.feedburner.com/uxpodcast",
+        "https://feeds.pacific-content.com/wireframe"
       ]
     },
     {

@@ -73,19 +73,20 @@
         background-color $hover-transition,
         color $hover-transition,
         box-shadow $hover-transition;
-      @include theme-transition(background-color border-color color);
+      @include theme-transition(background-color color box-shadow);
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: #FFE082;
+          box-shadow: var(--shadow-1);
+        }
+      }
 
       &[disabled] {
         background-color: sem-color(background-code);
         color: sem-color(text-5);
         cursor: default;
-      }
-
-      @media (hover: hover) {
-        &:not([disabled]):hover {
-          background-color: #FFE082;
-          box-shadow: var(--shadow-1);
-        }
+        box-shadow: none;
       }
 
       &:active {

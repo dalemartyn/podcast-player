@@ -21,7 +21,7 @@
     "logo darkmode"
     "menu menu";
 
-  @include mq($from: md) {
+  @include mq($from: lg) {
     grid-template-columns: 170px 1fr 170px;
     grid-template-areas:
       "logo menu darkmode";
@@ -32,7 +32,7 @@
     grid-area: logo;
     justify-self: start;
 
-    @include mq($from: md) {
+    @include mq($from: lg) {
       margin-top: sp(xmicro);
       margin-bottom: sp(xmicro);
     }
@@ -85,7 +85,7 @@
   .c-site-header__menu {
     grid-area: menu;
 
-    @include mq($from: md) {
+    @include mq($from: lg) {
       justify-self: center;
       padding-left: sp();
       padding-right: sp();
