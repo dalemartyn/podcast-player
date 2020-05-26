@@ -249,9 +249,7 @@
 .mdc-slider--in-transit .mdc-slider__track,
 .mdc-slider:focus:not(.mdc-slider--active) .mdc-slider__thumb-container,
 .mdc-slider:focus:not(.mdc-slider--active) .mdc-slider__track {
-  transition: -webkit-transform 80ms ease;
   transition: transform 80ms ease;
-  transition: transform 80ms ease, -webkit-transform 80ms ease;
 }
 
 .mdc-slider--discrete.mdc-slider--active .mdc-slider__thumb {

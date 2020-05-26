@@ -1,19 +1,22 @@
-import React, { useRef, } from "react";
-import { useAppDispatch } from '../../AppStateProvider';
-import {
-  usePlayerState,
-  useEventHandler,
-  useListenTracker
-} from "./audio-element-hooks";
+import React, { useRef } from "react";
+import { useAppState, useAppDispatch } from '../../AppStateProvider';
+import { getEpisodeUrl } from '../../reducers/player';
+import useAudioPlayer from './hooks/useAudioPlayer';
+import useEventHandler from './hooks/useEventHandler';
+import useListenTracker from './hooks/useListenTracker';
 
-export default function AudioElement({
-  src = null,
-  state
-}) {
+export default function AudioElement() {
+  const { player } = useAppState();
+  const src = getEpisodeUrl(player);
+
   const audioElement = useRef(null);
   const dispatch = useAppDispatch();
 
-  function updatePlayerCurrentTime({duration, currentTime}) {
+  function updatePlayerCurrentTime() {
+    const {
+      currentTime,
+      duration
+    } = audioElement.current;
     dispatch({
       type: 'PLAYER_UPDATE_CURRENT_TIME',
       data: {
@@ -29,24 +32,18 @@ export default function AudioElement({
     });
   }
 
-  usePlayerState(state, audioElement);
+  useAudioPlayer(player, audioElement);
   useEventHandler('canplay', canPlayPodcast, audioElement);
   useEventHandler('loadedmetadata', updatePlayerCurrentTime, audioElement);
-  useEventHandler('seeking', (e) => {
-    console.log("seeking", e.currentTime);
-    updatePlayerCurrentTime(e);
-  }, audioElement);
-  useEventHandler('seeked', (e) => {
-    console.log("seeked", e.currentTime);
-    updatePlayerCurrentTime(e);
-  }, audioElement);
   useListenTracker(updatePlayerCurrentTime, audioElement);
 
   return (
-    <audio
-      controls
-      ref={audioElement}
-      src={src}
-    />
+    <>
+      <audio
+        controls
+        ref={audioElement}
+        src={src}
+      />
+    </>
   )
 }

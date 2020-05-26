@@ -17,10 +17,7 @@ export default function Playbar() {
   return (
     <div className={classNames("c-playbar", { "is-offscreen": isOffscreen })}>
       <div className="c-playbar__audio">
-        <AudioElement
-          state={player.state}
-          src={episodeUrl}
-        />
+        <AudioElement />
       </div>
       <div className="u-padding-left u-padding-right u-padding-vertical-small">
         <div className="c-playbar__layout">
