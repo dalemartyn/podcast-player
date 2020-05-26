@@ -13,7 +13,7 @@ export default function PlaybackBar() {
     } else {
       setTime(player.seekPosition);
     }
-  }, [player]);
+  }, [player.currentTime, player.seekPosition, player.isSeeking]);
 
   return (
     <div className="c-playback-bar">

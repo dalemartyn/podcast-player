@@ -77,8 +77,10 @@ function startAt(state = 0, action) {
 
 function duration(state = 0, action) {
   switch (action.type) {
-    case "PLAYER_UPDATE_CURRENT_TIME":
-      return action.data.duration
+    case "PLAYER_UPDATE_DURATION":
+      return action.data.value
+    case "PLAYER_LOAD_EPISODE":
+      return 0;
     default:
       return state;
   }
@@ -87,7 +89,9 @@ function duration(state = 0, action) {
 function currentTime(state = 0, action) {
   switch (action.type) {
     case "PLAYER_UPDATE_CURRENT_TIME":
-      return action.data.currentTime
+      return action.data.value
+    case "PLAYER_LOAD_EPISODE":
+      return 0;
     default:
       return state;
   }

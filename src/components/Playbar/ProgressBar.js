@@ -48,14 +48,17 @@ export default function PlaybackBar() {
     }
   }, [player.currentTime, player.isSeeking]);
 
+  const disabled = !player.duration;
+
   return (
     <Slider
       onInput={throttledSetSeeking.current}
       onChange={throttledSeekTo.current}
       min={0}
-      max={player.duration || 100000}
+      max={player.duration || 3600}
       step={1}
       value={time}
+      disabled={disabled}
     />
   );
 }

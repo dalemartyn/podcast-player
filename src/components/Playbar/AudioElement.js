@@ -13,15 +13,19 @@ export default function AudioElement() {
   const dispatch = useAppDispatch();
 
   function updatePlayerCurrentTime() {
-    const {
-      currentTime,
-      duration
-    } = audioElement.current;
     dispatch({
       type: 'PLAYER_UPDATE_CURRENT_TIME',
       data: {
-        currentTime,
-        duration
+        value: audioElement.current.currentTime,
+      }
+    });
+  }
+
+  function updatePlayerDuration() {
+    dispatch({
+      type: 'PLAYER_UPDATE_DURATION',
+      data: {
+        value: audioElement.current.duration,
       }
     });
   }
@@ -35,6 +39,7 @@ export default function AudioElement() {
   useAudioPlayer(player, audioElement);
   useEventHandler('canplay', canPlayPodcast, audioElement);
   useEventHandler('loadedmetadata', updatePlayerCurrentTime, audioElement);
+  useEventHandler('loadedmetadata', updatePlayerDuration, audioElement);
   useListenTracker(updatePlayerCurrentTime, audioElement);
 
   return (
