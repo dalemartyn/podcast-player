@@ -128,7 +128,9 @@ function getAllData(categories) {
 
 function getInitialState(data) {
   const byUrl = {};
-  data.forEach((podcast) => byUrl[podcast.url] = podcast);
+  data.forEach((podcast) => byUrl[podcast.url] = {
+    meta: podcast
+  });
 
   const initialState = {
     byUrl,

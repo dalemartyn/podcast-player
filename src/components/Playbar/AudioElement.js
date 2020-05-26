@@ -1,76 +1,52 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, } from "react";
+import { useAppDispatch } from '../../AppStateProvider';
+import {
+  usePlayerState,
+  useEventHandler,
+  useListenTracker
+} from "./audio-element-hooks";
 
-export default function AudioElement(props) {
-  const {
-    src,
-    state,
-    min = 0,
-    max = 100
-  } = props;
-
+export default function AudioElement({
+  src = null,
+  state
+}) {
   const audioElement = useRef(null);
-  usePlayerState(audioElement, state);
-  useEventListeners(audioElement, props);
+  const dispatch = useAppDispatch();
+
+  function updatePlayerCurrentTime({duration, currentTime}) {
+    dispatch({
+      type: 'UPDATE_CURRENT_TIME',
+      data: {
+        currentTime,
+        duration
+      }
+    });
+  }
+
+  function canPlayPodcast() {
+    dispatch({
+      type: 'CAN_PLAY_PODCAST'
+    });
+  }
+
+  usePlayerState(state, audioElement);
+  useEventHandler('canplay', canPlayPodcast, audioElement);
+  useEventHandler('loadedmetadata', updatePlayerCurrentTime, audioElement);
+  useEventHandler('seeking', (e) => {
+    console.log("seeking", e.currentTime);
+    updatePlayerCurrentTime(e);
+  }, audioElement);
+  useEventHandler('seeked', (e) => {
+    console.log("seeked", e.currentTime);
+    updatePlayerCurrentTime(e);
+  }, audioElement);
+  useListenTracker(updatePlayerCurrentTime, audioElement);
 
   return (
     <audio
       controls
       ref={audioElement}
       src={src}
-      min={min}
-      max={max}
-      className="c-player__audio"
     />
   )
-}
-
-function usePlayerState(audioElement, state) {
-  useEffect(function () {
-    const audio = audioElement.current;
-
-    if (state === 'play') {
-      audio.play();
-    } else if (state === 'pause') {
-      audio.pause();
-    } else if (state === 'stop') {
-      audio.stop();
-    }
-  }, [audioElement, state]);
-}
-
-
-function useEventListeners(audioElement, props) {
-  const {
-    onMetadata = () => {},
-    onPlay = () => {}
-  } = props;
-
-  useEffect(function addEventListeners() {
-    const audio = audioElement.current;
-
-    const metadataHandler = (e) => {
-      console.log('meta');
-      onMetadata({
-        duration: e.target.duration,
-        currentTime: e.target.currentTime
-      });
-    };
-
-    const playHandler = (e) => {
-      audio.play();
-      console.log('canplay');
-      onPlay({
-        duration: e.target.duration,
-        currentTime: e.target.currentTime
-      })
-    };
-
-    audio.addEventListener('loadedmetadata', metadataHandler);
-    audio.addEventListener('canplay', playHandler);
-
-    return function destroyEventListeners() {
-      audio.removeEventListener('loadedmetadata', metadataHandler);
-      audio.removeEventListener('canplay', playHandler);
-    }
-  }, [audioElement, onPlay, onMetadata]);
 }

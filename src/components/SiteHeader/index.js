@@ -14,7 +14,7 @@ export default function SiteHeader() {
 
   return (
     <div className="c-site-header">
-      <div className="o-wrapper-l">
+      <div className="o-wrapper-toolbar">
         <div className="c-site-header__main">
           <div className="c-site-header__logo">
             <SiteLogoLink className="c-site-header__logo-link" />

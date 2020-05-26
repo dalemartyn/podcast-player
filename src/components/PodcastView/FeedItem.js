@@ -39,7 +39,7 @@ export default function FeedItem({episode, player, onPlayButtonClick, onPauseBut
   );
 }
 
-function isInPlayer(episode, player) {
+export function isInPlayer(episode, player) {
   let episodeUrl;
 
   if (typeof episode.media !== "undefined") {
@@ -59,6 +59,7 @@ function isInPlayer(episode, player) {
   return false;
 }
 
-function isPlaying(episode, player) {
-  return isInPlayer(episode, player) && player.state === "play";
+export function isPlaying(episode, player) {
+  return isInPlayer(episode, player) &&
+    (player.state === "play" || player.state === "load");
 }

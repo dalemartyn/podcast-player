@@ -9,6 +9,7 @@
     "@testing-library/react": "^10.0.4",
     "@testing-library/user-event": "^10.3.5",
     "autop": "^1.0.1",
+    "classnames": "^2.2.6",
     "dompurify": "^2.0.11",
     "feedparser": "^2.2.10",
     "focus-visible": "^5.1.0",

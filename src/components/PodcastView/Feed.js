@@ -1,25 +1,32 @@
 import React from 'react';
 import Spinner from '../Spinner';
-import FeedItem from './FeedItem';
+import FeedItem, { isInPlayer } from './FeedItem';
 import {
   useAppState,
   useAppDispatch
 } from '../../AppStateProvider';
+import { getPodcast } from '../../reducers/podcasts';
 
 export default function Feed({ podcastUrl }) {
 
-  const { episodes, player } = useAppState();
+  const { podcasts, player } = useAppState();
 
   const dispatch = useAppDispatch();
 
   function playPodcast(episode) {
-    dispatch({
-      type: 'PLAY_PODCAST',
-      data: {
-        episode,
-        podcastUrl
-      }
-    });
+    if (isInPlayer(episode, player)) {
+      dispatch({
+        type: 'PLAY_PODCAST'
+      });
+    } else {
+      dispatch({
+        type: 'LOAD_PODCAST',
+        data: {
+          episode,
+          podcastUrl
+        }
+      });
+    }
   }
 
   function pausePodcast() {
@@ -28,10 +35,10 @@ export default function Feed({ podcastUrl }) {
     });
   }
 
-  const feed = episodes.byUrl[podcastUrl];
+  const podcast = getPodcast(podcasts, podcastUrl);
 
-  if ( feed ) {
-    return feed.map((episode) => <FeedItem
+  if ( podcast && podcast.episodes ) {
+    return podcast.episodes.map((episode) => <FeedItem
       episode={episode}
       key={episode.guid}
       player={player}

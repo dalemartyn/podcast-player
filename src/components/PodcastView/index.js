@@ -7,19 +7,24 @@ import Feed from './Feed';
 import PodcastHeader from './PodcastHeader';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import usePodcast from '../../hooks/usePodcast';
+import {
+  getPodcastMeta,
+  getPodcastErrorMessage
+} from '../../reducers/podcasts';
 
 export default function PodcastView() {
   const location = useLocation();
-  const { podcasts, episodes } = useAppState();
+  const { podcasts } = useAppState();
   const params = new URLSearchParams(location.search);
   const podcastUrl = params.get('rss');
   usePodcast(podcastUrl);
 
-  const podcast = getPodcast(podcastUrl, podcasts);
+  const podcastMeta = getPodcastMeta(podcasts, podcastUrl);
+  const errorMessage = getPodcastErrorMessage(podcasts, podcastUrl);
 
-  useDocumentTitle(podcast && podcast.title);
+  useDocumentTitle(podcastMeta && podcastMeta.title);
 
-  if (episodes.feed && episodes.feed.error) {
+  if (errorMessage) {
     return (
       <div className="u-margin-bottom-xxlarge">
         <h1 className="ts-post-title u-text-center u-margin-bottom">Something went wrong.</h1>
@@ -30,17 +35,9 @@ export default function PodcastView() {
 
   return (
     <>
-      { podcast && <PodcastHeader podcast={podcast} />}
+      { podcastMeta && <PodcastHeader podcastMeta={podcastMeta} />}
       <Feed podcastUrl={podcastUrl} />
     </>
   );
 
-}
-
-
-function getPodcast(url, podcasts) {
-  if (podcasts.byUrl[url]) {
-    return podcasts.byUrl[url];
-  }
-  return null;
 }

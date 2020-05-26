@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 import { useAppState } from '../../AppStateProvider';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import PodcastImage from '../PodcastImage';
+import { getPodcastMeta } from '../../reducers/podcasts';
 
 export default function GridView({ category }) {
   useDocumentTitle(category.title);
   const { podcasts } = useAppState();
 
   const podcastGridItems = category.podcasts.map(function(url) {
-    const podcast = podcasts.byUrl[url];
-    return <PodcastGridItem podcast={podcast} key={podcast.url} />
+    const podcastMeta = getPodcastMeta(podcasts, url);
+    return <PodcastGridItem podcastMeta={podcastMeta} key={url} />
   });
 
   return (
@@ -31,7 +32,7 @@ function GridLayout({ title, children }) {
   );
 }
 
-function PodcastGridItem({ podcast }) {
+function PodcastGridItem({ podcastMeta }) {
 
   return (
     <li className="c-podcast-grid__item">
@@ -39,15 +40,15 @@ function PodcastGridItem({ podcast }) {
         <Link
           to={{
             pathname: '/podcast',
-            search: `?rss=${encodeURIComponent(podcast.url)}`
+            search: `?rss=${encodeURIComponent(podcastMeta.url)}`
           }}
           className="c-podcast-grid__link o-ratio__content"
         >
-          <PodcastImage podcast={podcast} />
+          <PodcastImage podcastMeta={podcastMeta} />
         </Link>
       </div>
       <h2 className="ts-display-5 u-margin-top-small u-break-word">
-        {podcast.title || podcast.url}
+        {podcastMeta.title || podcastMeta.url}
       </h2>
     </li>
   );

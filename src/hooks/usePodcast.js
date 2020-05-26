@@ -20,7 +20,7 @@ export default function usePodcast(url) {
 
   useLayoutEffect(() => {
     dispatch({
-      type: 'SET_PODCAST',
+      type: 'FETCH_PODCAST_REQUEST',
       data: {
         url
       }
@@ -32,7 +32,7 @@ export default function usePodcast(url) {
       try {
         const podcastData = await getPodcastData(url);
         dispatch({
-          type: 'ADD_PODCAST',
+          type: 'FETCH_PODCAST_SUCCESS',
           data: {
             podcastData,
             url
@@ -40,7 +40,7 @@ export default function usePodcast(url) {
         });
       } catch (e) {
         dispatch({
-          type: 'SET_PODCAST',
+          type: 'FETCH_PODCAST_FAILURE',
           data: {
             error: e.toString(),
             url

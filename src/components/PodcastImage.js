@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function PodcastImage({podcast, className=""}) {
+export default function PodcastImage({podcastMeta, className=""}) {
   const {
     image,
     originalImage,
     title
-  } = podcast;
+  } = podcastMeta;
 
   let src;
 

@@ -1,0 +1,48 @@
+/* ==========================================================================
+   #PLAYBAR
+   ========================================================================== */
+
+
+.c-playbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: sem-color("surface", .98);
+  box-shadow: var(--shadow-2);
+  @include theme-transition(background-color border-color);
+  opacity: 1;
+  transition:
+    transform .3s $decelerate-easing;
+
+  &.is-offscreen {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+
+  .c-playbar__layout {
+    display: grid;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-gap: sp(xlarge);
+    align-items: center;
+  }
+
+    .c-playbar__start {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .c-playbar__middle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .c-playbar__end {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }

@@ -1,16 +1,16 @@
 import React from 'react';
 import PodcastImage from '../PodcastImage';
 
-export default function PodcastHeader({podcast}) {
+export default function PodcastHeader({podcastMeta}) {
   const {
     title,
     description
-  } = podcast;
+  } = podcastMeta;
   return (
     <div className="c-podcast-header u-margin-bottom-xlarge">
       <div className="c-podcast-header__cover">
         <div className="c-image o-ratio o-ratio--1:1">
-          <PodcastImage podcast={podcast} className="o-ratio__content" />
+          <PodcastImage podcastMeta={podcastMeta} className="o-ratio__content" />
         </div>
       </div>
       <div className="c-podcast-header__content">
