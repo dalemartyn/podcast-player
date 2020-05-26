@@ -26,10 +26,18 @@ export default function podcast(state = {}, action) {
   }
 }
 
+
 function meta(state = {}, action) {
   switch (action.type) {
     case "FETCH_PODCAST_SUCCESS":
-      return action.data.podcastData.meta
+      /*
+       * Merge meta with current state to keep the local images
+       * for podcasts we have in pre-loaded in our inital state.
+       */
+      return {
+        ...state,
+        ...action.data.podcastData.meta
+      }
     default:
       return state;
   }

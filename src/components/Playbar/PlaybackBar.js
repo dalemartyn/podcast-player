@@ -11,7 +11,7 @@ export default function PlaybackBar() {
 
   return (
     <div className="c-playback-bar">
-      <div className="c-playback-bar__progress-time">{formatTime(currentTime)}</div>
+      <div className="c-playback-bar__progress-time ts-time">{formatTime(currentTime)}</div>
       <div className="c-playback-bar__progress-bar">
         <Slider
           onInput={evt => console.log(evt)}
@@ -21,7 +21,7 @@ export default function PlaybackBar() {
           step={5}
         />
       </div>
-      <div className="c-playback-bar__progress-time">{formatTime(duration)}</div>
+      <div className="c-playback-bar__progress-time ts-time">{formatTime(duration)}</div>
     </div>
   );
 }
@@ -31,7 +31,7 @@ function formatTime(s) {
   if (!s) return '00:00';
 
   const mins = Math.floor(s / 60);
-  const secs = Math.round(s % 60);
+  const secs = Math.floor(s % 60);
 
   const pad = (n) => n.toString().padStart(2, '0');
 

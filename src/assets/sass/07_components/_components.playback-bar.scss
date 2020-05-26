@@ -7,10 +7,12 @@
   display: grid;
   width: 100%;
   grid-template-columns: 40px 1fr 40px;
-  grid-gap: sp();
+  grid-gap: sp(small);
   align-items: center;
 }
 
-  .c-playback-bar__progress-time {}
+  .c-playback-bar__progress-time {
+    text-align: center;
+  }
 
   .c-playback-bar__progress-bar {}

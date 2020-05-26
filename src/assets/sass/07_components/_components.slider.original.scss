@@ -1,21 +1,42 @@
-/* ==========================================================================
-   #SLIDER
-   ========================================================================== */
-
-
-@keyframes mdc-slider-emphasize {
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://github.com/material-components/material-components-web/blob/master/LICENSE
+ */
+@-webkit-keyframes mdc-slider-emphasize {
   0% {
-    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
   50% {
-    animation-timing-function: ease-in;
-    transform: scale(0.9);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
   100% {
-    transform: scale(0.667);
+    -webkit-transform: scale(0.571);
+            transform: scale(0.571);
   }
 }
-
+@keyframes mdc-slider-emphasize {
+  0% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  50% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  100% {
+    -webkit-transform: scale(0.571);
+            transform: scale(0.571);
+  }
+}
 .mdc-slider {
   position: relative;
   width: 100%;
@@ -25,38 +46,38 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .mdc-slider:not(.mdc-slider--disabled) .mdc-slider__track {
-  background-color: #26C6DA;
+  background-color: #018786;
   /* @alternate */
-  background-color: var(--mdc-theme-secondary, #26C6DA);
+  background-color: var(--mdc-theme-secondary, #018786);
 }
 .mdc-slider:not(.mdc-slider--disabled) .mdc-slider__track-container::after {
-  background-color: #26C6DA;
+  background-color: #018786;
   /* @alternate */
-  background-color: var(--mdc-theme-secondary, #26C6DA);
+  background-color: var(--mdc-theme-secondary, #018786);
   opacity: 0.26;
 }
 .mdc-slider:not(.mdc-slider--disabled) .mdc-slider__track-marker-container {
-  background-color: #26C6DA;
+  background-color: #018786;
   /* @alternate */
-  background-color: var(--mdc-theme-secondary, #26C6DA);
+  background-color: var(--mdc-theme-secondary, #018786);
 }
 .mdc-slider:not(.mdc-slider--disabled) .mdc-slider__thumb {
-  fill: #26C6DA;
+  fill: #018786;
   /* @alternate */
-  fill: var(--mdc-theme-secondary, #26C6DA);
-  stroke: #26C6DA;
+  fill: var(--mdc-theme-secondary, #018786);
+  stroke: #018786;
   /* @alternate */
-  stroke: var(--mdc-theme-secondary, #26C6DA);
+  stroke: var(--mdc-theme-secondary, #018786);
 }
 .mdc-slider:not(.mdc-slider--disabled) .mdc-slider__focus-ring {
-  background-color: #26C6DA;
+  background-color: #018786;
   /* @alternate */
-  background-color: var(--mdc-theme-secondary, #26C6DA);
+  background-color: var(--mdc-theme-secondary, #018786);
 }
 .mdc-slider:not(.mdc-slider--disabled) .mdc-slider__pin {
-  background-color: #26C6DA;
+  background-color: #018786;
   /* @alternate */
-  background-color: var(--mdc-theme-secondary, #26C6DA);
+  background-color: var(--mdc-theme-secondary, #018786);
 }
 .mdc-slider:not(.mdc-slider--disabled) .mdc-slider__pin {
   color: white;
@@ -90,9 +111,9 @@
 }
 .mdc-slider__track-container {
   position: absolute;
-  top: calc(50% - 1px);
+  top: 50%;
   width: 100%;
-  height: 3px;
+  height: 2px;
   overflow: hidden;
 }
 .mdc-slider__track-container::after {
@@ -148,7 +169,7 @@
 }
 .mdc-slider__thumb-container {
   position: absolute;
-  top: 14px;
+  top: 15px;
   left: 0;
   width: 21px;
   height: 100%;
@@ -162,8 +183,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform: scale(0.667);
-          transform: scale(0.667);
+  -webkit-transform: scale(0.571);
+          transform: scale(0.571);
   stroke-width: 3.5;
   transition: fill 100ms ease-out, stroke 100ms ease-out, -webkit-transform 100ms ease-out;
   transition: transform 100ms ease-out, fill 100ms ease-out, stroke 100ms ease-out;
@@ -269,3 +290,5 @@
 .mdc-slider--discrete.mdc-slider--display-markers .mdc-slider__track-marker-container {
   visibility: visible;
 }
+
+/*# sourceMappingURL=mdc.slider.css.map*/

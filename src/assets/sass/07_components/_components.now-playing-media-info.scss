@@ -1,0 +1,39 @@
+/* ==========================================================================
+   #NOW-PLAYING-MEDIA-INFO
+   ========================================================================== */
+
+.c-now-playing-media-info {
+  display: grid;
+  height: 100%;
+  grid-gap: sp(small);
+  grid-template-columns: 48px 1fr;
+  text-decoration: none;
+}
+
+  // .c-now-playing-media-info__artwork {}
+
+  .c-now-playing-media-info__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+    .c-now-playing-media-info__episode-title,
+    .c-now-playing-media-info__podcast-title {
+      flex-shrink: 0;
+      min-width: 0;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .c-now-playing-media-info__episode-title {
+      line-height: 1.5;
+    }
+
+    .c-now-playing-media-info__podcast-title {
+      line-height: 1.25;
+    }

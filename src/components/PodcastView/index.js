@@ -9,7 +9,8 @@ import useDocumentTitle from '../../hooks/useDocumentTitle';
 import usePodcast from '../../hooks/usePodcast';
 import {
   getPodcastMeta,
-  getPodcastErrorMessage
+  getPodcastErrorMessage,
+  getPodcastIsFetching
 } from '../../reducers/podcasts';
 
 export default function PodcastView() {
@@ -21,10 +22,11 @@ export default function PodcastView() {
 
   const podcastMeta = getPodcastMeta(podcasts, podcastUrl);
   const errorMessage = getPodcastErrorMessage(podcasts, podcastUrl);
+  const isFetching = getPodcastIsFetching(podcasts, podcastUrl);
 
   useDocumentTitle(podcastMeta && podcastMeta.title);
 
-  if (errorMessage) {
+  if (errorMessage && !isFetching) {
     return (
       <div className="u-margin-bottom-xxlarge">
         <h1 className="ts-post-title u-text-center u-margin-bottom">Something went wrong.</h1>
@@ -36,7 +38,7 @@ export default function PodcastView() {
   return (
     <>
       { podcastMeta && <PodcastHeader podcastMeta={podcastMeta} />}
-      <Feed podcastUrl={podcastUrl} />
+      <Feed podcastUrl={podcastUrl} podcastMeta={podcastMeta} />
     </>
   );
 

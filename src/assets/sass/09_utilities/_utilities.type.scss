@@ -47,6 +47,13 @@
   line-height: 1.25;
 }
 
+.ts-time {
+  @include ms-respond(font-size, .25);
+  color: sem-color(text-2);
+  @include theme-transition(color);
+  line-height: 1;
+}
+
 .ts-display-1 {
   @include ms-respond(font-size, 3.5);
   letter-spacing: -.005em;
@@ -69,6 +76,11 @@
 
 .ts-display-5 {
   @include ms-respond(font-size, 1);
+}
+
+.ts-display-6 {
+  @include ms-respond(font-size, .5);
+  font-weight: fw(bold);
 }
 
 .ts-body-2 {

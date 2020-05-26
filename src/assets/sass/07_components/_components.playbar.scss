@@ -18,21 +18,42 @@
   &.is-offscreen {
     transform: translateY(100%);
     opacity: 0;
+    pointer-events: none;
   }
 }
+
+  .c-playbar__audio {
+    position: absolute;
+    right: sp();
+    bottom: calc(100% + #{sp(small)});
+
+    audio {
+      display: block;
+      box-shadow: var(--shadow-3);
+      border-radius: var(--rounded-radius);
+
+      &::-webkit-media-controls-enclosure {
+        background-color: #ffda68;
+        border-radius: var(--rounded-radius);
+        @include theme-transition(background-color);
+
+        .t-dark & {
+          background-color: #ffe082;
+        }
+      }
+    }
+  }
 
 
   .c-playbar__layout {
     display: grid;
     grid-template-columns: 3fr 4fr 3fr;
-    grid-gap: sp(xlarge);
-    align-items: center;
+    grid-gap: sp(xxxlarge);
   }
 
     .c-playbar__start {
       display: flex;
       justify-content: flex-start;
-      align-items: center;
     }
 
     .c-playbar__middle {

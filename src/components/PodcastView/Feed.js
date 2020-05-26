@@ -7,7 +7,7 @@ import {
 } from '../../AppStateProvider';
 import { getPodcast } from '../../reducers/podcasts';
 
-export default function Feed({ podcastUrl }) {
+export default function Feed({ podcastUrl, podcastMeta }) {
 
   const { podcasts, player } = useAppState();
 
@@ -23,7 +23,7 @@ export default function Feed({ podcastUrl }) {
         type: 'LOAD_PODCAST',
         data: {
           episode,
-          podcastUrl
+          podcastMeta
         }
       });
     }

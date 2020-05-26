@@ -31,6 +31,7 @@
       display: block;
       background-color: sem-color(background-code);
       overflow: hidden;
+      position: relative;
       border-radius: var(--rounded-radius);
 
       &::after {
@@ -42,8 +43,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: var(--rounded-radius);
-        box-shadow: 0 0 0 1px sem-color(text, .12) inset;
       }
 
       &:hover,

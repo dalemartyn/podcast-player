@@ -8,10 +8,8 @@ export default function PodcastHeader({podcastMeta}) {
   } = podcastMeta;
   return (
     <div className="c-podcast-header u-margin-bottom-xlarge">
-      <div className="c-podcast-header__cover">
-        <div className="c-image o-ratio o-ratio--1:1">
-          <PodcastImage podcastMeta={podcastMeta} className="o-ratio__content" />
-        </div>
+      <div className="c-podcast-header__artwork">
+        <PodcastImage podcastMeta={podcastMeta} />
       </div>
       <div className="c-podcast-header__content">
         <h1 className="ts-post-title u-margin-bottom-small">{ title }</h1>

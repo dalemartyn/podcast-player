@@ -31,7 +31,7 @@ function useEventHandler(eventName, handler, audioElement) {
 }
 
 function useListenTracker(onTrack, audioElement) {
-  const LISTEN_INTERVAL = 1000;
+  const LISTEN_INTERVAL = 250;
   const listenTracker = useRef();
 
   useEffect(function() {

@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { useAppState } from '../../AppStateProvider';
 import AudioElement from './AudioElement';
-import EpisodeButton from './EpisodeButton';
+import NowPlayingMediaInfo from './NowPlayingMediaInfo';
 import PlaybackBar from './PlaybackBar';
 import {
   getEpisodeUrl
@@ -16,19 +16,21 @@ export default function Playbar() {
 
   return (
     <div className={classNames("c-playbar", { "is-offscreen": isOffscreen })}>
-      <div className="u-padding-left u-padding-right u-padding-vertical-micro">
+      <div className="c-playbar__audio">
+        <AudioElement
+          state={player.state}
+          src={episodeUrl}
+        />
+      </div>
+      <div className="u-padding-left u-padding-right u-padding-vertical-small">
         <div className="c-playbar__layout">
           <div className="c-playbar__start">
-            <EpisodeButton episode={player.episode} podcastUrl={player.podcastUrl} />
+            <NowPlayingMediaInfo episode={player.episode} podcastMeta={player.podcastMeta} />
           </div>
           <div className="c-playbar__middle">
             <PlaybackBar />
           </div>
           <div className="c-playbar__end">
-            <AudioElement
-              state={player.state}
-              src={episodeUrl}
-            />
           </div>
         </div>
       </div>

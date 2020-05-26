@@ -3,7 +3,7 @@ export default function player(state = {}, action) {
     case "LOAD_PODCAST": {
       return {
         episode: action.data.episode,
-        podcastUrl: action.data.podcastUrl,
+        podcastMeta: action.data.podcastMeta,
         state: "load"
       };
     }
