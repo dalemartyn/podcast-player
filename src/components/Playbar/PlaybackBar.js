@@ -18,6 +18,7 @@ export default function PlaybackBar() {
           onChange={evt => console.log(evt)}
           min={0}
           max={player.duration || 1000}
+          value={player.currentTime}
           step={5}
         />
       </div>

@@ -1,13 +1,13 @@
 export default function player(state = {}, action) {
   switch (action.type) {
-    case "LOAD_PODCAST": {
+    case "PLAYER_LOAD_EPISODE": {
       return {
         episode: action.data.episode,
         podcastMeta: action.data.podcastMeta,
         state: "load"
       };
     }
-    case "CAN_PLAY_PODCAST": {
+    case "PLAYER_CAN_PLAY": {
       let newState;
       if (state.state === "load") {
         newState = "play";
@@ -19,20 +19,20 @@ export default function player(state = {}, action) {
         state: newState
       };
     }
-    case "PLAY_PODCAST": {
+    case "PLAYER_PLAY": {
       return {
         ...state,
         state: "play"
       };
     }
-    case "UPDATE_CURRENT_TIME": {
+    case "PLAYER_UPDATE_CURRENT_TIME": {
       return {
         ...state,
         duration: action.data.duration,
         currentTime: action.data.currentTime
       };
     }
-    case "PAUSE_PODCAST": {
+    case "PLAYER_PAUSE": {
       return {
         ...state,
         state: "pause"

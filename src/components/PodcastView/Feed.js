@@ -16,11 +16,11 @@ export default function Feed({ podcastUrl, podcastMeta }) {
   function playPodcast(episode) {
     if (isInPlayer(episode, player)) {
       dispatch({
-        type: 'PLAY_PODCAST'
+        type: 'PLAYER_PLAY'
       });
     } else {
       dispatch({
-        type: 'LOAD_PODCAST',
+        type: 'PLAYER_LOAD_EPISODE',
         data: {
           episode,
           podcastMeta
@@ -31,7 +31,7 @@ export default function Feed({ podcastUrl, podcastMeta }) {
 
   function pausePodcast() {
     dispatch({
-      type: 'PAUSE_PODCAST'
+      type: 'PLAYER_PAUSE'
     });
   }
 

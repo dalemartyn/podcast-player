@@ -15,7 +15,7 @@ export default function AudioElement({
 
   function updatePlayerCurrentTime({duration, currentTime}) {
     dispatch({
-      type: 'UPDATE_CURRENT_TIME',
+      type: 'PLAYER_UPDATE_CURRENT_TIME',
       data: {
         currentTime,
         duration
@@ -25,7 +25,7 @@ export default function AudioElement({
 
   function canPlayPodcast() {
     dispatch({
-      type: 'CAN_PLAY_PODCAST'
+      type: 'PLAYER_CAN_PLAY'
     });
   }
 
