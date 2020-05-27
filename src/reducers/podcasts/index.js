@@ -48,5 +48,5 @@ export function getPodcastIsFetching(state, url) {
     return null;
   }
 
-  return podcast.errorMessage;
+  return podcast.isFetching;
 }
