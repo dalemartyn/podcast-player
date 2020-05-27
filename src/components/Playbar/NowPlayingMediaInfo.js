@@ -21,6 +21,10 @@ export default function NowPlayingMediaInfo({episode, podcastMeta}) {
     }
   }
 
+  if (!podcastMeta.url) {
+    return null;
+  }
+
   return (
     <Link
       to={{
