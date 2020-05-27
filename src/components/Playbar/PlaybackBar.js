@@ -7,13 +7,11 @@ export default function PlaybackBar() {
   const dispatch = useAppDispatch();
   const [slider, setSlider] = useState({
     active: false,
-    focus: false,
     value: null
   });
 
   function handleInput(e) {
     setSlider({
-      focus: true,
       active: true,
       value: e.detail.value
     });
@@ -29,27 +27,13 @@ export default function PlaybackBar() {
       }
     });
 
-    setSlider((state) => ({
-      focus: state.focus,
+    setSlider({
       active: false,
       value: e.detail.value
-    }));
-
-    // delay changing slider "focus"
-    // (and setting its value using player.currentTime)
-    // so that any animations can run
-    setTimeout(function () {
-      setSlider((state) => ({
-        focus: false,
-        active: state.active,
-        value: state.value
-      }));
-    }, 500);
+    });
   }
 
-  const sliderValue = slider.focus ? slider.value : player.currentTime;
-  const sliderDisabled = !player.duration;
-
+  const disabled = !player.duration;
   const time = slider.active ? slider.value : player.currentTime;
 
   return (
@@ -62,8 +46,8 @@ export default function PlaybackBar() {
           min={0}
           max={player.duration || 3600}
           step={1}
-          value={sliderValue}
-          disabled={sliderDisabled}
+          value={time}
+          disabled={disabled}
         />
       </div>
       <div className="c-playback-bar__progress-time ts-time"><Time seconds={player.duration} /></div>
