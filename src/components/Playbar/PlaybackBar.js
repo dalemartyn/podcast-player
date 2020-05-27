@@ -1,27 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useAppState } from '../../AppStateProvider';
 import ProgressBar from './ProgressBar';
 
 export default function PlaybackBar() {
   const { player } = useAppState();
-  const [time, setTime] = useState(0);
-  const duration = formatTime(player.duration);
+  const [useSliderValue, setUseSliderValue] = useState(false);
+  const [slider, setSlider] = useState({
+    active: false,
+    value: null
+  });
 
-  useEffect(() => {
-    if (!player.isSeeking) {
-      setTime(player.currentTime);
-    } else {
-      setTime(player.seekPosition);
-    }
-  }, [player.currentTime, player.seekPosition, player.isSeeking]);
+  const time = useSliderValue ? slider.value : player.currentTime;
 
   return (
     <div className="c-playback-bar">
       <div className="c-playback-bar__progress-time ts-time">{formatTime(time)}</div>
       <div className="c-playback-bar__progress-bar">
-        <ProgressBar />
+        <ProgressBar
+          slider={slider}
+          setSlider={setSlider}
+          setUseSliderValue={setUseSliderValue}
+        />
       </div>
-      <div className="c-playback-bar__progress-time ts-time">{duration}</div>
+      <div className="c-playback-bar__progress-time ts-time">{formatTime(player.duration)}</div>
     </div>
   );
 }

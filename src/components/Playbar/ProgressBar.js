@@ -1,59 +1,57 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import {
   useAppState,
   useAppDispatch
 } from '../../AppStateProvider';
 import { Slider } from '@rmwc/slider'; // https://rmwc.io/sliders
-import { throttle } from 'lodash-es';
 
-export default function PlaybackBar() {
+export default function PlaybackBar({slider, setSlider, setUseSliderValue}) {
   const { player } = useAppState();
   const dispatch = useAppDispatch();
 
-  const [time, setTime] = useState(0);
+  function handleInput(e) {
+    setUseSliderValue(true);
+    setSlider({
+      active: true,
+      value: e.detail.value
+    });
+  }
 
-  function seekToSliderValue(e) {
+  function handleChange(e) {
     const sliderValue = e.detail.value;
+
     dispatch({
       type: 'PLAYER_SEEK_TO',
       data: {
-        time: sliderValue
+        value: sliderValue
       }
     });
 
-    // delay switching back to a controlled component
+    setUseSliderValue(false);
+
+    setSlider((state) => ({
+      active: state.active,
+      value: e.detail.value
+    }));
+
+    // delay changing slider active
+    // (and using player.currentTime)
     // so that any animations can run
     setTimeout(function() {
-      dispatch({
-        type: 'PLAYER_IS_NOT_SEEKING'
-      });
+      setSlider((state) => ({
+        active: false,
+        value: state.value
+      }));
     }, 500);
   }
 
-  function setSeeking(e) {
-    dispatch({
-      type: 'PLAYER_IS_SEEKING',
-      data: {
-        value: e.detail.value
-      }
-    });
-  }
-
-  const throttledSetSeeking = useRef(throttle(setSeeking, 32));
-  const throttledSeekTo = useRef(throttle(seekToSliderValue, 100));
-
-  useEffect(() => {
-    if (!player.isSeeking) {
-      setTime(player.currentTime);
-    }
-  }, [player.currentTime, player.isSeeking]);
-
+  const time = slider.active ? slider.value : player.currentTime;
   const disabled = !player.duration;
 
   return (
     <Slider
-      onInput={throttledSetSeeking.current}
-      onChange={throttledSeekTo.current}
+      onInput={handleInput}
+      onChange={handleChange}
       min={0}
       max={player.duration || 3600}
       step={1}
