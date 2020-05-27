@@ -5,12 +5,8 @@ import {
 } from 'react-router-dom';
 import PodcastImage from '../PodcastImage';
 
-export default function EpisodeButton({episode, podcastMeta}) {
+export default function NowPlayingMediaInfo({episode, podcastMeta}) {
   const location = useLocation();
-
-  if (!episode) {
-    return null;
-  }
 
   function handleClick(e) {
     const params = new URLSearchParams(location.search);

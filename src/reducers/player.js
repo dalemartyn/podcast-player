@@ -1,4 +1,4 @@
-export default function player(state, action) {
+export default function player(state = {}, action) {
   return {
     episode: episode(state.episode, action),
     podcastMeta: podcastMeta(state.podcastMeta, action),

@@ -18,14 +18,10 @@ export default function AppStateProvider({children}) {
     podcasts: {
       byUrl,
       categories
-    },
-    episodes: {
-      byUrl: {}
-    },
-    player: {}
+    }
   };
 
-  const [state, dispatch] = useReducer(podcastApp, initialState);
+  const [state, dispatch] = useReducer(podcastApp, initialState, podcastApp);
 
   return (
     <AppStateContext.Provider value={state}>

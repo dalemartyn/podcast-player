@@ -4,6 +4,7 @@ import { Slider } from '@rmwc/slider'; // https://rmwc.io/sliders
 
 export default function PlaybackBar() {
   const { player } = useAppState();
+
   const dispatch = useAppDispatch();
   const [slider, setSlider] = useState({
     active: false,
