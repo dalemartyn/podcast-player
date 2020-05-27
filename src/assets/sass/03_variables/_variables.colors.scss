@@ -1,4 +1,5 @@
 @mixin light-color-vars {
+  --color-primary:             #{rgb-material("cyan", "400")};
   --color-background:          #{rgb-triplet("white")};
   // --color-background:          #{rgb-triplet("white", $darken: 2%)};
   --color-background-code:     #{rgb-triplet("white", $darken: 6%)};
@@ -8,7 +9,7 @@
   --color-text-2:              #{rgb-triplet("blue-grey-500")};
   --color-text-3:              #{rgb-triplet("blue-grey-400")};
   --color-text-4:              #{rgb-triplet("blue-grey-300")};
-  --color-text-5:              #{rgb-triplet("blue-grey-100")};
+  --color-text-disabled:              #{rgb-triplet("blue-grey-100")};
   --color-quote-border:        #{rgb-triplet("blue-grey-400")};
   --color-border:              #{rgb-triplet("blue-grey-50")};
   --color-selection:           #{rgb-material("cyan", "400")};
@@ -41,6 +42,7 @@
 }
 
 @mixin dark-color-vars {
+  --color-primary:             #{rgb-material("cyan", "300")};
   --color-background:          #{rgb-triplet("blue-grey-950")};
   --color-background-code:     #{rgb-triplet("blue-grey-900")};
   --color-surface:             #{rgb-triplet("blue-grey-900")};
@@ -49,7 +51,7 @@
   --color-text-2:              #{rgb-triplet("blue-grey-200")};
   --color-text-3:              #{rgb-triplet("blue-grey-300")};
   --color-text-4:              #{rgb-triplet("blue-grey-400")};
-  --color-text-5:              #{rgb-triplet("blue-grey-800")};
+  --color-text-disabled:              #{rgb-triplet("blue-grey-800")};
   --color-quote-border:        #{rgb-triplet("blue-grey-300")};
   --color-border:              #{rgb-triplet("blue-grey-850")};
   --color-selection:           #{rgb-material("cyan", "300")};

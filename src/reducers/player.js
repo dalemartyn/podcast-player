@@ -9,12 +9,10 @@ export default function player(state = {}, action) {
   }
 }
 
-function playerState(state = '', action) {
+function playerState(state = "disabled", action) {
   switch (action.type) {
     case "PLAYER_LOAD_EPISODE":
       return "load";
-    case "PLAYER_CAN_PLAY":
-      return (state === "load" ? "play" : state);
     case "PLAYER_PLAY":
       return "play";
     case "PLAYER_PAUSE":
@@ -67,7 +65,6 @@ function duration(state = 0, action) {
 function currentTime(state = 0, action) {
   switch (action.type) {
     case "PLAYER_UPDATE_CURRENT_TIME":
-    case "PLAYER_SEEK_TO":
       return action.data.value
     case "PLAYER_LOAD_EPISODE":
       return 0;
@@ -86,4 +83,8 @@ export function getEpisodeUrl(player) {
   }
 
   return "";
+}
+
+export function isDisabled(player) {
+  return player.state === 'disabled';
 }

@@ -13,6 +13,14 @@
 
   .c-playback-bar__progress-time {
     text-align: center;
+    @include ms-respond(font-size, .25);
+    color: sem-color(text-2);
+    @include theme-transition(color);
+    line-height: 1;
   }
 
-  .c-playback-bar__progress-bar {}
+  .c-playback-bar__progress-time--disabled {
+    text-align: center;
+    color: sem-color(text-disabled);
+  }
+

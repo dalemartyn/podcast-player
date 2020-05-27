@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function useAudioEventHandler(eventName, handler, audioElement) {
+export default function useEventHandler(eventName, handler, audioElement) {
   useEffect(() => {
     const audio = audioElement.current;
 

@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { useAppState, useAppDispatch } from '../../AppStateProvider';
+import { useAppState } from '../../AppStateProvider';
+import { useAudioElement } from '../../AudioElementProvider';
 import { Slider } from '@rmwc/slider'; // https://rmwc.io/sliders
+import classNames from 'classnames';
+import { isDisabled } from '../../reducers/player';
 
-export default function PlaybackBar() {
+export default React.memo(function PlaybackBar() {
   const { player } = useAppState();
+  const audioElement = useAudioElement();
 
-  const dispatch = useAppDispatch();
   const [slider, setSlider] = useState({
     active: false,
     value: null
@@ -21,25 +24,29 @@ export default function PlaybackBar() {
   function handleChange(e) {
     const sliderValue = e.detail.value;
 
-    dispatch({
-      type: 'PLAYER_SEEK_TO',
-      data: {
-        value: sliderValue
-      }
-    });
+    audioElement.current.currentTime = sliderValue;
 
-    setSlider({
-      active: false,
-      value: e.detail.value
-    });
+    setTimeout(() => {
+      setSlider({
+        active: false,
+        value: e.detail.value
+      });
+    }, 100);
   }
 
-  const disabled = !player.duration;
+  const disabled = isDisabled(player);
   const time = slider.active ? slider.value : player.currentTime;
+
+  const timeClassName = classNames(
+    "c-playback-bar__progress-time",
+    { "c-playback-bar__progress-time--disabled": disabled }
+  );
 
   return (
     <div className="c-playback-bar">
-      <div className="c-playback-bar__progress-time ts-time"><Time seconds={time} /></div>
+      <div className={timeClassName}>
+        <Time seconds={time} />
+      </div>
       <div className="c-playback-bar__progress-bar">
         <Slider
           onInput={handleInput}
@@ -51,10 +58,12 @@ export default function PlaybackBar() {
           disabled={disabled}
         />
       </div>
-      <div className="c-playback-bar__progress-time ts-time"><Time seconds={player.duration} /></div>
+      <div className={timeClassName}>
+        <Time seconds={player.duration} />
+      </div>
     </div>
   );
-}
+});
 
 function Time({seconds}) {
   if (!seconds) return '00:00';

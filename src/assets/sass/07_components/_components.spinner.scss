@@ -21,12 +21,12 @@
 }
 
 .c-spinner__track {
-  stroke: sem-color("text");
-  opacity: 0.2;
+  stroke: sem-color(primary);
+  opacity: 0.4;
 }
 
 .c-spinner__progress {
-  stroke: sem-color("text");
+  stroke: sem-color(primary);
   stroke-dasharray: 80;
   stroke-dashoffset: 60;
 }

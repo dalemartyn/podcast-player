@@ -1,10 +1,7 @@
 import { useEffect } from 'react';
 
-export default function useAudioPlayer(player, audioElement) {
-  const {
-    state,
-    startAt
-  } = player;
+export default function useControls(state, audioElement) {
+
   useEffect(function () {
     const audio = audioElement.current;
 
@@ -15,9 +12,5 @@ export default function useAudioPlayer(player, audioElement) {
     } else if (state === 'stop') {
       audio.stop();
     }
-
-    if (startAt) {
-      audio.currentTime = startAt;
-    }
-  }, [state, startAt, audioElement]);
+  }, [state, audioElement]);
 }

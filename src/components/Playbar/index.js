@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { useAppState } from '../../AppStateProvider';
 import AudioElement from './AudioElement';
 import NowPlayingMediaInfo from './NowPlayingMediaInfo';
-import PlaybackBar from './PlaybackBar';
+import PlayerControls from './PlayerControls';
 import {
   getEpisodeUrl
 } from '../../reducers/player';
@@ -25,7 +25,7 @@ export default function Playbar() {
             <NowPlayingMediaInfo episode={player.episode} podcastMeta={player.podcastMeta} />
           </div>
           <div className="c-playbar__middle">
-            <PlaybackBar />
+            <PlayerControls />
           </div>
           <div className="c-playbar__end">
           </div>

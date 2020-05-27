@@ -1,53 +1,64 @@
-import React, { useRef } from "react";
-import { useAppState, useAppDispatch } from '../../AppStateProvider';
-import { getEpisodeUrl } from '../../reducers/player';
-import useAudioPlayer from './hooks/useAudioPlayer';
+import React from "react";
+import { useAppDispatch } from '../../AppStateProvider';
+import { useAudioElement } from '../../AudioElementProvider';
 import useEventHandler from './hooks/useEventHandler';
-import useListenTracker from './hooks/useListenTracker';
 
 export default function AudioElement() {
-  const { player } = useAppState();
-  const src = getEpisodeUrl(player);
-
-  const audioElement = useRef(null);
+  const audioElement = useAudioElement();
   const dispatch = useAppDispatch();
 
-  function updatePlayerCurrentTime() {
+  function setCurrentTime() {
+    const audio = audioElement.current;
+    const value = parseInt(audio.currentTime, 10);
     dispatch({
       type: 'PLAYER_UPDATE_CURRENT_TIME',
       data: {
-        value: audioElement.current.currentTime,
+        value
       }
     });
   }
 
-  function updatePlayerDuration() {
+  function setDuration() {
+    const audio = audioElement.current;
+    const value = parseInt(audio.duration, 10);
+
     dispatch({
       type: 'PLAYER_UPDATE_DURATION',
       data: {
-        value: audioElement.current.duration,
+        value
       }
     });
   }
 
-  function canPlayPodcast() {
+  function paused() {
     dispatch({
-      type: 'PLAYER_CAN_PLAY'
+      type: 'PLAYER_PAUSE'
     });
   }
 
-  useAudioPlayer(player, audioElement);
-  useEventHandler('canplay', canPlayPodcast, audioElement);
-  useEventHandler('loadedmetadata', updatePlayerCurrentTime, audioElement);
-  useEventHandler('loadedmetadata', updatePlayerDuration, audioElement);
-  useListenTracker(updatePlayerCurrentTime, audioElement);
+  function play() {
+    dispatch({
+      type: 'PLAYER_PLAY'
+    });
+  }
+
+  function timeUpdate() {
+    setTimeout(setCurrentTime, 0);
+  }
+
+  useEventHandler('loadedmetadata', setCurrentTime, audioElement);
+  useEventHandler('loadedmetadata', setDuration, audioElement);
+  useEventHandler('pause', paused, audioElement);
+  useEventHandler('play', play, audioElement);
+  useEventHandler('seek', setCurrentTime, audioElement);
+  useEventHandler('seeking', setCurrentTime, audioElement);
+  useEventHandler('timeupdate', timeUpdate, audioElement);
 
   return (
     <>
       <audio
         controls
         ref={audioElement}
-        src={src}
       />
     </>
   )
