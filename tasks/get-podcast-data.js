@@ -11,7 +11,7 @@ const {
   getPodcastMeta
 } = require('./utils/podcast-data');
 
-module.exports = function getPodcastData(url, numEpisodes) {
+module.exports = function getPodcastData(url, numEpisodes = 1) {
   return new Promise(function(resolve, reject) {
     let podcastMeta = {};
     let episodes = [];

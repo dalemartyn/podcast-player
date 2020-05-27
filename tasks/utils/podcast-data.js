@@ -102,6 +102,16 @@ function getSummary(post) {
   return getRSSSummary(post);
 }
 
+function getItunesImage(post) {
+  const itunesImage = post['itunes:image'];
+
+  if (itunesImage && itunesImage['@'] && itunesImage['@'].href) {
+    return sanitize(itunesImage['@'].href);
+  }
+
+  return sanitize(post.image.url);
+}
+
 function getMedia(post) {
   return post.enclosures[0];
 }
@@ -120,7 +130,7 @@ function getPodcastMeta(post, url) {
   const meta = {
     title: getTitle(post),
     description: he.decode(sanitize(post.description)),
-    originalImage: sanitize(post.image.url),
+    originalImage: getItunesImage(post),
     link: sanitize(post.link),
     date: sanitize(post.date),
     url

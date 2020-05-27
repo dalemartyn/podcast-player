@@ -19,3 +19,12 @@ test('can parse duration', () => {
   expect(parseDuration('48:51')).toBe('48 mins');
   expect(parseDuration('45:00')).toBe('45 mins');
 });
+
+test('can get podcast image', () => {
+  const getPodcastData = require('../get-podcast-data');
+
+  return getPodcastData('https://www.theguardian.com/football/series/forgotten-stories-of-football/podcast.xml')
+    .then((data) => {
+      expect(data.meta.originalImage).toBe('https://uploads.guim.co.uk/2020/05/11/Forgotten_Stories_of_Football_Final_(1).jpg');
+    });
+});
