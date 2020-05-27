@@ -1,6 +1,5 @@
 const darkThemeOS = matchMedia('(prefers-color-scheme: dark)');
 let switched = loadTheme();
-let button;
 
 function toggle() {
   switched = !switched;
@@ -19,7 +18,6 @@ function updateTheme() {
   const isDark = isDarkTheme();
   updateHtmlClass(isDark);
   updateMetaTag(isDark);
-  updateButton(isDark);
 }
 
 function switchTheme() {
@@ -41,12 +39,6 @@ function updateHtmlClass(isDark) {
 function updateMetaTag(isDark) {
   const color = isDark ? '#212c31' : "fff";
   document.getElementById('theme').setAttribute('content', color);
-}
-
-function updateButton(isDark) {
-  if (button) {
-    button.setAttribute('aria-checked', isDark);
-  }
 }
 
 function saveTheme() {
