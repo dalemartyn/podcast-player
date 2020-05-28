@@ -1,2 +1,7 @@
 [build]
   functions = "src/functions"
+
+[[headers]]
+  for = "/img/podcast-images/*"
+  [headers.values]
+    Cache-Control = "max-age=86400"
