@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Spinner from '../Spinner';
 import FeedItem, { isInPlayer } from './FeedItem';
 import {
@@ -30,7 +30,8 @@ export default function Feed({ podcastUrl, podcastMeta }) {
       });
     }
 
-    audio.play();
+    audio.play()
+      .catch(e => console.log('playing failed or was interrupted'));;
   }
 
   function pausePodcast() {

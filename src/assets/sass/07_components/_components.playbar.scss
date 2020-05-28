@@ -15,11 +15,11 @@
   transition:
     transform .3s $decelerate-easing;
 
-  // &.is-offscreen {
-  //   transform: translateY(100%);
-  //   opacity: 0;
-  //   pointer-events: none;
-  // }
+  &.is-offscreen {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
   .c-playbar__audio {

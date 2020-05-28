@@ -57,7 +57,6 @@ export default function AudioElement() {
   return (
     <>
       <audio
-        controls
         ref={audioElement}
       />
     </>

@@ -6,11 +6,13 @@
   display: grid;
   height: 100%;
   grid-gap: sp(small);
-  grid-template-columns: 72px 1fr;
+  grid-template-columns: calc(#{sp()} * 3) 1fr;
   text-decoration: none;
 }
 
-  // .c-now-playing-media-info__artwork {}
+  .c-now-playing-media-info__artwork {
+    align-self: center;
+  }
 
   .c-now-playing-media-info__content {
     display: flex;

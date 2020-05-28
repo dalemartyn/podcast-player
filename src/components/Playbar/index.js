@@ -4,15 +4,16 @@ import { useAppState } from '../../AppStateProvider';
 import AudioElement from './AudioElement';
 import NowPlayingMediaInfo from './NowPlayingMediaInfo';
 import PlayerControls from './PlayerControls';
-import {
-  getEpisodeUrl
-} from '../../reducers/player';
+// import {
+//   getEpisodeUrl
+// } from '../../reducers/player';
 
 export default function Playbar() {
   const { player } = useAppState();
-  const episodeUrl = getEpisodeUrl(player);
 
-  const isOffscreen = ! episodeUrl;
+  // const episodeUrl = getEpisodeUrl(player);
+  // const isOffscreen = ! episodeUrl;
+  const isOffscreen = false;
 
   return (
     <div className={classNames("c-playbar", { "is-offscreen": isOffscreen })}>

@@ -1,5 +1,5 @@
 @mixin light-color-vars {
-  --color-primary:             #{rgb-material("cyan", "400")};
+  --color-primary:             #{rgb-material("cyan", "600")};
   --color-background:          #{rgb-triplet("white")};
   // --color-background:          #{rgb-triplet("white", $darken: 2%)};
   --color-background-code:     #{rgb-triplet("white", $darken: 6%)};
@@ -42,7 +42,7 @@
 }
 
 @mixin dark-color-vars {
-  --color-primary:             #{rgb-material("cyan", "300")};
+  --color-primary:             #{rgb-material("cyan", "400")};
   --color-background:          #{rgb-triplet("blue-grey-950")};
   --color-background-code:     #{rgb-triplet("blue-grey-900")};
   --color-surface:             #{rgb-triplet("blue-grey-900")};

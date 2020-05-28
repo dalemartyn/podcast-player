@@ -3,6 +3,11 @@ import PlaybackBar from './PlaybackBar';
 import { useAppState } from '../../AppStateProvider';
 import { useAudioElement } from '../../AudioElementProvider';
 import { isDisabled } from '../../reducers/player';
+import {
+  SkipBackButton,
+  PlayPauseButton,
+  SkipForwardButton
+} from "./buttons";
 
 export default function PlayerControls() {
   const { player } = useAppState();
@@ -13,7 +18,8 @@ export default function PlayerControls() {
   function handlePlayPause() {
     const audio = audioElement.current;
     if (audio.paused) {
-      audio.play();
+      audio.play()
+        .catch(e => console.log('playing failed or was interrupted'));
     } else {
       audio.pause();
     }
@@ -21,7 +27,7 @@ export default function PlayerControls() {
 
   function handleSkipBack() {
     const audio = audioElement.current;
-    audio.currentTime = audio.currentTime - 15;
+    audio.currentTime = audio.currentTime - 10;
   }
 
   function handleSkipForward() {
@@ -29,29 +35,12 @@ export default function PlayerControls() {
     audio.currentTime = audio.currentTime + 30;
   }
 
-  function getButtonLabel() {
-    switch (player.state) {
-      case "pause":
-        return "play";
-      case "play":
-        return "pause";
-      default:
-        return "-";
-    }
-  }
-
   return (
     <div className="c-player-controls">
       <div>
-        <button onClick={() => { handleSkipBack() } } disabled={disabled}>
-          -15
-        </button>
-        <button onClick={() => { handlePlayPause() } } disabled={disabled}>
-          { getButtonLabel() }
-        </button>
-        <button onClick={() => { handleSkipForward() } } disabled={disabled}>
-          +30
-        </button>
+        <SkipBackButton onClick={handleSkipBack} disabled={disabled} />
+        <PlayPauseButton onClick={handlePlayPause} disabled={disabled} state={player.state} />
+        <SkipForwardButton onClick={handleSkipForward} disabled={disabled} />
       </div>
       <PlaybackBar />
     </div>
