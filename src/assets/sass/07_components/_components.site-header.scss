@@ -18,13 +18,13 @@
   display: grid;
   grid-template-columns: 1fr min-content;
   grid-template-areas:
-    "logo darkmode"
+    "logo toggle"
     "menu menu";
 
   @include mq($from: lg) {
     grid-template-columns: 170px 1fr 170px;
     grid-template-areas:
-      "logo menu darkmode";
+      "logo menu toggle";
   }
 }
 
@@ -38,8 +38,8 @@
     }
   }
 
-  .c-site-header__darkmode {
-    grid-area: darkmode;
+  .c-site-header__theme-toggle {
+    grid-area: toggle;
     width: 2rem;
     width: 100%;
     display: flex;

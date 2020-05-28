@@ -22,7 +22,13 @@ export default function NowPlayingMediaInfo({episode, podcastMeta}) {
   }
 
   if (!podcastMeta.url) {
-    return null;
+    return (
+      <div className="c-now-playing-media-info">
+        <div className="c-now-playing-media-info__artwork">
+          <PodcastImage podcastMeta={podcastMeta} isSmall={true} />
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -32,7 +38,7 @@ export default function NowPlayingMediaInfo({episode, podcastMeta}) {
         search: '?rss=' + encodeURIComponent(podcastMeta.url)
       }}
       onClick={handleClick}
-      className="c-now-playing-media-info"
+      className="c-now-playing-media-info u-padding-small"
     >
       <div className="c-now-playing-media-info__artwork">
         <PodcastImage podcastMeta={podcastMeta} isSmall={true} />

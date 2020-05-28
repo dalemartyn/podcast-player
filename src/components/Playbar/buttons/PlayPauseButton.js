@@ -18,7 +18,7 @@ export default function PlayPauseButton({ state, onClick, disabled}) {
   }
   
   return (
-    <button onClick={onClick} disabled={disabled}>
+    <button onClick={onClick} disabled={disabled} className="c-player-button c-player-button--playpause">
         { getIcon() }
     </button>
   );

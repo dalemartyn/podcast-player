@@ -6,8 +6,34 @@
   display: grid;
   height: 100%;
   grid-gap: sp(small);
-  grid-template-columns: calc(#{sp()} * 3) 1fr;
+  grid-template-columns: calc(#{sp()} * 3.7) 1fr;
   text-decoration: none;
+  padding: calc(#{sp(small)} / 2);
+  margin: calc(#{sp(small)} / 2);
+  transition:
+    background-color $hover-transition,
+    box-shadow $hover-transition;
+  @include theme-transition(background-color box-shadow);
+  border-radius: var(--rounded-radius);
+
+  @media (hover: hover) {
+
+    &:hover {
+      background-color: var(--state-color-hover);
+    }
+  }
+
+  &:active {
+    background-color: var(--state-color-active);
+  }
+
+  @include focus-style {
+    outline: none;
+    box-shadow: 0 0 0 3px sem-color(link) inset;
+    background-color: sem-color(link, .375);
+    border-radius: var(--rounded-radius);
+  }
+
 }
 
   .c-now-playing-media-info__artwork {

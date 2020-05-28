@@ -9,7 +9,8 @@
   --color-text-2:              #{rgb-triplet("blue-grey-500")};
   --color-text-3:              #{rgb-triplet("blue-grey-400")};
   --color-text-4:              #{rgb-triplet("blue-grey-300")};
-  --color-text-disabled:              #{rgb-triplet("blue-grey-100")};
+  --color-text-disabled:       #{rgb-triplet("blue-grey-100")};
+  --color-disabled:            #{rgb-triplet("blue-grey-200")};
   --color-quote-border:        #{rgb-triplet("blue-grey-400")};
   --color-border:              #{rgb-triplet("blue-grey-50")};
   --color-selection:           #{rgb-material("cyan", "400")};
@@ -51,7 +52,8 @@
   --color-text-2:              #{rgb-triplet("blue-grey-200")};
   --color-text-3:              #{rgb-triplet("blue-grey-300")};
   --color-text-4:              #{rgb-triplet("blue-grey-400")};
-  --color-text-disabled:              #{rgb-triplet("blue-grey-800")};
+  --color-text-disabled:       #{rgb-triplet("blue-grey-800")};
+  --color-disabled:            #{rgb-triplet("blue-grey-600")};
   --color-quote-border:        #{rgb-triplet("blue-grey-300")};
   --color-border:              #{rgb-triplet("blue-grey-850")};
   --color-selection:           #{rgb-material("cyan", "300")};

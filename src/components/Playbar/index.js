@@ -4,32 +4,29 @@ import { useAppState } from '../../AppStateProvider';
 import AudioElement from './AudioElement';
 import NowPlayingMediaInfo from './NowPlayingMediaInfo';
 import PlayerControls from './PlayerControls';
-// import {
-//   getEpisodeUrl
-// } from '../../reducers/player';
+import {
+  getEpisodeUrl
+} from '../../reducers/player';
 
 export default function Playbar() {
   const { player } = useAppState();
 
-  // const episodeUrl = getEpisodeUrl(player);
-  // const isOffscreen = ! episodeUrl;
-  const isOffscreen = false;
+  const episodeUrl = getEpisodeUrl(player);
+  const isOffscreen = ! episodeUrl;
 
   return (
     <div className={classNames("c-playbar", { "is-offscreen": isOffscreen })}>
       <div className="c-playbar__audio">
         <AudioElement />
       </div>
-      <div className="u-padding-left u-padding-right u-padding-vertical-small">
-        <div className="c-playbar__layout">
-          <div className="c-playbar__start">
-            <NowPlayingMediaInfo episode={player.episode} podcastMeta={player.podcastMeta} />
-          </div>
-          <div className="c-playbar__middle">
-            <PlayerControls />
-          </div>
-          <div className="c-playbar__end">
-          </div>
+      <div className="c-playbar__layout">
+        <div className="c-playbar__start">
+          <NowPlayingMediaInfo episode={player.episode} podcastMeta={player.podcastMeta} />
+        </div>
+        <div className="c-playbar__middle">
+          <PlayerControls />
+        </div>
+        <div className="c-playbar__end">
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import {
   useResolvedLocation
 } from 'react-router-dom';
 import { useAppState } from '../../AppStateProvider';
-import DarkModeToggle from './DarkModeToggle';
+import ThemeToggle from './ThemeToggle';
 import SiteLogo from '../SiteLogo';
 
 
@@ -24,8 +24,8 @@ export default function SiteHeader() {
             <SiteMenu items={podcasts.categories} />
           </div>
 
-          <div className="c-site-header__darkmode">
-            <DarkModeToggle />
+          <div className="c-site-header__theme-toggle">
+            <ThemeToggle />
           </div>
         </div>
       </div>

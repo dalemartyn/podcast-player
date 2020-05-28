@@ -1,0 +1,54 @@
+/* ==========================================================================
+   #THEME-TOGGLE
+   ========================================================================== */
+
+.c-theme-toggle {
+  @include button-reset;
+  padding: sp(tiny);
+  margin: calc(#{sp(tiny)} * -1);
+  transition:
+    background-color $hover-transition,
+    box-shadow $hover-transition;
+  @include theme-transition(background-color box-shadow);
+  border-radius: 50%;
+  touch-action: manipulation;
+
+  @media (hover: hover) {
+
+    &:hover {
+      background-color: var(--state-color-hover);
+    }
+  }
+
+  &:active {
+    background-color: var(--state-color-active);
+  }
+
+  @include focus-style {
+    outline: none;
+    box-shadow: 0 0 0 3px sem-color(link) inset;
+    background-color: sem-color(link, .375);
+    border-radius: 50%;
+  }
+
+  > svg {
+    fill: sem-color(text);
+    @include theme-transition(fill);
+    display: block;
+    @include ms-respond(height, 1.55);
+    @include ms-respond(width, 1.55);
+    width: auto;
+  }
+}
+
+  :root .c-theme-toggle #dark-theme-transition-path {
+    transform: translateX(50%);
+  }
+
+  :root.t-dark .c-theme-toggle #dark-theme-transition-path {
+    transform: translateX(-50%);
+  }
+
+  :root.is-transitioning .c-theme-toggle #dark-theme-transition-path {
+    transition: transform $theme-transition;
+  }

@@ -5,15 +5,14 @@
 
 .c-playback-bar {
   display: grid;
-  width: 100%;
-  grid-template-columns: 48px 1fr 48px;
+  grid-template-columns: 40px 1fr 40px;
   grid-gap: sp(small);
   align-items: center;
 }
 
   .c-playback-bar__progress-time {
     text-align: center;
-    @include ms-respond(font-size, .25);
+    @include ms-respond(font-size, 0);
     color: sem-color(text-2);
     @include theme-transition(color);
     line-height: 1;

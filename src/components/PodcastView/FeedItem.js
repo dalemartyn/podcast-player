@@ -8,12 +8,12 @@ export default function FeedItem({episode, player, onPlayButtonClick, onPauseBut
   let button;
 
   if (isPlaying(episode, player)) {
-    button = <button className="ts-body-2" onClick={onPauseButtonClick}>
-      <PauseOutline32 aria-label="Pause" className="c-icon c-icon--pause" />
+    button = <button onClick={onPauseButtonClick} className="c-player-button c-player-button--trim">
+      <PauseOutline32 aria-label="Pause" />
     </button>
   } else {
-    button = <button onClick={() => onPlayButtonClick(episode) }>
-      <PlayOutline32 aria-label="Play" className="c-icon c-icon--play" />
+    button = <button onClick={() => onPlayButtonClick(episode) } className="c-player-button c-player-button--trim">
+      <PlayOutline32 aria-label="Play" />
     </button>;
   }
 

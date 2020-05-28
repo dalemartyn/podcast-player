@@ -47,8 +47,8 @@
 
   .c-playbar__layout {
     display: grid;
-    grid-template-columns: 3fr 4fr 3fr;
-    grid-gap: sp(xxxlarge);
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: sp(xxlarge);
   }
 
     .c-playbar__start {

@@ -9,9 +9,7 @@
   @include theme-transition(border-color);
 }
 
-.c-feed-item__button button {
-  @include button-reset;
-}
+// .c-feed-item__button {}
 
 
   .c-feed-item__description {
