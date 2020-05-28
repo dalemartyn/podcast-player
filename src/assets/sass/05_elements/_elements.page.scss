@@ -26,6 +26,8 @@
   color: sem-color(text);
   @include theme-transition(background-color color);
   -webkit-font-smoothing: antialiased;
-  padding-bottom: var(--player-height);
 }
 
+:root.playbar-active {
+  padding-bottom: var(--player-height);
+}

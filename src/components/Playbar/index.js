@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import { useAppState } from '../../AppStateProvider';
 import AudioElement from './AudioElement';
@@ -13,6 +13,10 @@ export default function Playbar() {
 
   const episodeUrl = getEpisodeUrl(player);
   const isOffscreen = ! episodeUrl;
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('playbar-active', !isOffscreen);
+  }, [isOffscreen]);
 
   return (
     <div className={classNames("c-playbar", { "is-offscreen": isOffscreen })}>
