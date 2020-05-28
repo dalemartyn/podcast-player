@@ -38,7 +38,7 @@ export default function NowPlayingMediaInfo({episode, podcastMeta}) {
         search: '?rss=' + encodeURIComponent(podcastMeta.url)
       }}
       onClick={handleClick}
-      className="c-now-playing-media-info u-padding-small"
+      className="c-now-playing-media-info"
     >
       <div className="c-now-playing-media-info__artwork">
         <PodcastImage podcastMeta={podcastMeta} isSmall={true} />

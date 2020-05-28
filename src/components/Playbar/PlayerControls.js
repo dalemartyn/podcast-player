@@ -37,12 +37,12 @@ export default function PlayerControls() {
 
   return (
     <div className="c-player-controls u-padding-left u-padding-right">
-      <div className="c-player-controls__buttons u-padding-vertical-micro">
+      <div className="c-player-controls__buttons u-padding-top-xmicro">
         <SkipBackButton onClick={handleSkipBack} disabled={disabled} />
         <PlayPauseButton onClick={handlePlayPause} disabled={disabled} state={player.state} />
         <SkipForwardButton onClick={handleSkipForward} disabled={disabled} />
       </div>
-      <div className="c-player-controls__progress-bar u-padding-bottom-micro">
+      <div className="c-player-controls__progress-bar u-padding-bottom-xmicro">
         <PlaybackBar />
       </div>
     </div>
