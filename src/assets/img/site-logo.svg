@@ -1,11 +1,11 @@
 <svg width="138" height="138" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="69" cy="69" r="64" fill="#26C6DA"/>
-<rect x="59" y="25" width="8" height="72" rx="4" fill="black"/>
-<rect x="71" y="41" width="8" height="72" rx="4" fill="black"/>
-<rect x="47" y="41" width="8" height="46" rx="4" fill="black"/>
-<rect x="83" y="51" width="8" height="46" rx="4" fill="black"/>
-<rect x="35" y="61" width="8" height="16" rx="4" fill="black"/>
-<rect x="23" y="65" width="8" height="8" rx="4" fill="black"/>
-<rect x="95" y="61" width="8" height="16" rx="4" fill="black"/>
-<rect x="107" y="65" width="8" height="8" rx="4" fill="black"/>
+<rect x="59" y="25" width="8" height="74" rx="4" fill="#192124"/>
+<rect x="71" y="39" width="8" height="74" rx="4" fill="#192124"/>
+<rect x="47" y="41" width="8" height="46" rx="4" fill="#192124"/>
+<rect x="83" y="51" width="8" height="46" rx="4" fill="#192124"/>
+<rect x="35" y="56" width="8" height="18" rx="4" fill="#192124"/>
+<rect x="23" y="61" width="8" height="8" rx="4" fill="#192124"/>
+<rect x="95" y="64" width="8" height="18" rx="4" fill="#192124"/>
+<rect x="107" y="69" width="8" height="8" rx="4" fill="#192124"/>
 </svg>
