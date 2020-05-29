@@ -3,7 +3,6 @@ export default function player(state = {}, action) {
     episode: episode(state.episode, action),
     podcastMeta: podcastMeta(state.podcastMeta, action),
     state: playerState(state.state, action),
-    startAt: startAt(state.startAt, action),
     duration: duration(state.duration, action),
     currentTime: currentTime(state.currentTime, action)
   }
@@ -35,17 +34,6 @@ function podcastMeta(state = {}, action) {
   switch (action.type) {
     case "PLAYER_LOAD_EPISODE":
       return action.data.podcastMeta;
-    default:
-      return state;
-  }
-}
-
-function startAt(state = 0, action) {
-  switch (action.type) {
-    case "PLAYER_LOAD_EPISODE":
-      return 0;
-    case "PLAYER_SEEK_TO":
-      return action.data.value
     default:
       return state;
   }
