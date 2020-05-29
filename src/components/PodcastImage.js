@@ -2,21 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 
 export default function PodcastImage({podcastMeta, isSmall=false}) {
-  const {
-    image,
-    originalImage,
-    title
-  } = podcastMeta;
+  const { title } = podcastMeta;
 
-  let src;
-
-  if (image) {
-    src = image;
-  } else if (originalImage) {
-    src = originalImage;
-  } else {
-    src = '/img/placeholder.svg';
-  }
+  const src = getImageSrc(podcastMeta);
 
   const className = classNames(
     'c-podcast-image',
@@ -32,4 +20,14 @@ export default function PodcastImage({podcastMeta, isSmall=false}) {
       <img src={ src } alt={ title } className="o-ratio__content" />
     </div>
   );
+}
+
+export function getImageSrc({image, originalImage}) {
+  if (image) {
+    return image;
+  } else if (originalImage) {
+    return originalImage;
+  } else {
+    return '/img/placeholder.svg';
+  }
 }

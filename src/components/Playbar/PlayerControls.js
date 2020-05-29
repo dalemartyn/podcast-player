@@ -4,9 +4,9 @@ import { useAppState } from '../../AppStateProvider';
 import { useAudioElement } from '../../AudioElementProvider';
 import { isDisabled } from '../../reducers/player';
 import {
-  SkipBackButton,
+  SeekBackwardButton,
   PlayPauseButton,
-  SkipForwardButton
+  SeekForwardButton
 } from "./buttons";
 
 export default function PlayerControls() {
@@ -25,12 +25,12 @@ export default function PlayerControls() {
     }
   }
 
-  function handleSkipBack() {
+  function handleSeekBackward() {
     const audio = audioElement.current;
     audio.currentTime = audio.currentTime - 10;
   }
 
-  function handleSkipForward() {
+  function handleSeekForward() {
     const audio = audioElement.current;
     audio.currentTime = audio.currentTime + 30;
   }
@@ -38,9 +38,9 @@ export default function PlayerControls() {
   return (
     <div className="c-player-controls u-padding-left u-padding-right">
       <div className="c-player-controls__buttons u-padding-top-xmicro">
-        <SkipBackButton onClick={handleSkipBack} disabled={disabled} />
+        <SeekBackwardButton onClick={handleSeekBackward} disabled={disabled} />
         <PlayPauseButton onClick={handlePlayPause} disabled={disabled} state={player.state} />
-        <SkipForwardButton onClick={handleSkipForward} disabled={disabled} />
+        <SeekForwardButton onClick={handleSeekForward} disabled={disabled} />
       </div>
       <div className="c-player-controls__progress-bar u-padding-bottom-xmicro">
         <PlaybackBar />

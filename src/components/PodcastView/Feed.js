@@ -7,6 +7,7 @@ import {
 } from '../../AppStateProvider';
 import { useAudioElement } from '../../AudioElementProvider';
 import { getPodcast } from '../../reducers/podcasts';
+import { getImageSrc } from '../PodcastImage';
 
 export default function Feed({ podcastUrl, podcastMeta }) {
   const { podcasts, player } = useAppState();
@@ -27,6 +28,17 @@ export default function Feed({ podcastUrl, podcastMeta }) {
           episode,
           podcastMeta
         }
+      });
+    }
+
+    if ('mediaSession' in navigator) {
+      console.log('setting data');
+      navigator.mediaSession.metadata = new window.MediaMetadata({
+        title: episode.title,
+        artist: podcastMeta.title,
+        artwork: [
+          { src: getImageSrc(podcastMeta), sizes: '480x480', type: 'image/png' }
+        ]
       });
     }
 

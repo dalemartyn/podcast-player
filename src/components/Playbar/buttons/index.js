@@ -1,9 +1,9 @@
 import PlayPauseButton from "./PlayPauseButton";
-import SkipForwardButton from "./SkipForwardButton";
-import SkipBackButton from "./SkipBackButton";
+import SeekForwardButton from "./SeekForwardButton";
+import SeekBackwardButton from "./SeekBackwardButton";
 
 export {
   PlayPauseButton,
-  SkipForwardButton,
-  SkipBackButton
+  SeekForwardButton,
+  SeekBackwardButton
 };
