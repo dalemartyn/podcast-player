@@ -40,6 +40,17 @@ export default function Feed({ podcastUrl, podcastMeta }) {
           { src: getImageSrc(podcastMeta), sizes: '480x480', type: 'image/png' }
         ]
       });
+
+      navigator.mediaSession.setActionHandler('seekbackward', () => {
+        const audio = audioElement.current;
+        audio.currentTime = audio.currentTime - 10;
+      });
+
+      navigator.mediaSession.setActionHandler('seekforward', () => {
+        const audio = audioElement.current;
+        audio.currentTime = audio.currentTime + 30;
+      });
+
     }
 
     audio.play()
