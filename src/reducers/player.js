@@ -76,3 +76,28 @@ export function getEpisodeUrl(player) {
 export function isDisabled(player) {
   return player.state === 'disabled';
 }
+
+export function isInPlayer(state, episode) {
+  let episodeUrl;
+
+  if (typeof episode.media !== "undefined") {
+    episodeUrl = episode.media.url;
+  } else {
+    console.log("Redacted podcast episode.", episode);
+    return false;
+  }
+
+  if (
+    state.episode && state.episode.media &&
+    (state.episode.media.url === episodeUrl)
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
+export function isPlaying(state, episode) {
+  return isInPlayer(state, episode) &&
+    (state.state === "play" || state.state === "load");
+}

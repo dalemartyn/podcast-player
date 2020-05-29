@@ -9,6 +9,10 @@
   @include theme-transition(border-color);
 }
 
+.c-feed-item--active {
+  background-color: var(--state-color-active);
+}
+
 // .c-feed-item__button {}
 
 

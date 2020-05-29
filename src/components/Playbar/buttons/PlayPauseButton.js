@@ -1,7 +1,7 @@
 import React from "react";
 import {
-  PlayIcon,
-  PauseIcon
+  Play,
+  Pause
 } from './icons';
 
 
@@ -10,10 +10,10 @@ export default function PlayPauseButton({ state, onClick, disabled}) {
   function getIcon() {
     switch (state) {
       case "play":
-        return <PauseIcon />;
+        return <Pause />;
       case "pause":
       default:
-        return <PlayIcon />;
+        return <Play />;
     }
   }
   

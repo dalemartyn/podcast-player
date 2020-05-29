@@ -50,6 +50,7 @@ module.exports = function getPodcastData(url, numEpisodes = 1) {
           const summary = getSummary(post);
           const duration = getDuration(post);
           const date = getDate(post.date);
+          const timestamp = post.date.valueOf();
           const guid = post.guid;
 
           const episode = {
@@ -60,7 +61,8 @@ module.exports = function getPodcastData(url, numEpisodes = 1) {
             subtitle,
             summary,
             content,
-            duration
+            duration,
+            timestamp
           }
 
           if (episodes.length === 0) {
@@ -78,9 +80,11 @@ module.exports = function getPodcastData(url, numEpisodes = 1) {
     }).catch(reject);
 
     function resolveWithData() {
+      episodes.sort((a, b) => b.timestamp - a.timestamp);
+      const items = episodes.map(({timestamp, ...attrs}) => attrs);
       resolve({
         meta: podcastMeta,
-        items: episodes
+        items
       })
     }
 

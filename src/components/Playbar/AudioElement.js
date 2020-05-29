@@ -50,6 +50,7 @@ export default function AudioElement() {
   useEventHandler('loadedmetadata', setDuration, audioElement);
   useEventHandler('pause', paused, audioElement);
   useEventHandler('play', play, audioElement);
+  useEventHandler('playing', play, audioElement);
   useEventHandler('seek', setCurrentTime, audioElement);
   useEventHandler('seeking', setCurrentTime, audioElement);
   useEventHandler('timeupdate', timeUpdate, audioElement);

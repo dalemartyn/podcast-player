@@ -4,14 +4,18 @@ import { useAppState } from '../../AppStateProvider';
 import { useAudioElement } from '../../AudioElementProvider';
 import { isDisabled } from '../../reducers/player';
 import {
-  SeekBackwardButton,
   PlayPauseButton,
-  SeekForwardButton
+  PlayerButton
 } from "./buttons";
+import * as Icon from './buttons/icons';
+import useSkipControls from '../../hooks/useSkipControls';
+import useMediaSession from '../../hooks/useMediaSession';
 
 export default function PlayerControls() {
   const { player } = useAppState();
   const audioElement = useAudioElement();
+  const { skipPrevious, skipNext } = useSkipControls();
+  useMediaSession();
 
   const disabled = isDisabled(player);
 
@@ -35,12 +39,35 @@ export default function PlayerControls() {
     audio.currentTime = audio.currentTime + 30;
   }
 
+  function handleSkipPrevious() {
+    skipPrevious();
+  }
+
+  function handleSkipNext() {
+    skipNext();
+  }
+
   return (
     <div className="c-player-controls u-padding-left u-padding-right">
       <div className="c-player-controls__buttons u-padding-top-xmicro">
-        <SeekBackwardButton onClick={handleSeekBackward} disabled={disabled} />
+
+        <PlayerButton onClick={handleSkipPrevious} disabled={disabled}>
+          <Icon.SkipPrevious />
+        </PlayerButton>
+
+        <PlayerButton onClick={handleSeekBackward} disabled={disabled}>
+          <Icon.SeekBackward />
+        </PlayerButton>
+
         <PlayPauseButton onClick={handlePlayPause} disabled={disabled} state={player.state} />
-        <SeekForwardButton onClick={handleSeekForward} disabled={disabled} />
+
+        <PlayerButton onClick={handleSeekForward} disabled={disabled}>
+          <Icon.SeekForward />
+        </PlayerButton>
+
+        <PlayerButton onClick={handleSkipNext} disabled={disabled}>
+          <Icon.SkipNext />
+        </PlayerButton>
       </div>
       <div className="c-player-controls__progress-bar u-padding-bottom-xmicro">
         <PlaybackBar />

@@ -132,7 +132,7 @@ function getPodcastMeta(post, url) {
     description: he.decode(sanitize(post.description)),
     originalImage: getItunesImage(post),
     link: sanitize(post.link),
-    date: sanitize(post.date),
+    date: getDate(post.date),
     url
   };
 

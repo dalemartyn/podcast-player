@@ -3,22 +3,25 @@ import {
   PauseOutline32,
   PlayOutline32
 } from '@carbon/icons-react';
+import { isInPlayer, isPlaying } from '../../reducers/player';
+import classNames from 'classnames';
 
 export default function FeedItem({episode, player, onPlayButtonClick, onPauseButtonClick}) {
   let button;
+  const active = isInPlayer(player, episode);
 
-  if (isPlaying(episode, player)) {
-    button = <button onClick={onPauseButtonClick} className="c-player-button c-player-button--trim">
+  if (isPlaying(player, episode)) {
+    button = <button onClick={onPauseButtonClick} className="c-player-button c-player-button--flush-vertical">
       <PauseOutline32 aria-label="Pause" />
     </button>
   } else {
-    button = <button onClick={() => onPlayButtonClick(episode) } className="c-player-button c-player-button--trim">
+    button = <button onClick={() => onPlayButtonClick(episode) } className="c-player-button c-player-button--flush-vertical">
       <PlayOutline32 aria-label="Play" />
     </button>;
   }
 
   return (
-    <div className="c-feed-item u-padding-top u-padding-bottom-large">
+    <div className={classNames("c-feed-item", { "c-feed-item--active": active }, "u-padding-top", "u-padding-bottom-large")}>
       <div className="c-feed-item__button u-margin-right">
         {button}
       </div>
@@ -37,29 +40,4 @@ export default function FeedItem({episode, player, onPlayButtonClick, onPauseBut
       </div>
     </div>
   );
-}
-
-export function isInPlayer(episode, player) {
-  let episodeUrl;
-
-  if (typeof episode.media !== "undefined") {
-    episodeUrl = episode.media.url;
-  } else {
-    console.log("Redacted podcast episode.", episode);
-    return false;
-  }
-
-  if (
-    player.episode && player.episode.media &&
-    (player.episode.media.url === episodeUrl)
-  ) {
-    return true;
-  }
-
-  return false;
-}
-
-export function isPlaying(episode, player) {
-  return isInPlayer(episode, player) &&
-    (player.state === "play" || player.state === "load");
 }

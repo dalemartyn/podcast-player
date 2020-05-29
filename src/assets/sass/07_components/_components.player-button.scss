@@ -48,6 +48,11 @@
   }
 }
 
-  .c-player-button--trim {
+  .c-player-button--flush {
     margin: calc(#{sp(tiny)} * -1);
+  }
+
+  .c-player-button--flush-vertical {
+    margin-top: calc(#{sp(tiny)} * -1);
+    margin-bottom: calc(#{sp(tiny)} * -1);
   }
