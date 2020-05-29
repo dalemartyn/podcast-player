@@ -3,7 +3,8 @@ import { useAppState } from '../AppStateProvider';
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  useLocation
 } from 'react-router-dom';
 import Playbar from './Playbar';
 import SiteHeader from './SiteHeader';
@@ -13,12 +14,27 @@ import GridView from './GridView';
 import NotFound from './NotFound';
 import MainLayout from './MainLayout';
 
-function scrollToTop() {
-  window.scrollTo(0, 0);
+export default function PodcastAppRouter() {
+  return (
+    <BrowserRouter>
+      <SiteHeader />
+      <MainLayout>
+        <PodcastAppRoutes />
+      </MainLayout>
+      <Playbar />
+    </BrowserRouter>
+  );
 }
 
-export default function PodcastAppRouter() {
+function PodcastAppRoutes() {
   const state = useAppState();
+  const location = useLocation();
+
+  const scrollToTop = () => {
+    if (!(location.state && location.state.blockScrollToTop)) {
+      window.scrollTo(0, 0);
+    }
+  }
 
   const categoryRoutes = state.podcasts.categories.map(category => {
     return (
@@ -32,25 +48,19 @@ export default function PodcastAppRouter() {
   });
 
   return (
-    <BrowserRouter>
-      <SiteHeader />
-      <MainLayout>
-        <Routes>
-          <Route
-            path="/"
-            element={<HomeView />}
-            preload={scrollToTop}
-          />
-          <Route
-            path="/podcast"
-            element={<PodcastView />}
-            preload={scrollToTop}
-          />
-          {categoryRoutes}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </MainLayout>
-      <Playbar />
-    </BrowserRouter>
-  );
+    <Routes>
+      <Route
+        path="/"
+        element={<HomeView />}
+        preload={scrollToTop}
+      />
+      <Route
+        path="/podcast"
+        element={<PodcastView />}
+        preload={scrollToTop}
+      />
+      {categoryRoutes}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  )
 }

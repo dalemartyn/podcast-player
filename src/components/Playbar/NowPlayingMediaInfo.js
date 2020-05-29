@@ -1,23 +1,37 @@
 import React from 'react';
 import {
   Link,
-  useLocation
+  useLocation,
+  useNavigate
 } from 'react-router-dom';
 import PodcastImage from '../PodcastImage';
 
 export default function NowPlayingMediaInfo({episode, podcastMeta}) {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const to = {
+    pathname: '/podcast',
+    search: '?rss=' + encodeURIComponent(podcastMeta.url)
+  };
 
   function handleClick(e) {
+    e.preventDefault();
     const params = new URLSearchParams(location.search);
     const currentPodcastView = params.get('rss');
 
     if (podcastMeta.url === currentPodcastView) {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      navigate(to, {
+        replace: true,
+        state: {
+          scrollToNowPlaying: true,
+          blockScrollToTop: true
+        }
+      })
+    } else {
+      navigate(to, {
+        state: { scrollToNowPlaying: true }
+      })
     }
   }
 
@@ -33,10 +47,7 @@ export default function NowPlayingMediaInfo({episode, podcastMeta}) {
 
   return (
     <Link
-      to={{
-        pathname: '/podcast',
-        search: '?rss=' + encodeURIComponent(podcastMeta.url)
-      }}
+      to={to}
       onClick={handleClick}
       className="c-now-playing-media-info"
     >

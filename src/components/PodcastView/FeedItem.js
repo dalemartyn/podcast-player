@@ -6,7 +6,7 @@ import {
 import { isInPlayer, isPlaying } from '../../reducers/player';
 import classNames from 'classnames';
 
-export default function FeedItem({episode, player, onPlayButtonClick, onPauseButtonClick}) {
+export default function FeedItem({episode, player, onPlayButtonClick, onPauseButtonClick, activeFeedItemRef}) {
   let button;
   const active = isInPlayer(player, episode);
 
@@ -21,8 +21,8 @@ export default function FeedItem({episode, player, onPlayButtonClick, onPauseBut
   }
 
   return (
-    <div className={classNames("c-feed-item", { "c-feed-item--active": active }, "u-padding-top", "u-padding-bottom-large")}>
-      <div className="c-feed-item__button u-margin-right">
+    <div className={classNames("c-feed-item", { "c-feed-item--active": active }, "u-padding-top", "u-padding-bottom-large")} ref={activeFeedItemRef}>
+      <div className="c-feed-item__button u-margin-right-small">
         {button}
       </div>
       <div className="c-feed-item__content">
