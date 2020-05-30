@@ -3,30 +3,46 @@ import { getPodcastEpisodes } from '../reducers/podcasts';
 import { findIndex } from 'lodash-es';
 import useLoadEpisode from './useLoadEpisode';
 
-export default function usePlayer() {
+export default function useControls() {
   const { player, podcasts } = useAppState();
   const loadEpisode = useLoadEpisode();
 
-  function skipPrevious() {
+  function getEpisode(offset) {
     const episodes = getPodcastEpisodes(podcasts, player.podcastMeta.url);
+    if (!episodes) return null;
     const currentEpisodeIndex = findIndex(episodes, {
       guid: player.episode.guid
     });
-    const previousEpisode = episodes[currentEpisodeIndex - 1];
-    loadEpisode(previousEpisode, player.podcastMeta);
+    return episodes[currentEpisodeIndex + offset] || null;
+  }
+
+  function skip(offset) {
+    const episode = getEpisode(offset);
+    if (episode) {
+      loadEpisode(episode, player.podcastMeta);
+    }
+  }
+
+  function skipPrevious() {
+    skip(+1);
   }
 
   function skipNext() {
-    const episodes = getPodcastEpisodes(podcasts, player.podcastMeta.url);
-    const currentEpisodeIndex = findIndex(episodes, {
-      guid: player.episode.guid
-    });
-    const nextEpisode = episodes[currentEpisodeIndex + 1];
-    loadEpisode(nextEpisode, player.podcastMeta);
+    skip(-1);
+  }
+
+  function getPrevious() {
+    return getEpisode(+1);
+  }
+
+  function getNext() {
+    return getEpisode(-1);
   }
 
   return {
     skipPrevious,
-    skipNext
+    skipNext,
+    getPrevious,
+    getNext
   };
 }

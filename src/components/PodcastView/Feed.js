@@ -13,25 +13,9 @@ import { useLocation } from 'react-router-dom';
 export default function Feed({ podcastUrl, podcastMeta }) {
   const { podcasts, player } = useAppState();
   const audioElement = useAudioElement();
-  const location = useLocation();
   const activeFeedItem = useRef();
 
-  useEffect(function scrollToNowPlaying() {
-    let t;
-    const scroll = (location.state && location.state.scrollToNowPlaying);
-
-    if (scroll && activeFeedItem.current) {
-      t = setTimeout(() => {
-        window.scrollTo({
-          top: activeFeedItem.current.offsetTop - 70,
-          behavior: 'smooth'
-        });
-      }, 750);
-      return () => {
-        clearTimeout(t);
-      };
-    }
-  }, [location]);
+  useScrollToActiveFeedItem(activeFeedItem);
 
   const load = useLoadEpisode();
   
@@ -73,3 +57,33 @@ export default function Feed({ podcastUrl, podcastMeta }) {
     return <Spinner /> ;
   }
 };
+
+function useScrollToActiveFeedItem(activeFeedItem) {
+  const location = useLocation();
+
+  useEffect(function() {
+    const scroll = (location.state && location.state.scrollToNowPlaying);
+
+    if (scroll && activeFeedItem.current) {
+      let t;
+      const scrollingFromTop = !location.state.blockScrollToTop;
+
+      function scrollToActiveItem() {
+        window.scrollTo({
+          top: activeFeedItem.current.offsetTop - 70,
+          behavior: 'smooth'
+        });
+      }
+
+      if (scrollingFromTop) {
+        t = setTimeout(scrollToActiveItem, 750);
+        return () => {
+          clearTimeout(t);
+        };
+      }
+
+      scrollToActiveItem();
+    }
+  }, [location, activeFeedItem]);
+
+}

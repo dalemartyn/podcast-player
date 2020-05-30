@@ -1,7 +1,7 @@
 import { useAppDispatch } from '../AppStateProvider';
 import { useAudioElement } from '../AudioElementProvider';
 
-export default function usePlayer() {
+export default function useLoadEpisode() {
   const dispatch = useAppDispatch();
   const audioElement = useAudioElement();
 

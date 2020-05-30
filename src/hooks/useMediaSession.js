@@ -6,7 +6,7 @@ import { getImageSrc } from '../components/PodcastImage';
 
 export default function useMediaSession() {
   const audioElement = useAudioElement();
-  const { skipPrevious, skipNext } = useSkipControls();
+  const controls = useSkipControls();
   const { player } = useAppState();
   const {
     episode,
@@ -14,6 +14,14 @@ export default function useMediaSession() {
   } = player;
 
   useEffect(function() {
+    const {
+      skipPrevious,
+      skipNext,
+      getPrevious,
+      getNext
+    } = controls;
+    const previous = getPrevious();
+    const next = getNext();
 
     if ( 'mediaSession' in navigator) {
       navigator.mediaSession.metadata = new window.MediaMetadata({
@@ -34,9 +42,9 @@ export default function useMediaSession() {
         audio.currentTime = audio.currentTime + 30;
       });
 
-      navigator.mediaSession.setActionHandler('previoustrack', skipPrevious);
-      navigator.mediaSession.setActionHandler('nexttrack', skipNext);
+      navigator.mediaSession.setActionHandler('previoustrack', previous && skipPrevious);
+      navigator.mediaSession.setActionHandler('nexttrack', next && skipNext);
     }
-  }, [episode, podcastMeta, audioElement, skipNext, skipPrevious]);
+  }, [episode, podcastMeta, audioElement, controls]);
 
 }

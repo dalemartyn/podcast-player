@@ -3,8 +3,7 @@ export default function player(state = {}, action) {
     episode: episode(state.episode, action),
     podcastMeta: podcastMeta(state.podcastMeta, action),
     state: playerState(state.state, action),
-    duration: duration(state.duration, action),
-    currentTime: currentTime(state.currentTime, action)
+    duration: duration(state.duration, action)
   }
 }
 
@@ -42,17 +41,6 @@ function podcastMeta(state = {}, action) {
 function duration(state = 0, action) {
   switch (action.type) {
     case "PLAYER_UPDATE_DURATION":
-      return action.data.value
-    case "PLAYER_LOAD_EPISODE":
-      return 0;
-    default:
-      return state;
-  }
-}
-
-function currentTime(state = 0, action) {
-  switch (action.type) {
-    case "PLAYER_UPDATE_CURRENT_TIME":
       return action.data.value
     case "PLAYER_LOAD_EPISODE":
       return 0;

@@ -5,7 +5,7 @@ import { Slider } from '@rmwc/slider'; // https://rmwc.io/sliders
 import classNames from 'classnames';
 import { isDisabled } from '../../reducers/player';
 
-export default function PlaybackBar() {
+export default function PlaybackBar({currentTime}) {
   const { player } = useAppState();
   const audioElement = useAudioElement();
 
@@ -35,7 +35,7 @@ export default function PlaybackBar() {
   }
 
   const disabled = isDisabled(player);
-  const time = slider.active ? slider.value : player.currentTime;
+  const time = slider.active ? slider.value : currentTime;
 
   const timeClassName = classNames(
     "c-playback-bar__progress-time",

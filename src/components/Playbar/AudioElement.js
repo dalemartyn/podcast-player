@@ -3,19 +3,14 @@ import { useAppDispatch } from '../../AppStateProvider';
 import { useAudioElement } from '../../AudioElementProvider';
 import useEventHandler from './hooks/useEventHandler';
 
-export default function AudioElement({controls}) {
+export default function AudioElement({controls, setCurrentTime}) {
   const audioElement = useAudioElement();
   const dispatch = useAppDispatch();
 
-  function setCurrentTime() {
+  function updateCurrentTime() {
     const audio = audioElement.current;
     const value = parseInt(audio.currentTime, 10);
-    dispatch({
-      type: 'PLAYER_UPDATE_CURRENT_TIME',
-      data: {
-        value
-      }
-    });
+    setCurrentTime(value);
   }
 
   function setDuration() {
@@ -43,16 +38,16 @@ export default function AudioElement({controls}) {
   }
 
   function timeUpdate() {
-    setTimeout(setCurrentTime, 0);
+    setTimeout(updateCurrentTime, 0);
   }
 
-  useEventHandler('loadedmetadata', setCurrentTime, audioElement);
+  useEventHandler('loadedmetadata', updateCurrentTime, audioElement);
   useEventHandler('loadedmetadata', setDuration, audioElement);
   useEventHandler('pause', paused, audioElement);
   useEventHandler('play', play, audioElement);
   useEventHandler('playing', play, audioElement);
-  useEventHandler('seek', setCurrentTime, audioElement);
-  useEventHandler('seeking', setCurrentTime, audioElement);
+  useEventHandler('seek', updateCurrentTime, audioElement);
+  useEventHandler('seeking', updateCurrentTime, audioElement);
   useEventHandler('timeupdate', timeUpdate, audioElement);
 
   return (

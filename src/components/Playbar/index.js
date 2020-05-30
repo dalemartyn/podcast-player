@@ -12,6 +12,7 @@ import {
 export default function Playbar() {
   const { player } = useAppState();
   const [showAudioControls, setShowAudioControls] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
 
   const episodeUrl = getEpisodeUrl(player);
   const isOffscreen = ! episodeUrl;
@@ -23,14 +24,14 @@ export default function Playbar() {
   return (
     <div className={classNames("c-playbar", { "is-offscreen": isOffscreen })}>
       <div className="c-playbar__audio">
-        <AudioElement controls={showAudioControls} />
+        <AudioElement controls={showAudioControls} setCurrentTime={setCurrentTime} />
       </div>
       <div className="c-playbar__layout">
         <div className="c-playbar__start">
           <NowPlayingMediaInfo episode={player.episode} podcastMeta={player.podcastMeta} />
         </div>
         <div className="c-playbar__middle">
-          <PlayerControls setShowAudioControls={setShowAudioControls} />
+          <PlayerControls currentTime={currentTime} setShowAudioControls={setShowAudioControls} />
         </div>
         <div className="c-playbar__end">
           <VolumeControls />

@@ -11,10 +11,15 @@ import * as Icon from './buttons/icons';
 import useSkipControls from '../../hooks/useSkipControls';
 import useMediaSession from '../../hooks/useMediaSession';
 
-export default function PlayerControls({setShowAudioControls}) {
+export default function PlayerControls({currentTime, setShowAudioControls}) {
   const { player } = useAppState();
   const audioElement = useAudioElement();
-  const { skipPrevious, skipNext } = useSkipControls();
+  const {
+    skipPrevious,
+    skipNext,
+    getPrevious,
+    getNext
+  } = useSkipControls();
   useMediaSession();
 
   const disabled = isDisabled(player);
@@ -29,48 +34,48 @@ export default function PlayerControls({setShowAudioControls}) {
     }
   }
 
-  function handleSeekBackward() {
+  function seekBackward() {
     const audio = audioElement.current;
     audio.currentTime = audio.currentTime - 10;
   }
 
-  function handleSeekForward() {
+  function seekForward() {
     const audio = audioElement.current;
     audio.currentTime = audio.currentTime + 30;
   }
 
-  function handleSkipPrevious() {
-    skipPrevious();
-  }
-
-  function handleSkipNext() {
-    skipNext();
-  }
+  const previous = getPrevious();
+  const next = getNext();
 
   return (
     <div className="c-player-controls u-padding-left u-padding-right">
       <div className="c-player-controls__buttons u-padding-top-xmicro">
 
-        <PlayerButton onClick={handleSkipPrevious} disabled={disabled}>
+        <PlayerButton onClick={skipPrevious} disabled={disabled || !previous}>
           <Icon.SkipPrevious />
         </PlayerButton>
 
-        <PlayerButton onClick={handleSeekBackward} disabled={disabled}>
+        <PlayerButton onClick={seekBackward} disabled={disabled}>
           <Icon.SeekBackward />
         </PlayerButton>
 
-        <PlayPauseButton onClick={handlePlayPause} disabled={disabled} setShowAudioControls={setShowAudioControls} state={player.state} />
+        <PlayPauseButton
+          onClick={handlePlayPause}
+          disabled={disabled}
+          setShowAudioControls={setShowAudioControls}
+          state={player.state}
+        />
 
-        <PlayerButton onClick={handleSeekForward} disabled={disabled}>
+        <PlayerButton onClick={seekForward} disabled={disabled}>
           <Icon.SeekForward />
         </PlayerButton>
 
-        <PlayerButton onClick={handleSkipNext} disabled={disabled}>
+        <PlayerButton onClick={skipNext} disabled={disabled || !next}>
           <Icon.SkipNext />
         </PlayerButton>
       </div>
       <div className="c-player-controls__progress-bar u-padding-bottom-xmicro">
-        <PlaybackBar />
+        <PlaybackBar currentTime={currentTime} />
       </div>
     </div>
   );
