@@ -3,7 +3,7 @@ import { useAppDispatch } from '../../AppStateProvider';
 import { useAudioElement } from '../../AudioElementProvider';
 import useEventHandler from './hooks/useEventHandler';
 
-export default function AudioElement() {
+export default function AudioElement({controls}) {
   const audioElement = useAudioElement();
   const dispatch = useAppDispatch();
 
@@ -59,6 +59,7 @@ export default function AudioElement() {
     <>
       <audio
         ref={audioElement}
+        controls={controls}
       />
     </>
   )

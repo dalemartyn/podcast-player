@@ -24,13 +24,18 @@
 
   .c-playbar__audio {
     position: absolute;
+    left: sp();
     right: sp();
     bottom: calc(100% + #{sp(small)});
+    display: flex;
+    justify-content: center;
 
     audio {
       display: block;
       box-shadow: var(--shadow-3);
       border-radius: var(--rounded-radius);
+      max-width: 100%;
+      width: 480px;
 
       &::-webkit-media-controls-enclosure {
         background-color: #ffda68;

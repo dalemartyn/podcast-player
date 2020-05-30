@@ -5,7 +5,7 @@ import { Slider } from '@rmwc/slider'; // https://rmwc.io/sliders
 import classNames from 'classnames';
 import { isDisabled } from '../../reducers/player';
 
-export default React.memo(function PlaybackBar() {
+export default function PlaybackBar() {
   const { player } = useAppState();
   const audioElement = useAudioElement();
 
@@ -63,7 +63,7 @@ export default React.memo(function PlaybackBar() {
       </div>
     </div>
   );
-});
+};
 
 function Time({seconds}) {
   if (!seconds) return '00:00';

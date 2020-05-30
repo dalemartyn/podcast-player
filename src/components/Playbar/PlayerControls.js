@@ -11,7 +11,7 @@ import * as Icon from './buttons/icons';
 import useSkipControls from '../../hooks/useSkipControls';
 import useMediaSession from '../../hooks/useMediaSession';
 
-export default function PlayerControls() {
+export default function PlayerControls({setShowAudioControls}) {
   const { player } = useAppState();
   const audioElement = useAudioElement();
   const { skipPrevious, skipNext } = useSkipControls();
@@ -59,7 +59,7 @@ export default function PlayerControls() {
           <Icon.SeekBackward />
         </PlayerButton>
 
-        <PlayPauseButton onClick={handlePlayPause} disabled={disabled} state={player.state} />
+        <PlayPauseButton onClick={handlePlayPause} disabled={disabled} setShowAudioControls={setShowAudioControls} state={player.state} />
 
         <PlayerButton onClick={handleSeekForward} disabled={disabled}>
           <Icon.SeekForward />

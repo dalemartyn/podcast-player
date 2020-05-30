@@ -26,7 +26,7 @@ export default function Feed({ podcastUrl, podcastMeta }) {
           top: activeFeedItem.current.offsetTop - 70,
           behavior: 'smooth'
         });
-      }, 250);
+      }, 750);
       return () => {
         clearTimeout(t);
       };

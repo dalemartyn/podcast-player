@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { useAppState } from '../../AppStateProvider';
 import AudioElement from './AudioElement';
 import NowPlayingMediaInfo from './NowPlayingMediaInfo';
 import PlayerControls from './PlayerControls';
+import VolumeControls from './VolumeControls';
 import {
   getEpisodeUrl
 } from '../../reducers/player';
 
 export default function Playbar() {
   const { player } = useAppState();
+  const [showAudioControls, setShowAudioControls] = useState(false);
 
   const episodeUrl = getEpisodeUrl(player);
   const isOffscreen = ! episodeUrl;
@@ -21,16 +23,17 @@ export default function Playbar() {
   return (
     <div className={classNames("c-playbar", { "is-offscreen": isOffscreen })}>
       <div className="c-playbar__audio">
-        <AudioElement />
+        <AudioElement controls={showAudioControls} />
       </div>
       <div className="c-playbar__layout">
         <div className="c-playbar__start">
           <NowPlayingMediaInfo episode={player.episode} podcastMeta={player.podcastMeta} />
         </div>
         <div className="c-playbar__middle">
-          <PlayerControls />
+          <PlayerControls setShowAudioControls={setShowAudioControls} />
         </div>
         <div className="c-playbar__end">
+          <VolumeControls />
         </div>
       </div>
     </div>
