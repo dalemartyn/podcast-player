@@ -8,9 +8,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: sem-color("surface", .98);
-  box-shadow: var(--shadow-2);
-  @include theme-transition(background-color border-color);
+  background-color: sem-color("playbar", .98);
+  box-shadow: var(--shadow-2-up);
+  @include theme-transition(background-color border-color box-shadow);
   opacity: 1;
   transition:
     transform .3s $decelerate-easing;

@@ -35,8 +35,8 @@
     @include theme-transition(fill);
     display: block;
     @include ms-respond(--player-icon-size, 1.55);
-    height: calc(var(--player-icon-size) * 1.25);
-    width: calc(var(--player-icon-size) * 1.25);
+    height: var(--player-icon-size);
+    width: var(--player-icon-size);
   }
 
   &[disabled] {
@@ -49,16 +49,12 @@
   }
 }
 
-.c-player-button--playpause {
-  padding: sp(xmicro);
-  margin-left: sp(micro);
-  margin-right: sp(micro);
-
-  > svg {
-    height: calc(var(--player-icon-size) * 1.25 * 1.5);
-    width: calc(var(--player-icon-size) * 1.25 * 1.5);
+  .c-player-button--medium {
+    > svg {
+      height: calc(var(--player-icon-size) * 1.25);
+      width: calc(var(--player-icon-size) * 1.25);
+    }
   }
-}
 
   .c-player-button--large {
     > svg {

@@ -25,7 +25,7 @@ export default function PlayPauseButton({ state, onClick, disabled, setShowAudio
   }
 
   return (
-    <button onClick={onClick} disabled={disabled} {...longPressEvents} className="c-player-button c-player-button--playpause">
+    <button onClick={onClick} disabled={disabled} {...longPressEvents} className="c-playpause-button">
       { getIcon() }
     </button>
   );

@@ -55,7 +55,7 @@ export default function PlayerControls({currentTime, setShowAudioControls}) {
           <Icon.SkipPrevious />
         </PlayerButton>
 
-        <PlayerButton onClick={seekBackward} disabled={disabled} isLarge={true}>
+        <PlayerButton onClick={seekBackward} disabled={disabled} size="medium">
           <Icon.SeekBackward />
         </PlayerButton>
 
@@ -66,7 +66,7 @@ export default function PlayerControls({currentTime, setShowAudioControls}) {
           state={player.state}
         />
 
-        <PlayerButton onClick={seekForward} disabled={disabled} isLarge={true}>
+        <PlayerButton onClick={seekForward} disabled={disabled} size="medium">
           <Icon.SeekForward />
         </PlayerButton>
 

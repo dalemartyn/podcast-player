@@ -1,0 +1,58 @@
+/* ==========================================================================
+   #PLAYPAUSE-BUTTON
+   ========================================================================== */
+
+.c-playpause-button {
+  $button-color: material-color("cyan", "400");
+  $button-hover-color: mix(color("white"), $button-color, 15%);
+  $button-active-color: mix(color("white"), $button-color, 30%);
+  @include button-reset;
+  margin-left: sp(micro);
+  margin-right: sp(micro);
+  background-color: $button-color;
+  box-shadow: var(--shadow-1);
+  transition:
+    background-color $hover-transition,
+    box-shadow $hover-transition;
+  @include theme-transition(background-color box-shadow);
+  border-radius: 50%;
+  touch-action: manipulation;
+
+  @media (hover: hover) {
+
+    &:hover {
+      background-color: $button-hover-color;
+      box-shadow: var(--shadow-2);
+    }
+  }
+
+  &:active {
+    background-color: $button-active-color;
+  }
+
+  @include focus-style {
+    outline: none;
+    box-shadow:
+      0 0 0 3px sem-color(background),
+      0 0 0 6px sem-color(link);
+  }
+
+  > svg {
+    @include ms-respond(--player-icon-size, 1.55);
+    height: calc(var(--player-icon-size) * 1.25 * 1.5);
+    width: calc(var(--player-icon-size) * 1.25 * 1.5);
+    fill: color(blue-grey-950);
+    @include theme-transition(fill);
+    display: block;
+  }
+
+  &[disabled] {
+    background-color: inherit;
+    cursor: not-allowed;
+    box-shadow: none;
+
+    > svg {
+      fill: sem-color(disabled);
+    }
+  }
+}

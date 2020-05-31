@@ -1,1 +1,13 @@
-{}
+{
+  "short_name": "Podcasts",
+  "name": "Podcasts by Dale",
+  "icons": [{
+      "src": "appicon.svg",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#26C6DA",
+  "background_color": "#ffffff"
+}

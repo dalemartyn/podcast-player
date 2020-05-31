@@ -1,13 +1,17 @@
 @mixin light-shadow-vars {
   --shadow-1:
-    0 1px 4px rgba(0, 0, 0, .08),
-    0 4px 12px rgba(0, 0, 0, .04);
+    0 1px 4px rgba(0, 0, 0, .1),
+    0 4px 12px rgba(0, 0, 0, .06);
   --shadow-2:
-    0 1px 6px rgba(0, 0, 0, .08),
-    0 4px 24px rgba(0, 0, 0, .04);
+    0 1px 6px rgba(0, 0, 0, .1),
+    0 4px 24px rgba(0, 0, 0, .06);
   --shadow-3:
-    0 3px 8px rgba(0, 0, 0, .12),
-    0 6px 36px rgba(0, 0, 0, .06);
+    0 3px 8px rgba(0, 0, 0, .14),
+    0 6px 36px rgba(0, 0, 0, .08);
+
+  --shadow-2-up:
+    0 -1px 6px rgba(0, 0, 0, .1),
+    0 -4px 24px rgba(0, 0, 0, .06);
 }
 
 @mixin dark-shadow-vars {
@@ -20,4 +24,8 @@
   --shadow-3:
     0 3px 8px rgba(0, 0, 0, .24),
     0 6px 36px rgba(0, 0, 0, .18);
+
+  --shadow-2-up:
+    0 -1px 6px rgba(0, 0, 0, .16),
+    0 -4px 24px rgba(0, 0, 0, .12);
 }
