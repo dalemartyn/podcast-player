@@ -61,8 +61,8 @@ export function getEpisodeUrl(player) {
   return "";
 }
 
-export function isDisabled(player) {
-  return player.state === 'disabled';
+export function isDisabled(state) {
+  return state.state === 'disabled' || state.duration === 0;
 }
 
 export function isInPlayer(state, episode) {

@@ -51,14 +51,21 @@
 
 
   .c-playbar__layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: sp(xxlarge);
+
+    @include mq($from: md) {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-gap: sp(xxlarge);
+    }
   }
 
     .c-playbar__start {
-      display: flex;
-      justify-content: flex-start;
+      display: none;
+
+      @include mq($from: md) {
+        display: flex;
+        justify-content: flex-start;
+      }
     }
 
     .c-playbar__middle {
@@ -68,7 +75,11 @@
     }
 
     .c-playbar__end {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      display: none;
+
+      @include mq($from: md) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
     }

@@ -5,14 +5,28 @@
 
 .c-feed-item {
   display: flex;
-  border-top: 1px solid sem-color(border);
+  // border-top: 1px solid sem-color(border);
   @include theme-transition(border-color);
   scroll-margin-top: var(--site-header-height);
+  position: relative;
+  z-index: 0;
 }
 
-.c-feed-item--active {
-  background-color: var(--state-color-active);
-}
+  .c-feed-item__background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: calc(#{sp()} * -1);
+    right: calc(#{sp()} * -1);
+    transition: background-color $hover-transition;
+    @include theme-transition(background-color);
+    border-radius: var(--rounded-radius);
+
+    .c-feed-item--active > & {
+      background-color: var(--state-color-active);
+    }
+  }
 
 // .c-feed-item__button {}
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  PauseOutline32,
-  PlayOutline32
-} from '@carbon/icons-react';
+  Pause,
+  Play
+} from './icons';
 import { isInPlayer, isPlaying } from '../../reducers/player';
 import classNames from 'classnames';
 
@@ -11,18 +11,19 @@ export default function FeedItem({episode, player, onPlayButtonClick, onPauseBut
   const active = isInPlayer(player, episode);
 
   if (isPlaying(player, episode)) {
-    button = <button onClick={onPauseButtonClick} className="c-player-button c-player-button--flush-vertical">
-      <PauseOutline32 aria-label="Pause" />
+    button = <button onClick={onPauseButtonClick} className="c-player-button c-player-button--large c-player-button--flush">
+      <Pause aria-label="Pause" />
     </button>
   } else {
-    button = <button onClick={() => onPlayButtonClick(episode) } className="c-player-button c-player-button--flush-vertical">
-      <PlayOutline32 aria-label="Play" />
+    button = <button onClick={() => onPlayButtonClick(episode) } className="c-player-button c-player-button--large c-player-button--flush">
+      <Play aria-label="Play" />
     </button>;
   }
 
   return (
     <div className={classNames("c-feed-item", { "c-feed-item--active": active }, "u-padding-top", "u-padding-bottom-large")} ref={activeFeedItemRef}>
-      <div className="c-feed-item__button u-margin-right-small">
+      <div className="c-feed-item__background"></div>
+      <div className="c-feed-item__button u-margin-right">
         {button}
       </div>
       <div className="c-feed-item__content">

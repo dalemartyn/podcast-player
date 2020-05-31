@@ -4,6 +4,7 @@
 
 .c-now-playing-media-info {
   display: grid;
+  width: 100%;
   grid-gap: sp(small);
   grid-template-columns: calc(#{sp()} * 3) 1fr;
   text-decoration: none;

@@ -11,3 +11,22 @@
   --state-color-hover-img:  #{rgba(color("blue-grey-100"), .12)};
   --state-color-active-img: #{rgba(color("blue-grey-100"), .24)};
 }
+
+@mixin light-state-color-vars {
+  $state-color: mix(
+    color("blue-grey-600"),
+    material-color("cyan", "600"),
+    15%
+  );
+  --state-color-hover:      #{rgba($state-color, .08)};
+  --state-color-active:     #{rgba($state-color, .16)};
+  --state-color-hover-img:  #{rgba(color("blue-grey-900"), .15)};
+  --state-color-active-img: #{rgba(color("blue-grey-900"), .3)};
+}
+
+@mixin dark-state-color-vars {
+  --state-color-hover:      #{rgba(material-color("cyan", "400"), .1)};
+  --state-color-active:     #{rgba(material-color("cyan", "400"), .2)};
+  --state-color-hover-img:  #{rgba(color("blue-grey-100"), .15)};
+  --state-color-active-img: #{rgba(color("blue-grey-100"), .3)};
+}

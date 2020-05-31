@@ -1,0 +1,10 @@
+export { ReactComponent as Play } from './play.svg';
+export { ReactComponent as Pause } from './pause.svg';
+export { ReactComponent as SeekForward } from './seek-forward.svg';
+export { ReactComponent as SeekBackward } from './seek-backward.svg';
+export { ReactComponent as SkipNext } from './skip-next.svg';
+export { ReactComponent as SkipPrevious } from './skip-previous.svg';
+export { ReactComponent as VolumeOff } from './volume-off.svg';
+export { ReactComponent as VolumeMute } from './volume-mute.svg';
+export { ReactComponent as VolumeDown } from './volume-down.svg';
+export { ReactComponent as VolumeUp } from './volume-up.svg';

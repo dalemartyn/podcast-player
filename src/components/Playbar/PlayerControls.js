@@ -51,11 +51,11 @@ export default function PlayerControls({currentTime, setShowAudioControls}) {
     <div className="c-player-controls u-padding-left u-padding-right">
       <div className="c-player-controls__buttons u-padding-top-xmicro">
 
-        <PlayerButton onClick={skipPrevious} disabled={disabled || !previous}>
+        <PlayerButton onClick={skipPrevious} disabled={!previous}>
           <Icon.SkipPrevious />
         </PlayerButton>
 
-        <PlayerButton onClick={seekBackward} disabled={disabled}>
+        <PlayerButton onClick={seekBackward} disabled={disabled} isLarge={true}>
           <Icon.SeekBackward />
         </PlayerButton>
 
@@ -66,11 +66,11 @@ export default function PlayerControls({currentTime, setShowAudioControls}) {
           state={player.state}
         />
 
-        <PlayerButton onClick={seekForward} disabled={disabled}>
+        <PlayerButton onClick={seekForward} disabled={disabled} isLarge={true}>
           <Icon.SeekForward />
         </PlayerButton>
 
-        <PlayerButton onClick={skipNext} disabled={disabled || !next}>
+        <PlayerButton onClick={skipNext} disabled={!next}>
           <Icon.SkipNext />
         </PlayerButton>
       </div>
