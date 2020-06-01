@@ -34,7 +34,7 @@ export default function useMediaSession() {
 
       navigator.mediaSession.setActionHandler('seekbackward', () => {
         const audio = audioElement.current;
-        audio.currentTime = audio.currentTime - 10;
+        audio.currentTime = audio.currentTime - 15;
       });
 
       navigator.mediaSession.setActionHandler('seekforward', () => {

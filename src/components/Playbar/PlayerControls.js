@@ -36,7 +36,7 @@ export default function PlayerControls({currentTime, setShowAudioControls}) {
 
   function seekBackward() {
     const audio = audioElement.current;
-    audio.currentTime = audio.currentTime - 10;
+    audio.currentTime = audio.currentTime - 15;
   }
 
   function seekForward() {
