@@ -7,8 +7,8 @@
   $button-hover-color: mix(color("white"), $button-color, 15%);
   $button-active-color: mix(color("white"), $button-color, 30%);
   @include button-reset;
-  margin-left: sp(micro);
-  margin-right: sp(micro);
+  margin-left: sp(small);
+  margin-right: sp(small);
   background-color: $button-color;
   box-shadow: var(--shadow-1);
   transition:
@@ -39,8 +39,8 @@
 
   > svg {
     @include ms-respond(--player-icon-size, 1.55);
-    height: calc(var(--player-icon-size) * 1.25 * 1.5);
-    width: calc(var(--player-icon-size) * 1.25 * 1.5);
+    height: calc(var(--player-icon-size) * 1.5 * 1.5);
+    width: calc(var(--player-icon-size) * 1.5 * 1.5);
     fill: color(blue-grey-950);
     @include theme-transition(fill);
     display: block;

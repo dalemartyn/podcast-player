@@ -56,7 +56,7 @@ export default function NowPlayingMediaInfo({episode, podcastMeta}) {
       </div>
       <div className="c-now-playing-media-info__content">
         <div className="c-now-playing-media-info__episode-title ts-display-6">{ episode.title }</div>
-        <div className="c-now-playing-media-info__podcast-title ts-meta">{ podcastMeta.title }</div>
+        <div className="c-now-playing-media-info__podcast-title ts-label">{ podcastMeta.title }</div>
       </div>
     </Link>
   );

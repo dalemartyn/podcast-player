@@ -2,7 +2,7 @@
   --container-width:      #{rem(960px)};
   --container-width-xl:   #{rem(1200px)};
   --site-margin:          #{sp()};
-  --player-height:        #{92px};
+  --player-height:        #{101px};
   --site-header-height:   #{70px};
 
   @include mq($from: sm) {

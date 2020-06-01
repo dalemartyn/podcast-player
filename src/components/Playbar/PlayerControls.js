@@ -49,7 +49,7 @@ export default function PlayerControls({currentTime, setShowAudioControls}) {
 
   return (
     <div className="c-player-controls u-padding-left u-padding-right">
-      <div className="c-player-controls__buttons u-padding-top-xmicro">
+      <div className="c-player-controls__buttons u-padding-top-micro">
 
         <PlayerButton onClick={skipPrevious} disabled={!previous}>
           <Icon.SkipPrevious />
@@ -74,7 +74,7 @@ export default function PlayerControls({currentTime, setShowAudioControls}) {
           <Icon.SkipNext />
         </PlayerButton>
       </div>
-      <div className="c-player-controls__progress-bar u-padding-bottom-xmicro">
+      <div className="c-player-controls__progress-bar u-padding-bottom-micro">
         <PlaybackBar currentTime={currentTime} />
       </div>
     </div>

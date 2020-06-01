@@ -8,8 +8,8 @@
   grid-gap: sp(small);
   grid-template-columns: calc(#{sp()} * 3) 1fr;
   text-decoration: none;
-  padding: calc(#{sp(small)} / 2);
-  margin: calc(#{sp(small)} / 2);
+  padding: calc(#{sp()} / 2);
+  margin: calc(#{sp()} / 2);
   transition:
     background-color $hover-transition;
   @include theme-transition(background-color);

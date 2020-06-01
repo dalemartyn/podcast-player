@@ -11,6 +11,8 @@
   @include theme-transition(background-color box-shadow);
   border-radius: 50%;
   touch-action: manipulation;
+  margin-left: sp(xmicro);
+  margin-right: sp(xmicro);
 
   @media (hover: hover) {
 

@@ -21,7 +21,7 @@ export default function VolumeControls() {
   }
 
   return (
-    <div className="c-volume-slider u-padding-left u-padding-right">
+    <div className="c-volume-slider u-padding-left u-padding-right-large">
       <button onClick={mute} className="c-volume-slider__icon c-player-button c-player-button--small">
         <VolumeIcon isMuted={isMuted} volume={volume} />
       </button>
