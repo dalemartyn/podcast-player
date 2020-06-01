@@ -6,7 +6,7 @@
         "description": "Conversations about React with your favorite developers.",
         "originalImage": "https://cdn.simplecast.com/images/bdb43d4d-bd1d-4fbc-bd60-40f1e3299aa3/20f97d0b-6dab-4005-a995-0ab8fc2cf31c/3000x3000/1550288890-artwork.jpg?aid=rss_feed",
         "link": "http://reactpodcast.com/",
-        "date": "May 30, 2020",
+        "date": "Jun 01, 2020",
         "url": "https://rss.simplecast.com/podcasts/6265/rss",
         "image": "/img/podcast-images/react-podcast.png"
       }
@@ -17,7 +17,7 @@
         "description": "Surma and Jake talk about whatever's going on in the world of web development.",
         "originalImage": "http://static.libsyn.com/p/assets/4/0/a/0/40a057340c51398b/HTTP_Podcast_Episodes_thumb_v2_1.png",
         "link": "https://developers.google.com/web/shows/http203/podcast/",
-        "date": "May 31, 2020",
+        "date": "Jun 01, 2020",
         "url": "http://http203.googledevelopers.libsynpro.com/rss",
         "subtitle": "Where Surma and Jake occasionally talk web.",
         "image": "/img/podcast-images/http-203.png"
@@ -185,13 +185,24 @@
         "image": "/img/podcast-images/how-i-built-this-with-guy-raz.png"
       }
     },
+    "https://pinecast.com/feed/commerce-tea": {
+      "meta": {
+        "title": "Commerce Tea",
+        "description": "Commerce is changing faster than ever before. That’s why we started Commerce Tea, a podcast to help you keep up with what’s happening in the industry. We’re your hosts, Kelly Vaughn, CEO and founder of Shopify Plus agency The Taproom, and Rhian Beutler, COO, and co-founder of the Shopify app company venntov.\n\nYou’ll learn tips and tricks for growing and scaling your Shopify store, hear from top experts in the industry, and be inspired by stories from successful entrepreneurs on Shopify. Grab a mug and join us every Tuesday morning to talk shop.",
+        "originalImage": "https://storage.pinecast.net/podcasts/covers/01e9c830-d9d8-48aa-8782-f2eeb799f5a8/commerce_tea.PNG.png",
+        "link": "https://commercetea.com/",
+        "date": "Invalid DateTime",
+        "url": "https://pinecast.com/feed/commerce-tea",
+        "image": "/img/podcast-images/commerce-tea.png"
+      }
+    },
     "https://feeds.transistor.fm/rework": {
       "meta": {
         "title": "Rework",
         "description": "A podcast by Basecamp about the better way to work and run your business. We bring you stories and unconventional wisdom from Basecamp’s co-founders and other business owners.",
         "originalImage": "https://images.transistor.fm/file/transistor/images/show/4671/full_1569860119-artwork.jpg",
         "link": "https://rework.fm/",
-        "date": "May 27, 2020",
+        "date": "Jun 01, 2020",
         "url": "https://feeds.transistor.fm/rework",
         "subtitle": "A podcast by Basecamp about the better way to work and run your business.",
         "image": "/img/podcast-images/rework.png"
@@ -215,7 +226,7 @@
         "description": "Naval on wealth and happiness. On Twitter at @naval.",
         "originalImage": "https://ssl-static.libsyn.com/p/assets/5/c/e/b/5ceb9fba4ff0ab14/podcast_artwork.jpg",
         "link": "https://nav.al/",
-        "date": "May 31, 2020",
+        "date": "Jun 01, 2020",
         "url": "https://naval.libsyn.com/rss",
         "image": "/img/podcast-images/naval.png"
       }
@@ -271,7 +282,7 @@
         "description": "The Method podcast profiles designers at Google, giving listeners an inside look at their journeys and design choices.",
         "originalImage": "http://static.libsyn.com/p/assets/b/e/e/8/bee848bb83fdf0a6/avatar-A.png",
         "link": "https://design.google/",
-        "date": "May 31, 2020",
+        "date": "Jun 01, 2020",
         "url": "http://googledesignmethod.libsyn.com/rss",
         "subtitle": "Google Design",
         "image": "/img/podcast-images/method-podcast-from-google-design.png"
@@ -283,7 +294,7 @@
         "description": "Design Notes is a Google Design podcast about creative work and what it teaches us, hosted by Liam Spradlin. Each episode we talk with people from unique creative fields to discover what inspires and unites us in our practice.",
         "originalImage": "http://static.libsyn.com/p/assets/8/c/8/2/8c823317aaa6c9b6/DN_LOGO_1X1.png",
         "link": "https://design.google/podcast",
-        "date": "May 31, 2020",
+        "date": "Jun 01, 2020",
         "url": "http://designnotes.fm/rss",
         "subtitle": "Design Notes is a Google Design podcast about creative work and what it teaches us, hosted by Google’s Liam Spradlin. Each episode we’ll talk with people from unique creative fields to…",
         "image": "/img/podcast-images/design-notes.png"
@@ -387,7 +398,7 @@
         "description": "Liverpool FC through the eyes of match-going supporters, the award-winning Anfield Wrap podcast talks honestly and passionately about every game The Reds play home and away in the Premier League, the cups and European competition. Also covering LFC news, gossip and analysis, TAW has grown from two free shows a week in 2011 to a subscription package of circa 30 shows a month in 2016. More information at http://www.theanfieldwrap.com",
         "originalImage": "https://images.theabcdn.com/i/28012647.jpg",
         "link": "https://audioboom.com/channel/theanfieldwrappodcast",
-        "date": "May 28, 2020",
+        "date": "Jun 01, 2020",
         "url": "https://audioboom.com/channels/2402227.rss",
         "image": "/img/podcast-images/the-anfield-wrap.png"
       }
@@ -432,7 +443,7 @@
         "description": "The Football Weekly podcast squad brings you a twice-weekly dose of puns and punditry, news and analysis – from the Premier League and beyond",
         "originalImage": "https://thumborcdn.acast.com/klaTt9xu2klnAgW1X41sIMZb4Jo=/1500x1500/https://uploads.guim.co.uk/2018/08/06/football-weekly-3000_(1).jpg",
         "link": "https://www.theguardian.com/football/series/footballweekly",
-        "date": "May 28, 2020",
+        "date": "Jun 01, 2020",
         "url": "https://rss.acast.com/footballweekly",
         "subtitle": "The Football Weekly podcast squad brings you a twice-weekly dose of puns and punditry, news and analysis – from the Premier League and beyond",
         "image": "/img/podcast-images/football-weekly.png"
@@ -536,6 +547,7 @@
         "https://feeds.megaphone.fm/recodedecode",
         "https://rss.art19.com/tim-ferriss-show",
         "https://feeds.npr.org/510313/podcast.xml",
+        "https://pinecast.com/feed/commerce-tea",
         "https://feeds.transistor.fm/rework",
         "https://sivers.org/podcast.rss",
         "https://naval.libsyn.com/rss"

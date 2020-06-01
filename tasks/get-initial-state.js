@@ -31,6 +31,7 @@ const categories = [
       "https://feeds.megaphone.fm/recodedecode",                     // recode decode
       "https://rss.art19.com/tim-ferriss-show",                      // tim ferriss
       "https://feeds.npr.org/510313/podcast.xml",                    // how i built this
+      "https://pinecast.com/feed/commerce-tea",                      // commerce tea
       "https://feeds.transistor.fm/rework",                          // rework
       "https://sivers.org/podcast.rss",                              // derek sivers
       "https://naval.libsyn.com/rss",                                // naval
