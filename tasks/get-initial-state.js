@@ -11,13 +11,14 @@ const categories = [
     podcasts: [
       "https://rss.simplecast.com/podcasts/6265/rss",                // react podcast
       "http://http203.googledevelopers.libsynpro.com/rss",           // http 203
-      "https://feeds.feedwrench.com/js-jabber.rss",                  // javascript jabber
-      "https://gomakethings.com/podcast/feed.rss",                   // vanilla js
-      "https://changelog.com/podcast/feed",                          // changelog
-      "https://anchor.fm/s/10dbd4bc/podcast/rss",                    // svelte radio
-      "https://feeds.transistor.fm/maintainers-anonymous",           // maintainers anonymous
       "https://pinecast.com/feed/ladybug-podcast",                   // ladybug
+      "https://changelog.com/podcast/feed",                          // changelog
       "https://anchor.fm/s/cf40bd0/podcast/rss",                     // fist & scripts
+      "https://feed.syntax.fm/rss",                                  // syntax fm
+      "https://gomakethings.com/podcast/feed.rss",                   // vanilla js
+      "https://anchor.fm/s/10dbd4bc/podcast/rss",                    // svelte radio
+      "https://feeds.feedwrench.com/js-jabber.rss",                  // javascript jabber
+      "https://feeds.transistor.fm/maintainers-anonymous",           // maintainers anonymous
     ]
   },
   {

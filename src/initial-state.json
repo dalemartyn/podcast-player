@@ -23,16 +23,50 @@
         "image": "/img/podcast-images/http-203.png"
       }
     },
-    "https://feeds.feedwrench.com/js-jabber.rss": {
+    "https://pinecast.com/feed/ladybug-podcast": {
       "meta": {
-        "title": "JavaScript Jabber",
-        "description": "Weekly podcast discussion about Javascript on the front and back ends. Also discuss programming practices, coding environments, and the communities related to the technology.",
-        "originalImage": "https://s3.amazonaws.com/devchat.tv/javascript_jabber_thumb.jpg",
-        "link": "http://javascriptjabber.com",
-        "date": "May 19, 2020",
-        "url": "https://feeds.feedwrench.com/js-jabber.rss",
-        "subtitle": "Your Prototype for Great Code",
-        "image": "/img/podcast-images/javascript-jabber.png"
+        "title": "Ladybug Podcast",
+        "description": "We're Emma Bostian, Kelly Vaughn, and Ali Spittel - three seasoned software developers working in different sectors. Since there's a major lack of technical podcasts out there, we've decided to start one. Just kidding -- there's already a ton! But, we wanted to add our voices to the space and share our experiences and advice. We'll have great discussions around how to start coding, the hot technologies right now, how to get your first developer job, and more!",
+        "originalImage": "https://storage.pinecast.net/podcasts/covers/c617f912-02e9-488c-898e-59a87bdccd2f/ladybug_logo.png",
+        "link": "https://ladybug.dev/",
+        "date": "Invalid DateTime",
+        "url": "https://pinecast.com/feed/ladybug-podcast",
+        "subtitle": "Three ladies debugging the tech industry",
+        "image": "/img/podcast-images/ladybug-podcast.png"
+      }
+    },
+    "https://changelog.com/podcast/feed": {
+      "meta": {
+        "title": "The Changelog: Software Dev & Open Source",
+        "description": "Conversations with the hackers, leaders, and innovators of software development.  Hosts Adam Stacoviak and Jerod Santo face their imposter syndrome so you don’t have to. Expect in-depth interviews with the best and brightest in software engineering, open source, and leadership. This is a polyglot podcast. All programming languages, platforms, and communities are welcome. Open source moves fast. Keep up.",
+        "originalImage": "https://cdn.changelog.com/uploads/covers/the-changelog-original.png?v=63725770322",
+        "link": "https://changelog.com/podcast",
+        "date": "Invalid DateTime",
+        "url": "https://changelog.com/podcast/feed",
+        "image": "/img/podcast-images/the-changelog-software-dev-and-open-source.png"
+      }
+    },
+    "https://anchor.fm/s/cf40bd0/podcast/rss": {
+      "meta": {
+        "title": "Fish and Scripts",
+        "description": "The all things web development podcast by two Brits with opinions and puns. Join Phil and Jack for a relaxed chat as we sprinkle some salt and lavishly apply vinegar to a variety of topics from the world of frontend web development.",
+        "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/2073204/2073204-1566552571667-6a834123f44b.jpg",
+        "link": "https://www.fishandscripts.com/",
+        "date": "Jun 01, 2020",
+        "url": "https://anchor.fm/s/cf40bd0/podcast/rss",
+        "image": "/img/podcast-images/fish-and-scripts.png"
+      }
+    },
+    "https://feed.syntax.fm/rss": {
+      "meta": {
+        "title": "Syntax - Tasty Web Development Treats",
+        "description": "Full Stack Developers Wes Bos and Scott Tolinski dive deep into web development topics, explaining how they work and talking about their own experiences. They cover from JavaScript frameworks like React, to the latest advancements in CSS to simplifying web tooling.",
+        "originalImage": "https://ssl-static.libsyn.com/p/assets/7/9/0/7/790703531a3c8eca/iTunes_Artwork.png",
+        "link": "https://syntax.fm/",
+        "date": "Jun 01, 2020",
+        "url": "https://feed.syntax.fm/rss",
+        "subtitle": "Web Development Tasty Treats",
+        "image": "/img/podcast-images/syntax-tasty-web-development-treats.png"
       }
     },
     "https://gomakethings.com/podcast/feed.rss": {
@@ -47,26 +81,27 @@
         "image": "/img/podcast-images/the-vanilla-js-podcast.png"
       }
     },
-    "https://changelog.com/podcast/feed": {
-      "meta": {
-        "title": "The Changelog: Software Dev & Open Source",
-        "description": "Conversations with the hackers, leaders, and innovators of software development.  Hosts Adam Stacoviak and Jerod Santo face their imposter syndrome so you don’t have to. Expect in-depth interviews with the best and brightest in software engineering, open source, and leadership. This is a polyglot podcast. All programming languages, platforms, and communities are welcome. Open source moves fast. Keep up.",
-        "originalImage": "https://cdn.changelog.com/uploads/covers/the-changelog-original.png?v=63725770322",
-        "link": "https://changelog.com/podcast",
-        "date": "Invalid DateTime",
-        "url": "https://changelog.com/podcast/feed",
-        "image": "/img/podcast-images/the-changelog-software-dev-and-open-source.png"
-      }
-    },
     "https://anchor.fm/s/10dbd4bc/podcast/rss": {
       "meta": {
         "title": "Svelte Radio",
         "description": "Things about Svelte. Sometimes weekly, sometimes not.",
         "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/2728423/2728423-1575391650956-9f8e7eb17bbc1.jpg",
         "link": "https://www.svelteradio.com/",
-        "date": "May 31, 2020",
+        "date": "Jun 01, 2020",
         "url": "https://anchor.fm/s/10dbd4bc/podcast/rss",
         "image": "/img/podcast-images/svelte-radio.png"
+      }
+    },
+    "https://feeds.feedwrench.com/js-jabber.rss": {
+      "meta": {
+        "title": "JavaScript Jabber",
+        "description": "Weekly podcast discussion about Javascript on the front and back ends. Also discuss programming practices, coding environments, and the communities related to the technology.",
+        "originalImage": "https://s3.amazonaws.com/devchat.tv/javascript_jabber_thumb.jpg",
+        "link": "http://javascriptjabber.com",
+        "date": "May 19, 2020",
+        "url": "https://feeds.feedwrench.com/js-jabber.rss",
+        "subtitle": "Your Prototype for Great Code",
+        "image": "/img/podcast-images/javascript-jabber.png"
       }
     },
     "https://feeds.transistor.fm/maintainers-anonymous": {
@@ -79,29 +114,6 @@
         "url": "https://feeds.transistor.fm/maintainers-anonymous",
         "subtitle": "How can we work together to achieve a common goal: whether in our code, cities, or infrastructure.",
         "image": "/img/podcast-images/maintainers-anonymous.png"
-      }
-    },
-    "https://pinecast.com/feed/ladybug-podcast": {
-      "meta": {
-        "title": "Ladybug Podcast",
-        "description": "We're Emma Bostian, Kelly Vaughn, and Ali Spittel - three seasoned software developers working in different sectors. Since there's a major lack of technical podcasts out there, we've decided to start one. Just kidding -- there's already a ton! But, we wanted to add our voices to the space and share our experiences and advice. We'll have great discussions around how to start coding, the hot technologies right now, how to get your first developer job, and more!",
-        "originalImage": "https://storage.pinecast.net/podcasts/covers/c617f912-02e9-488c-898e-59a87bdccd2f/ladybug_logo.png",
-        "link": "https://ladybug.dev/",
-        "date": "Invalid DateTime",
-        "url": "https://pinecast.com/feed/ladybug-podcast",
-        "subtitle": "Three ladies debugging the tech industry",
-        "image": "/img/podcast-images/ladybug-podcast.png"
-      }
-    },
-    "https://anchor.fm/s/cf40bd0/podcast/rss": {
-      "meta": {
-        "title": "Fish and Scripts",
-        "description": "The all things web development podcast by two Brits with opinions and puns. Join Phil and Jack for a relaxed chat as we sprinkle some salt and lavishly apply vinegar to a variety of topics from the world of frontend web development.",
-        "originalImage": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/2073204/2073204-1566552571667-6a834123f44b.jpg",
-        "link": "https://www.fishandscripts.com/",
-        "date": "May 31, 2020",
-        "url": "https://anchor.fm/s/cf40bd0/podcast/rss",
-        "image": "/img/podcast-images/fish-and-scripts.png"
       }
     },
     "http://exponent.fm/feed/": {
@@ -168,7 +180,7 @@
         "description": "Guy Raz dives into the stories behind some of the world's best known companies. How I Built This weaves a narrative journey about innovators, entrepreneurs and idealists—and the movements they built.",
         "originalImage": "https://media.npr.org/assets/img/2018/08/03/npr_hibt_podcasttile_sq-98320b282169a8cea04a406530e6e7b957665b3f.jpg?s=1400",
         "link": "http://www.npr.org/series/490248027/how-i-built-this",
-        "date": "May 30, 2020",
+        "date": "Jun 01, 2020",
         "url": "https://feeds.npr.org/510313/podcast.xml",
         "image": "/img/podcast-images/how-i-built-this-with-guy-raz.png"
       }
@@ -444,7 +456,7 @@
         "description": "A series in which 90’s football aficionado Josh Widdicombe is joined by friends, and fellow 90s experts, co-host Chris Scull and ‘Director of Podcast’ Michael Marden, as the trio embark on a tour of niche football topics of the period 1st January 1990 to 31st December 1999.",
         "originalImage": "https://thumborcdn.acast.com/_kZI4EswIqFAqQ8bEkACV9YK7w0=/1500x1500/https://acastprod.blob.core.windows.net:443/media/v1//-j0kuky30-kev.jpg",
         "link": "https://rss.acast.com/www.quicklykevin.com",
-        "date": "May 25, 2020",
+        "date": "Jun 01, 2020",
         "url": "https://rss.acast.com/quicklykevin",
         "subtitle": "Quickly Kevin; will he score? Yes. Ohhh.",
         "image": "/img/podcast-images/quickly-kevin-will-he-score-the-90s-football-show.png"
@@ -504,13 +516,14 @@
       "podcasts": [
         "https://rss.simplecast.com/podcasts/6265/rss",
         "http://http203.googledevelopers.libsynpro.com/rss",
-        "https://feeds.feedwrench.com/js-jabber.rss",
-        "https://gomakethings.com/podcast/feed.rss",
-        "https://changelog.com/podcast/feed",
-        "https://anchor.fm/s/10dbd4bc/podcast/rss",
-        "https://feeds.transistor.fm/maintainers-anonymous",
         "https://pinecast.com/feed/ladybug-podcast",
-        "https://anchor.fm/s/cf40bd0/podcast/rss"
+        "https://changelog.com/podcast/feed",
+        "https://anchor.fm/s/cf40bd0/podcast/rss",
+        "https://feed.syntax.fm/rss",
+        "https://gomakethings.com/podcast/feed.rss",
+        "https://anchor.fm/s/10dbd4bc/podcast/rss",
+        "https://feeds.feedwrench.com/js-jabber.rss",
+        "https://feeds.transistor.fm/maintainers-anonymous"
       ]
     },
     {
