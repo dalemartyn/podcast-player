@@ -16,6 +16,5 @@ export default function useKeydown(key, callback) {
     return () => {
       window.removeEventListener('keydown', handler)
     }
-  // eslint-disable-next-line
-  }, [])
+  }, [key, callback])
 }
