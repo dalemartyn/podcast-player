@@ -12,6 +12,7 @@ export default function VolumeControls() {
     const audio = audioElement.current;
     setVolume(e.detail.value);
     audio.volume = volume;
+    (e.detail.value === 0) ? setIsMuted(true) : setIsMuted(false);
   }
 
   function mute() {
