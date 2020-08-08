@@ -10,15 +10,23 @@ export default function VolumeControls() {
 
   function changeVolume(e) {
     const audio = audioElement.current;
-    setVolume(e.detail.value);
+    const sliderValue = e.detail.value;
+    setVolume(sliderValue);
     audio.volume = volume;
-    setIsMuted(e.detail.value === 0);    
+
+    // mute or unmute when slider is at 0.
+    const isMuted = sliderValue === 0;
+    audio.muted = isMuted;
+    setIsMuted(isMuted);
   }
 
   function mute() {
     const audio = audioElement.current;
-    audio.muted = !isMuted;
-    setIsMuted(m => !m);
+    // don't unmute when volume slider is set to 0.
+    if (volume !== 0) {
+      audio.muted = !isMuted;
+      setIsMuted(m => !m);
+    }
   }
 
   return (
